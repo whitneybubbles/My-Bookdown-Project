@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>26 Two Real Example | Advanced Environmental Data Management</title>
+  <meta name="description" content="26 Two Real Example | Advanced Environmental Data Management" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="26 Two Real Example | Advanced Environmental Data Management" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="26 Two Real Example | Advanced Environmental Data Management" />
+  
+  
+  
+
+<meta name="author" content="Whitney Adam" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="recursive-function.html"/>
+<link rel="next" href="good-function-writing-practices.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html"><i class="fa fa-check"></i><b>2</b> Importing Data into R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#typing-vectors-and-matrices"><i class="fa fa-check"></i><b>2.1</b> Typing Vectors and Matrices</a></li>
+<li class="chapter" data-level="2.2" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#reading-data-frame"><i class="fa fa-check"></i><b>2.2</b> Reading Data Frame</a></li>
+<li class="chapter" data-level="2.3" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#fixed-with-input-files"><i class="fa fa-check"></i><b>2.3</b> Fixed-with Input Files</a></li>
+<li class="chapter" data-level="2.4" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#generating-data"><i class="fa fa-check"></i><b>2.4</b> Generating Data</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#sequences"><i class="fa fa-check"></i><b>2.4.1</b> Sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#random-number-generators"><i class="fa fa-check"></i><b>2.5</b> Random Number Generators</a></li>
+<li class="chapter" data-level="2.6" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#random-permutation"><i class="fa fa-check"></i><b>2.6</b> Random Permutation</a></li>
+<li class="chapter" data-level="2.7" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#spreadsheet"><i class="fa fa-check"></i><b>2.7</b> Spreadsheet</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="saving-r-data.html"><a href="saving-r-data.html"><i class="fa fa-check"></i><b>3</b> Saving R Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="saving-r-data.html"><a href="saving-r-data.html#writing-r-objects-to-files-in-ascii-format"><i class="fa fa-check"></i><b>3.1</b> Writing R Objects to Files in ASCII Format</a></li>
+<li class="chapter" data-level="3.2" data-path="saving-r-data.html"><a href="saving-r-data.html#reading-data-from-other-programs"><i class="fa fa-check"></i><b>3.2</b> Reading Data from Other Programs</a></li>
+<li class="chapter" data-level="3.3" data-path="saving-r-data.html"><a href="saving-r-data.html#functions-in-foreign-package"><i class="fa fa-check"></i><b>3.3</b> Functions in <code>foreign</code> package</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="date-objects.html"><a href="date-objects.html"><i class="fa fa-check"></i><b>4</b> Date Objects</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="date-objects.html"><a href="date-objects.html#date-formats-in-r-date-time-classes"><i class="fa fa-check"></i><b>4.1</b> Date formats in R date-time classes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="summary-statistics.html"><a href="summary-statistics.html"><i class="fa fa-check"></i><b>5</b> Summary Statistics</a></li>
+<li class="chapter" data-level="6" data-path="anatomy-of-a-plot.html"><a href="anatomy-of-a-plot.html"><i class="fa fa-check"></i><b>6</b> Anatomy of a Plot</a></li>
+<li class="chapter" data-level="7" data-path="customizing-a-plot.html"><a href="customizing-a-plot.html"><i class="fa fa-check"></i><b>7</b> Customizing a Plot</a></li>
+<li class="chapter" data-level="8" data-path="graphical-functions.html"><a href="graphical-functions.html"><i class="fa fa-check"></i><b>8</b> Graphical Functions</a></li>
+<li class="chapter" data-level="9" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html"><i class="fa fa-check"></i><b>9</b> Example: Lake Erie Harmful Algal Bloom Monitoring</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#data"><i class="fa fa-check"></i><b>9.1</b> Data</a></li>
+<li class="chapter" data-level="9.2" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#mc-distribution"><i class="fa fa-check"></i><b>9.2</b> MC Distribution</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#histogram-and-boxplot"><i class="fa fa-check"></i><b>9.2.1</b> Histogram and boxplot</a></li>
+<li class="chapter" data-level="9.2.2" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#comparing-to-the-normal-distribution"><i class="fa fa-check"></i><b>9.2.2</b> Comparing to the normal distribution</a></li>
+<li class="chapter" data-level="9.2.3" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#comparing-two-distributions"><i class="fa fa-check"></i><b>9.2.3</b> Comparing Two Distributions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="introduction-1.html"><a href="introduction-1.html"><i class="fa fa-check"></i><b>10</b> Introduction</a></li>
+<li class="chapter" data-level="11" data-path="data-1.html"><a href="data-1.html"><i class="fa fa-check"></i><b>11</b> Data</a></li>
+<li class="chapter" data-level="12" data-path="using-package-reshape.html"><a href="using-package-reshape.html"><i class="fa fa-check"></i><b>12</b> Using package <code>reshape</code></a></li>
+<li class="chapter" data-level="13" data-path="subscripting.html"><a href="subscripting.html"><i class="fa fa-check"></i><b>13</b> Subscripting</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="subscripting.html"><a href="subscripting.html#numerical-subscripts"><i class="fa fa-check"></i><b>13.1</b> Numerical Subscripts</a></li>
+<li class="chapter" data-level="13.2" data-path="subscripting.html"><a href="subscripting.html#character-subscripts"><i class="fa fa-check"></i><b>13.2</b> Character Subscripts</a></li>
+<li class="chapter" data-level="13.3" data-path="subscripting.html"><a href="subscripting.html#logical-subscripts"><i class="fa fa-check"></i><b>13.3</b> Logical Subscripts</a></li>
+<li class="chapter" data-level="13.4" data-path="subscripting.html"><a href="subscripting.html#subscripting-matrices"><i class="fa fa-check"></i><b>13.4</b> Subscripting Matrices</a></li>
+<li class="chapter" data-level="13.5" data-path="subscripting.html"><a href="subscripting.html#dropfalse"><i class="fa fa-check"></i><b>13.5</b> <code>drop=FALSE</code></a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="two-useful-functions-for-matrix.html"><a href="two-useful-functions-for-matrix.html"><i class="fa fa-check"></i><b>14</b> Two Useful Functions for Matrix</a></li>
+<li class="chapter" data-level="15" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>15</b> List</a></li>
+<li class="chapter" data-level="16" data-path="aggregation.html"><a href="aggregation.html"><i class="fa fa-check"></i><b>16</b> Aggregation</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="aggregation.html"><a href="aggregation.html#tabulation"><i class="fa fa-check"></i><b>16.1</b> Tabulation</a></li>
+<li class="chapter" data-level="16.2" data-path="aggregation.html"><a href="aggregation.html#general-considerations-of-aggregation"><i class="fa fa-check"></i><b>16.2</b> General Considerations of Aggregation</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="aggregation.html"><a href="aggregation.html#sapply"><i class="fa fa-check"></i><b>16.2.1</b> <code>sapply</code></a></li>
+<li class="chapter" data-level="16.2.2" data-path="aggregation.html"><a href="aggregation.html#apply"><i class="fa fa-check"></i><b>16.2.2</b> <code>apply</code></a></li>
+<li class="chapter" data-level="16.2.3" data-path="aggregation.html"><a href="aggregation.html#mapping-a-function-based-on-groups"><i class="fa fa-check"></i><b>16.2.3</b> Mapping a Function Based on Groups</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>17</b> Data transformation</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="transform.html"><a href="transform.html#introduction-2"><i class="fa fa-check"></i><b>17.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="transform.html"><a href="transform.html#prerequisites"><i class="fa fa-check"></i><b>17.1.1</b> Prerequisites</a></li>
+<li class="chapter" data-level="17.1.2" data-path="transform.html"><a href="transform.html#nycflights13"><i class="fa fa-check"></i><b>17.1.2</b> nycflights13</a></li>
+<li class="chapter" data-level="17.1.3" data-path="transform.html"><a href="transform.html#dplyr-basics"><i class="fa fa-check"></i><b>17.1.3</b> dplyr basics</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="transform.html"><a href="transform.html#filter-rows-with-filter"><i class="fa fa-check"></i><b>17.2</b> Filter rows with <code>filter()</code></a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="transform.html"><a href="transform.html#comparisons"><i class="fa fa-check"></i><b>17.2.1</b> Comparisons</a></li>
+<li class="chapter" data-level="17.2.2" data-path="transform.html"><a href="transform.html#logical-operators"><i class="fa fa-check"></i><b>17.2.2</b> Logical operators</a></li>
+<li class="chapter" data-level="17.2.3" data-path="transform.html"><a href="transform.html#missing-values"><i class="fa fa-check"></i><b>17.2.3</b> Missing values</a></li>
+<li class="chapter" data-level="17.2.4" data-path="transform.html"><a href="transform.html#exercises"><i class="fa fa-check"></i><b>17.2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="transform.html"><a href="transform.html#arrange-rows-with-arrange"><i class="fa fa-check"></i><b>17.3</b> Arrange rows with <code>arrange()</code></a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="transform.html"><a href="transform.html#exercises-1"><i class="fa fa-check"></i><b>17.3.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="transform.html"><a href="transform.html#select"><i class="fa fa-check"></i><b>17.4</b> Select columns with <code>select()</code></a>
+<ul>
+<li class="chapter" data-level="17.4.1" data-path="transform.html"><a href="transform.html#exercises-2"><i class="fa fa-check"></i><b>17.4.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.5" data-path="transform.html"><a href="transform.html#add-new-variables-with-mutate"><i class="fa fa-check"></i><b>17.5</b> Add new variables with <code>mutate()</code></a>
+<ul>
+<li class="chapter" data-level="17.5.1" data-path="transform.html"><a href="transform.html#mutate-funs"><i class="fa fa-check"></i><b>17.5.1</b> Useful creation functions</a></li>
+<li class="chapter" data-level="17.5.2" data-path="transform.html"><a href="transform.html#exercises-3"><i class="fa fa-check"></i><b>17.5.2</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.6" data-path="transform.html"><a href="transform.html#grouped-summaries-with-summarise"><i class="fa fa-check"></i><b>17.6</b> Grouped summaries with <code>summarise()</code></a>
+<ul>
+<li class="chapter" data-level="17.6.1" data-path="transform.html"><a href="transform.html#combining-multiple-operations-with-the-pipe"><i class="fa fa-check"></i><b>17.6.1</b> Combining multiple operations with the pipe</a></li>
+<li class="chapter" data-level="17.6.2" data-path="transform.html"><a href="transform.html#missing-values-1"><i class="fa fa-check"></i><b>17.6.2</b> Missing values</a></li>
+<li class="chapter" data-level="17.6.3" data-path="transform.html"><a href="transform.html#counts"><i class="fa fa-check"></i><b>17.6.3</b> Counts</a></li>
+<li class="chapter" data-level="17.6.4" data-path="transform.html"><a href="transform.html#summarise-funs"><i class="fa fa-check"></i><b>17.6.4</b> Useful summary functions</a></li>
+<li class="chapter" data-level="17.6.5" data-path="transform.html"><a href="transform.html#grouping-by-multiple-variables"><i class="fa fa-check"></i><b>17.6.5</b> Grouping by multiple variables</a></li>
+<li class="chapter" data-level="17.6.6" data-path="transform.html"><a href="transform.html#ungrouping"><i class="fa fa-check"></i><b>17.6.6</b> Ungrouping</a></li>
+<li class="chapter" data-level="17.6.7" data-path="transform.html"><a href="transform.html#exercises-4"><i class="fa fa-check"></i><b>17.6.7</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.7" data-path="transform.html"><a href="transform.html#grouped-mutates-and-filters"><i class="fa fa-check"></i><b>17.7</b> Grouped mutates (and filters)</a>
+<ul>
+<li class="chapter" data-level="17.7.1" data-path="transform.html"><a href="transform.html#exercises-5"><i class="fa fa-check"></i><b>17.7.1</b> Exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="package-reshape.html"><a href="package-reshape.html"><i class="fa fa-check"></i><b>18</b> Package <code>reshape</code></a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="package-reshape.html"><a href="package-reshape.html#melting-data"><i class="fa fa-check"></i><b>18.1</b> Melting data</a></li>
+<li class="chapter" data-level="18.2" data-path="package-reshape.html"><a href="package-reshape.html#casting-molten-data"><i class="fa fa-check"></i><b>18.2</b> Casting molten data</a></li>
+<li class="chapter" data-level="18.3" data-path="package-reshape.html"><a href="package-reshape.html#the-french-fries-example"><i class="fa fa-check"></i><b>18.3</b> The French Fries Example</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="package-reshape2.html"><a href="package-reshape2.html"><i class="fa fa-check"></i><b>19</b> Package <code>reshape2</code></a></li>
+<li class="chapter" data-level="20" data-path="reshaping-data.html"><a href="reshaping-data.html"><i class="fa fa-check"></i><b>20</b> Reshaping Data</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="reshaping-data.html"><a href="reshaping-data.html#modifying-data-frame-variables"><i class="fa fa-check"></i><b>20.1</b> Modifying data frame variables</a></li>
+<li class="chapter" data-level="20.2" data-path="reshaping-data.html"><a href="reshaping-data.html#reshaping-a-data-frame"><i class="fa fa-check"></i><b>20.2</b> Reshaping a data frame</a></li>
+<li class="chapter" data-level="20.3" data-path="reshaping-data.html"><a href="reshaping-data.html#function-reshape"><i class="fa fa-check"></i><b>20.3</b> Function <code>reshape</code></a></li>
+<li class="chapter" data-level="20.4" data-path="reshaping-data.html"><a href="reshaping-data.html#combining-data-frames"><i class="fa fa-check"></i><b>20.4</b> Combining Data Frames</a></li>
+<li class="chapter" data-level="20.5" data-path="reshaping-data.html"><a href="reshaping-data.html#merging-using-index"><i class="fa fa-check"></i><b>20.5</b> Merging using index</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="a-quick-review.html"><a href="a-quick-review.html"><i class="fa fa-check"></i><b>21</b> A quick review</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="a-quick-review.html"><a href="a-quick-review.html#data-in-r"><i class="fa fa-check"></i><b>21.1</b> Data in R</a></li>
+<li class="chapter" data-level="21.2" data-path="a-quick-review.html"><a href="a-quick-review.html#reading-and-writing-data"><i class="fa fa-check"></i><b>21.2</b> Reading and writing data</a></li>
+<li class="chapter" data-level="21.3" data-path="a-quick-review.html"><a href="a-quick-review.html#dates"><i class="fa fa-check"></i><b>21.3</b> Dates</a></li>
+<li class="chapter" data-level="21.4" data-path="a-quick-review.html"><a href="a-quick-review.html#subscripting-1"><i class="fa fa-check"></i><b>21.4</b> Subscripting</a></li>
+<li class="chapter" data-level="21.5" data-path="a-quick-review.html"><a href="a-quick-review.html#data-aggregation"><i class="fa fa-check"></i><b>21.5</b> Data aggregation</a></li>
+<li class="chapter" data-level="21.6" data-path="a-quick-review.html"><a href="a-quick-review.html#data-reshaping"><i class="fa fa-check"></i><b>21.6</b> Data reshaping</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="introduction-3.html"><a href="introduction-3.html"><i class="fa fa-check"></i><b>22</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="22.1" data-path="introduction-3.html"><a href="introduction-3.html#example-1"><i class="fa fa-check"></i><b>22.1</b> Example 1:</a></li>
+<li class="chapter" data-level="22.2" data-path="introduction-3.html"><a href="introduction-3.html#example-2"><i class="fa fa-check"></i><b>22.2</b> Example 2:</a></li>
+<li class="chapter" data-level="22.3" data-path="introduction-3.html"><a href="introduction-3.html#example-4"><i class="fa fa-check"></i><b>22.3</b> Example 4:</a></li>
+<li class="chapter" data-level="22.4" data-path="introduction-3.html"><a href="introduction-3.html#example-5"><i class="fa fa-check"></i><b>22.4</b> Example 5:</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="types-of-arguments.html"><a href="types-of-arguments.html"><i class="fa fa-check"></i><b>23</b> Types of arguments</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="types-of-arguments.html"><a href="types-of-arguments.html#example-6"><i class="fa fa-check"></i><b>23.1</b> Example 6:</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="default-arguments.html"><a href="default-arguments.html"><i class="fa fa-check"></i><b>24</b> Default arguments</a>
+<ul>
+<li class="chapter" data-level="24.1" data-path="default-arguments.html"><a href="default-arguments.html#example-7"><i class="fa fa-check"></i><b>24.1</b> Example 7:</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="recursive-function.html"><a href="recursive-function.html"><i class="fa fa-check"></i><b>25</b> Recursive Function</a></li>
+<li class="chapter" data-level="26" data-path="two-real-example.html"><a href="two-real-example.html"><i class="fa fa-check"></i><b>26</b> Two Real Example</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="two-real-example.html"><a href="two-real-example.html#importing-elisa-test-data"><i class="fa fa-check"></i><b>26.1</b> Importing ELISA Test Data</a></li>
+<li class="chapter" data-level="26.2" data-path="two-real-example.html"><a href="two-real-example.html#the-hockey-stick-model"><i class="fa fa-check"></i><b>26.2</b> The Hockey Stick Model</a></li>
+<li class="chapter" data-level="26.3" data-path="two-real-example.html"><a href="two-real-example.html#sparrow-model"><i class="fa fa-check"></i><b>26.3</b> SPARROW model</a></li>
+</ul></li>
+<li class="chapter" data-level="27" data-path="good-function-writing-practices.html"><a href="good-function-writing-practices.html"><i class="fa fa-check"></i><b>27</b> Good function writing practices</a></li>
+<li class="chapter" data-level="28" data-path="package-tidyr.html"><a href="package-tidyr.html"><i class="fa fa-check"></i><b>28</b> Package <code>tidyr</code></a></li>
+<li class="chapter" data-level="29" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html"><i class="fa fa-check"></i><b>29</b> Package <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="29.1" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#long-versus-wide"><i class="fa fa-check"></i><b>29.1</b> Long versus Wide</a></li>
+<li class="chapter" data-level="29.2" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#reshape2"><i class="fa fa-check"></i><b>29.2</b> <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="29.2.1" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#wide--to-long-format-data-the-melt-function"><i class="fa fa-check"></i><b>29.2.1</b> Wide- to long-format data: the <code>melt</code> function</a></li>
+<li class="chapter" data-level="29.2.2" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#long--to-wide-format-data-the-cast-functions"><i class="fa fa-check"></i><b>29.2.2</b> Long- to wide-format data: the cast functions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html"><i class="fa fa-check"></i><b>30</b> <code>tidyr</code> versus <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#data-tidying"><i class="fa fa-check"></i><b>30.1</b> Data tidying</a>
+<ul>
+<li class="chapter" data-level="30.1.1" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#from-the-wide-to-the-long-format-gather-vs-melt"><i class="fa fa-check"></i><b>30.1.1</b> From the wide to the long format: <code>gather()</code> vs <code>melt()</code></a></li>
+<li class="chapter" data-level="30.1.2" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#split-a-column-separate-vs-colsplit"><i class="fa fa-check"></i><b>30.1.2</b> Split a column: <code>separate()</code> vs <code>colsplit()</code></a></li>
+<li class="chapter" data-level="30.1.3" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#from-the-long-to-the-wide-format-spread-vs-dcast"><i class="fa fa-check"></i><b>30.1.3</b> From the long to the wide format: <code>spread()</code> vs <code>dcast()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="30.2" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#data-aggregation-1"><i class="fa fa-check"></i><b>30.2</b> Data aggregation</a></li>
+</ul></li>
+<li class="chapter" data-level="31" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>31</b> Factors</a>
+<ul>
+<li class="chapter" data-level="31.1" data-path="factors.html"><a href="factors.html#numeric-factors"><i class="fa fa-check"></i><b>31.1</b> Numeric Factors</a></li>
+<li class="chapter" data-level="31.2" data-path="factors.html"><a href="factors.html#manipulating-factors"><i class="fa fa-check"></i><b>31.2</b> Manipulating Factors</a></li>
+<li class="chapter" data-level="31.3" data-path="factors.html"><a href="factors.html#creating-factors-from-continuous-variables"><i class="fa fa-check"></i><b>31.3</b> Creating Factors from Continuous Variables</a></li>
+<li class="chapter" data-level="31.4" data-path="factors.html"><a href="factors.html#factors-based-on-dates-and-times"><i class="fa fa-check"></i><b>31.4</b> Factors Based on Dates and Times</a></li>
+<li class="chapter" data-level="31.5" data-path="factors.html"><a href="factors.html#interactions"><i class="fa fa-check"></i><b>31.5</b> Interactions</a></li>
+</ul></li>
+<li class="chapter" data-level="32" data-path="character-manipulation.html"><a href="character-manipulation.html"><i class="fa fa-check"></i><b>32</b> Character Manipulation</a>
+<ul>
+<li class="chapter" data-level="32.1" data-path="character-manipulation.html"><a href="character-manipulation.html#regular-expressions-in-r"><i class="fa fa-check"></i><b>32.1</b> Regular Expressions in R</a></li>
+<li class="chapter" data-level="32.2" data-path="character-manipulation.html"><a href="character-manipulation.html#breaking-apart-character-values"><i class="fa fa-check"></i><b>32.2</b> Breaking Apart Character Values</a></li>
+<li class="chapter" data-level="32.3" data-path="character-manipulation.html"><a href="character-manipulation.html#substitutions-and-tagging"><i class="fa fa-check"></i><b>32.3</b> Substitutions and Tagging</a></li>
+<li class="chapter" data-level="32.4" data-path="character-manipulation.html"><a href="character-manipulation.html#a-quick-summary"><i class="fa fa-check"></i><b>32.4</b> A Quick Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="33" data-path="introduction-4.html"><a href="introduction-4.html"><i class="fa fa-check"></i><b>33</b> Introduction</a></li>
+<li class="chapter" data-level="34" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i><b>34</b> Examples</a>
+<ul>
+<li class="chapter" data-level="34.1" data-path="examples.html"><a href="examples.html#example-1-1"><i class="fa fa-check"></i><b>34.1</b> Example 1</a></li>
+<li class="chapter" data-level="34.2" data-path="examples.html"><a href="examples.html#example-2-1"><i class="fa fa-check"></i><b>34.2</b> Example 2</a></li>
+<li class="chapter" data-level="34.3" data-path="examples.html"><a href="examples.html#using-lattice-package"><i class="fa fa-check"></i><b>34.3</b> Using Lattice Package</a></li>
+<li class="chapter" data-level="34.4" data-path="examples.html"><a href="examples.html#using-lattice-functions"><i class="fa fa-check"></i><b>34.4</b> Using Lattice Functions</a></li>
+<li class="chapter" data-level="34.5" data-path="examples.html"><a href="examples.html#custom-panel-functions"><i class="fa fa-check"></i><b>34.5</b> Custom Panel Functions</a></li>
+<li class="chapter" data-level="34.6" data-path="examples.html"><a href="examples.html#the-example-that-started-trellis"><i class="fa fa-check"></i><b>34.6</b> The Example That Started Trellis</a></li>
+<li class="chapter" data-level="34.7" data-path="examples.html"><a href="examples.html#an-example-of-graphical-exploratory-data-analysis"><i class="fa fa-check"></i><b>34.7</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="35" data-path="introduction-5.html"><a href="introduction-5.html"><i class="fa fa-check"></i><b>35</b> Introduction</a></li>
+<li class="chapter" data-level="36" data-path="examples-1.html"><a href="examples-1.html"><i class="fa fa-check"></i><b>36</b> Examples</a>
+<ul>
+<li class="chapter" data-level="36.1" data-path="examples-1.html"><a href="examples-1.html#example-1-2"><i class="fa fa-check"></i><b>36.1</b> Example 1</a></li>
+<li class="chapter" data-level="36.2" data-path="examples-1.html"><a href="examples-1.html#example-2-2"><i class="fa fa-check"></i><b>36.2</b> Example 2</a></li>
+<li class="chapter" data-level="36.3" data-path="examples-1.html"><a href="examples-1.html#using-lattice-package-1"><i class="fa fa-check"></i><b>36.3</b> Using Lattice Package</a></li>
+<li class="chapter" data-level="36.4" data-path="examples-1.html"><a href="examples-1.html#using-lattice-functions-1"><i class="fa fa-check"></i><b>36.4</b> Using Lattice Functions</a></li>
+<li class="chapter" data-level="36.5" data-path="examples-1.html"><a href="examples-1.html#costom-panel-functions"><i class="fa fa-check"></i><b>36.5</b> Costom Panel Functions</a></li>
+<li class="chapter" data-level="36.6" data-path="examples-1.html"><a href="examples-1.html#the-example-that-started-trellis-1"><i class="fa fa-check"></i><b>36.6</b> The Example That Started Trellis</a></li>
+<li class="chapter" data-level="36.7" data-path="examples-1.html"><a href="examples-1.html#an-example-of-graphical-exploratory-data-analysis-1"><i class="fa fa-check"></i><b>36.7</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="37" data-path="introduction-6.html"><a href="introduction-6.html"><i class="fa fa-check"></i><b>37</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="37.1" data-path="introduction-6.html"><a href="introduction-6.html#filter"><i class="fa fa-check"></i><b>37.1</b> Filter</a></li>
+<li class="chapter" data-level="37.2" data-path="introduction-6.html"><a href="introduction-6.html#mutate"><i class="fa fa-check"></i><b>37.2</b> Mutate</a></li>
+<li class="chapter" data-level="37.3" data-path="introduction-6.html"><a href="introduction-6.html#summarise"><i class="fa fa-check"></i><b>37.3</b> Summarise</a></li>
+<li class="chapter" data-level="37.4" data-path="introduction-6.html"><a href="introduction-6.html#group-by"><i class="fa fa-check"></i><b>37.4</b> Group By</a></li>
+<li class="chapter" data-level="37.5" data-path="introduction-6.html"><a href="introduction-6.html#sample"><i class="fa fa-check"></i><b>37.5</b> Sample</a></li>
+<li class="chapter" data-level="37.6" data-path="introduction-6.html"><a href="introduction-6.html#count"><i class="fa fa-check"></i><b>37.6</b> Count</a></li>
+<li class="chapter" data-level="37.7" data-path="introduction-6.html"><a href="introduction-6.html#arrange"><i class="fa fa-check"></i><b>37.7</b> Arrange</a></li>
+<li class="chapter" data-level="37.8" data-path="introduction-6.html"><a href="introduction-6.html#pipe"><i class="fa fa-check"></i><b>37.8</b> Pipe</a></li>
+</ul></li>
+<li class="chapter" data-level="38" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html"><i class="fa fa-check"></i><b>38</b> Explaining <code>dplyr</code> – A More Complicated Example</a>
+<ul>
+<li class="chapter" data-level="38.1" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#data-nycflights13"><i class="fa fa-check"></i><b>38.1</b> Data: <code>nycflights13</code></a></li>
+<li class="chapter" data-level="38.2" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#single-table-verbs"><i class="fa fa-check"></i><b>38.2</b> Single table verbs</a></li>
+<li class="chapter" data-level="38.3" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#filter-rows-with-filter-1"><i class="fa fa-check"></i><b>38.3</b> Filter rows with <code>filter()</code></a></li>
+<li class="chapter" data-level="38.4" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#arrange-rows-with-arrange-1"><i class="fa fa-check"></i><b>38.4</b> Arrange rows with <code>arrange()</code></a></li>
+<li class="chapter" data-level="38.5" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#select-columns-with-select"><i class="fa fa-check"></i><b>38.5</b> Select columns with <code>select()</code></a></li>
+<li class="chapter" data-level="38.6" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#extract-distinct-unique-rows"><i class="fa fa-check"></i><b>38.6</b> Extract distinct (unique) rows</a></li>
+<li class="chapter" data-level="38.7" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#add-new-columns-with-mutate"><i class="fa fa-check"></i><b>38.7</b> Add new columns with mutate()</a></li>
+<li class="chapter" data-level="38.8" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#summarise-values-with-summarise"><i class="fa fa-check"></i><b>38.8</b> Summarise values with <code>summarise()</code></a></li>
+<li class="chapter" data-level="38.9" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#randomly-sample-rows-with-sample_n-and-sample_frac"><i class="fa fa-check"></i><b>38.9</b> Randomly sample rows with sample_n() and sample_frac()</a></li>
+<li class="chapter" data-level="38.10" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#commonalities"><i class="fa fa-check"></i><b>38.10</b> Commonalities</a></li>
+</ul></li>
+<li class="chapter" data-level="39" data-path="grouped-operations.html"><a href="grouped-operations.html"><i class="fa fa-check"></i><b>39</b> Grouped operations</a>
+<ul>
+<li class="chapter" data-level="39.1" data-path="grouped-operations.html"><a href="grouped-operations.html#chaining"><i class="fa fa-check"></i><b>39.1</b> Chaining</a></li>
+<li class="chapter" data-level="39.2" data-path="grouped-operations.html"><a href="grouped-operations.html#a-quick-summary-1"><i class="fa fa-check"></i><b>39.2</b> A quick Summary</a>
+<ul>
+<li class="chapter" data-level="39.2.1" data-path="grouped-operations.html"><a href="grouped-operations.html#dplyr-verbs-in-action"><i class="fa fa-check"></i><b>39.2.1</b> dplyr verbs in action</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="40" data-path="a-quick-recap.html"><a href="a-quick-recap.html"><i class="fa fa-check"></i><b>40</b> A Quick Recap</a>
+<ul>
+<li class="chapter" data-level="40.1" data-path="a-quick-recap.html"><a href="a-quick-recap.html#costom-panel-functions-1"><i class="fa fa-check"></i><b>40.1</b> Costom Panel Functions</a></li>
+<li class="chapter" data-level="40.2" data-path="a-quick-recap.html"><a href="a-quick-recap.html#the-example-that-started-trellis-2"><i class="fa fa-check"></i><b>40.2</b> The Example That Started Trellis</a></li>
+</ul></li>
+<li class="chapter" data-level="41" data-path="types-of-data.html"><a href="types-of-data.html"><i class="fa fa-check"></i><b>41</b> Types of Data</a>
+<ul>
+<li class="chapter" data-level="41.1" data-path="types-of-data.html"><a href="types-of-data.html#univariate-data"><i class="fa fa-check"></i><b>41.1</b> Univariate data</a></li>
+<li class="chapter" data-level="41.2" data-path="types-of-data.html"><a href="types-of-data.html#fits-and-residuals"><i class="fa fa-check"></i><b>41.2</b> Fits and Residuals</a>
+<ul>
+<li class="chapter" data-level="41.2.1" data-path="types-of-data.html"><a href="types-of-data.html#homogeneity-and-pooling"><i class="fa fa-check"></i><b>41.2.1</b> Homogeneity and Pooling</a></li>
+<li class="chapter" data-level="41.2.2" data-path="types-of-data.html"><a href="types-of-data.html#checking-for-normality-of-the-pooled-residuals"><i class="fa fa-check"></i><b>41.2.2</b> Checking for normality of the pooled residuals</a></li>
+<li class="chapter" data-level="41.2.3" data-path="types-of-data.html"><a href="types-of-data.html#the-rfs-plot"><i class="fa fa-check"></i><b>41.2.3</b> The <code>rfs</code> plot</a></li>
+</ul></li>
+<li class="chapter" data-level="41.3" data-path="types-of-data.html"><a href="types-of-data.html#bivariate-data"><i class="fa fa-check"></i><b>41.3</b> Bivariate data</a></li>
+<li class="chapter" data-level="41.4" data-path="types-of-data.html"><a href="types-of-data.html#trivariate-and-hypervariate-data"><i class="fa fa-check"></i><b>41.4</b> Trivariate and hypervariate data</a></li>
+<li class="chapter" data-level="41.5" data-path="types-of-data.html"><a href="types-of-data.html#multiway-data"><i class="fa fa-check"></i><b>41.5</b> Multiway data</a></li>
+</ul></li>
+<li class="chapter" data-level="42" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html"><i class="fa fa-check"></i><b>42</b> Univariate Data – Displaying and Comparing Distributions</a>
+<ul>
+<li class="chapter" data-level="42.1" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#displaying-distribution"><i class="fa fa-check"></i><b>42.1</b> Displaying distribution</a></li>
+<li class="chapter" data-level="42.2" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#comparing-distributions"><i class="fa fa-check"></i><b>42.2</b> Comparing distributions</a></li>
+<li class="chapter" data-level="42.3" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#an-example-of-graphical-exploratory-data-analysis-2"><i class="fa fa-check"></i><b>42.3</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="43" data-path="a-summary.html"><a href="a-summary.html"><i class="fa fa-check"></i><b>43</b> A Summary</a>
+<ul>
+<li class="chapter" data-level="43.1" data-path="a-summary.html"><a href="a-summary.html#types-of-data-1"><i class="fa fa-check"></i><b>43.1</b> Types of Data</a>
+<ul>
+<li class="chapter" data-level="43.1.1" data-path="a-summary.html"><a href="a-summary.html#checking-for-normality-of-the-pooled-residuals-1"><i class="fa fa-check"></i><b>43.1.1</b> Checking for normality of the pooled residuals</a></li>
+<li class="chapter" data-level="43.1.2" data-path="a-summary.html"><a href="a-summary.html#the-rfs-plot-1"><i class="fa fa-check"></i><b>43.1.2</b> The <code>rfs</code> plot</a></li>
+</ul></li>
+<li class="chapter" data-level="43.2" data-path="a-summary.html"><a href="a-summary.html#additive-versus-multiplicative-shifts"><i class="fa fa-check"></i><b>43.2</b> Additive versus multiplicative shifts</a></li>
+<li class="chapter" data-level="43.3" data-path="a-summary.html"><a href="a-summary.html#using-q-q-plot-to-check-for-additive-shift"><i class="fa fa-check"></i><b>43.3</b> Using Q-Q plot to Check for Additive Shift</a></li>
+<li class="chapter" data-level="43.4" data-path="a-summary.html"><a href="a-summary.html#transformation-to-normality"><i class="fa fa-check"></i><b>43.4</b> Transformation to Normality</a></li>
+<li class="chapter" data-level="43.5" data-path="a-summary.html"><a href="a-summary.html#an-example-of-graphical-exploratory-data-analysis-3"><i class="fa fa-check"></i><b>43.5</b> An Example of Graphical Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="43.6" data-path="a-summary.html"><a href="a-summary.html#nutrient-loading-and-flow-from-maumee"><i class="fa fa-check"></i><b>43.6</b> Nutrient Loading and Flow from Maumee</a>
+<ul>
+<li class="chapter" data-level="43.6.1" data-path="a-summary.html"><a href="a-summary.html#objectives"><i class="fa fa-check"></i><b>43.6.1</b> Objectives</a></li>
+<li class="chapter" data-level="43.6.2" data-path="a-summary.html"><a href="a-summary.html#methods"><i class="fa fa-check"></i><b>43.6.2</b> Methods</a></li>
+<li class="chapter" data-level="43.6.3" data-path="a-summary.html"><a href="a-summary.html#results"><i class="fa fa-check"></i><b>43.6.3</b> Results</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Environmental Data Management</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="two-real-example" class="section level1" number="26">
+<h1><span class="header-section-number">26</span> Two Real Example</h1>
+<div id="importing-elisa-test-data" class="section level2" number="26.1">
+<h2><span class="header-section-number">26.1</span> Importing ELISA Test Data</h2>
+<p>In analyzing microcystin (MC) analysis data from OSU Stone Lab, we need to import raw data from the test kit. Each test has its own Excel spreadsheet. Each test has two sets of raw data: the readings of optical density (OD) from water samples (for calculating color absorption) and standard solution MC concentrations (for developing a standard curve). To properly analyze the data, I need to import the raw OD data and the standard solution concentrations. However, the spreadsheet has a format that cannot be directly imported using <code>read.table</code>. The raw OD data are stored in a block starts at line 22 and the standard solution concentrations are in another block starting at line 33. There are other complicating factors because of the number of water samples used in each test are different.</p>
+<p>I want to import the raw data for the standard solutions, as well as the results for water samples with unknown MC concentrations. The easy way is to copy and paste the two blocks of data into separate csv files. But there are 21 such tests and we are looking for more. I wrote the following function to import the ELISA data:</p>
+<div class="sourceCode" id="cb560"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb560-1"><a href="two-real-example.html#cb560-1" aria-hidden="true" tabindex="-1"></a>input <span class="ot">&lt;-</span> <span class="cf">function</span>(infile){</span>
+<span id="cb560-2"><a href="two-real-example.html#cb560-2" aria-hidden="true" tabindex="-1"></a>      tmp1 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="fu">paste</span>(dataDIR, infile, <span class="at">sep=</span><span class="st">&quot;/&quot;</span>), <span class="at">sep=</span><span class="st">&quot;,&quot;</span>,</span>
+<span id="cb560-3"><a href="two-real-example.html#cb560-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">skip=</span><span class="dv">21</span>, <span class="at">nrow=</span><span class="dv">8</span>, <span class="at">header=</span>F)[,<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)]</span>
+<span id="cb560-4"><a href="two-real-example.html#cb560-4" aria-hidden="true" tabindex="-1"></a>      tmp1 <span class="ot">&lt;-</span> tmp1[,<span class="sc">-</span><span class="fu">dim</span>(tmp1)[<span class="dv">2</span>]]</span>
+<span id="cb560-5"><a href="two-real-example.html#cb560-5" aria-hidden="true" tabindex="-1"></a>      tmp2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste</span>(dataDIR, infile, <span class="at">sep=</span><span class="st">&quot;/&quot;</span>), </span>
+<span id="cb560-6"><a href="two-real-example.html#cb560-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">skip=</span><span class="dv">31</span>, <span class="at">header=</span>T)[,<span class="dv">2</span><span class="sc">:</span><span class="dv">7</span>]</span>
+<span id="cb560-7"><a href="two-real-example.html#cb560-7" aria-hidden="true" tabindex="-1"></a>      tmp <span class="ot">&lt;-</span> <span class="fu">apply</span>(<span class="fu">as.matrix</span>(tmp1), <span class="dv">2</span>, sum, <span class="at">na.rm=</span>T) <span class="sc">==</span> <span class="dv">0</span></span>
+<span id="cb560-8"><a href="two-real-example.html#cb560-8" aria-hidden="true" tabindex="-1"></a>      tmp1 <span class="ot">&lt;-</span> tmp1[,<span class="sc">!</span>tmp]</span>
+<span id="cb560-9"><a href="two-real-example.html#cb560-9" aria-hidden="true" tabindex="-1"></a>      tmp <span class="ot">&lt;-</span> <span class="fu">apply</span>(tmp2,<span class="dv">1</span>, <span class="at">FUN=</span><span class="cf">function</span>(x) <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(x)))<span class="sc">!=</span><span class="dv">1</span></span>
+<span id="cb560-10"><a href="two-real-example.html#cb560-10" aria-hidden="true" tabindex="-1"></a>      tmp2 <span class="ot">&lt;-</span> tmp2[tmp,]  </span>
+<span id="cb560-11"><a href="two-real-example.html#cb560-11" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">dim</span>(tmp1)[<span class="dv">2</span>]<span class="sc">%%</span><span class="dv">2</span> <span class="sc">!=</span><span class="dv">0</span>) <span class="fu">stop</span>(<span class="st">&quot;Number of rows must be even&quot;</span>)</span>
+<span id="cb560-12"><a href="two-real-example.html#cb560-12" aria-hidden="true" tabindex="-1"></a>      <span class="do">## two replicates are used</span></span>
+<span id="cb560-13"><a href="two-real-example.html#cb560-13" aria-hidden="true" tabindex="-1"></a>      dm1 <span class="ot">&lt;-</span> <span class="fu">dim</span>(tmp1)[<span class="dv">2</span>]<span class="sc">/</span><span class="dv">2</span></span>
+<span id="cb560-14"><a href="two-real-example.html#cb560-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb560-15"><a href="two-real-example.html#cb560-15" aria-hidden="true" tabindex="-1"></a>      tmp1 <span class="ot">&lt;-</span> <span class="fu">unlist</span>(tmp1)</span>
+<span id="cb560-16"><a href="two-real-example.html#cb560-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb560-17"><a href="two-real-example.html#cb560-17" aria-hidden="true" tabindex="-1"></a>      <span class="do">## </span></span>
+<span id="cb560-18"><a href="two-real-example.html#cb560-18" aria-hidden="true" tabindex="-1"></a>      n <span class="ot">&lt;-</span> <span class="fu">length</span>(tmp1) <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">dim</span>(tmp2)[<span class="dv">1</span>]</span>
+<span id="cb560-19"><a href="two-real-example.html#cb560-19" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (n<span class="sc">&lt;</span><span class="dv">0</span>)    <span class="fu">stop</span> (<span class="st">&quot;Check data&quot;</span>)</span>
+<span id="cb560-20"><a href="two-real-example.html#cb560-20" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (n <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb560-21"><a href="two-real-example.html#cb560-21" aria-hidden="true" tabindex="-1"></a>          nas <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">matrix</span>(<span class="cn">NA</span>, <span class="at">nrow=</span>n<span class="sc">/</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="fu">dim</span>(tmp2)[<span class="dv">2</span>]))</span>
+<span id="cb560-22"><a href="two-real-example.html#cb560-22" aria-hidden="true" tabindex="-1"></a>          <span class="fu">names</span>(nas) <span class="ot">&lt;-</span> <span class="fu">names</span>(tmp2)</span>
+<span id="cb560-23"><a href="two-real-example.html#cb560-23" aria-hidden="true" tabindex="-1"></a>          tmp2 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(tmp2, nas)</span>
+<span id="cb560-24"><a href="two-real-example.html#cb560-24" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb560-25"><a href="two-real-example.html#cb560-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb560-26"><a href="two-real-example.html#cb560-26" aria-hidden="true" tabindex="-1"></a>      <span class="do">##</span></span>
+<span id="cb560-27"><a href="two-real-example.html#cb560-27" aria-hidden="true" tabindex="-1"></a>      rws <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb560-28"><a href="two-real-example.html#cb560-28" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>dm1)</span>
+<span id="cb560-29"><a href="two-real-example.html#cb560-29" aria-hidden="true" tabindex="-1"></a>          rws <span class="ot">&lt;-</span> <span class="fu">c</span>(rws, <span class="fu">rep</span>(((i<span class="dv">-1</span>)<span class="sc">*</span><span class="dv">8</span><span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span>(i<span class="sc">*</span><span class="dv">8</span>), <span class="dv">2</span>))</span>
+<span id="cb560-30"><a href="two-real-example.html#cb560-30" aria-hidden="true" tabindex="-1"></a>      tmp2 <span class="ot">&lt;-</span> tmp2[rws,]</span>
+<span id="cb560-31"><a href="two-real-example.html#cb560-31" aria-hidden="true" tabindex="-1"></a>      tmp2<span class="sc">$</span>Abs.obs <span class="ot">&lt;-</span> tmp1</span>
+<span id="cb560-32"><a href="two-real-example.html#cb560-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb560-33"><a href="two-real-example.html#cb560-33" aria-hidden="true" tabindex="-1"></a>      <span class="do">## 2 reference abs</span></span>
+<span id="cb560-34"><a href="two-real-example.html#cb560-34" aria-hidden="true" tabindex="-1"></a>      refabs <span class="ot">&lt;-</span> tmp2<span class="sc">$</span>Abs.obs[tmp2<span class="sc">$</span>conc<span class="sc">==</span><span class="dv">0</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(tmp2<span class="sc">$</span>conc)]</span>
+<span id="cb560-35"><a href="two-real-example.html#cb560-35" aria-hidden="true" tabindex="-1"></a>      b0b1<span class="fl">.1</span> <span class="ot">&lt;-</span> tmp2<span class="sc">$</span>ABS<span class="sc">/</span>refabs[<span class="dv">1</span>]</span>
+<span id="cb560-36"><a href="two-real-example.html#cb560-36" aria-hidden="true" tabindex="-1"></a>      b0b1<span class="fl">.2</span> <span class="ot">&lt;-</span> tmp2<span class="sc">$</span>ABS<span class="sc">/</span>refabs[<span class="dv">2</span>]</span>
+<span id="cb560-37"><a href="two-real-example.html#cb560-37" aria-hidden="true" tabindex="-1"></a>      b0b1<span class="fl">.3</span> <span class="ot">&lt;-</span> tmp2<span class="sc">$</span>ABS<span class="sc">/</span><span class="fu">mean</span>(refabs)</span>
+<span id="cb560-38"><a href="two-real-example.html#cb560-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb560-39"><a href="two-real-example.html#cb560-39" aria-hidden="true" tabindex="-1"></a>      calib <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">y1=</span>b0b1<span class="fl">.1</span>, <span class="at">y2=</span>b0b1<span class="fl">.2</span>, <span class="at">y3=</span>b0b1<span class="fl">.3</span>, </span>
+<span id="cb560-40"><a href="two-real-example.html#cb560-40" aria-hidden="true" tabindex="-1"></a>                          <span class="at">conc=</span>tmp2<span class="sc">$</span>conc, <span class="at">ABS =</span> tmp2<span class="sc">$</span>Abs.obs)</span>
+<span id="cb560-41"><a href="two-real-example.html#cb560-41" aria-hidden="true" tabindex="-1"></a>      calib<span class="sc">$</span>smp <span class="ot">&lt;-</span> tmp2<span class="sc">$</span>X<span class="fl">.1</span></span>
+<span id="cb560-42"><a href="two-real-example.html#cb560-42" aria-hidden="true" tabindex="-1"></a>      <span class="do">##  calib.data &lt;- calib.data[calib.data$conc!=0,]</span></span>
+<span id="cb560-43"><a href="two-real-example.html#cb560-43" aria-hidden="true" tabindex="-1"></a>      calib<span class="sc">$</span>conc[<span class="fu">substring</span>(calib<span class="sc">$</span>smp, <span class="dv">1</span>, <span class="dv">8</span>)<span class="sc">!=</span><span class="st">&quot;Standard&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb560-44"><a href="two-real-example.html#cb560-44" aria-hidden="true" tabindex="-1"></a>      tmp <span class="ot">&lt;-</span> <span class="sc">!</span><span class="fu">is.na</span>(calib<span class="sc">$</span>smp)</span>
+<span id="cb560-45"><a href="two-real-example.html#cb560-45" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(calib[tmp,])</span>
+<span id="cb560-46"><a href="two-real-example.html#cb560-46" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb560-47"><a href="two-real-example.html#cb560-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb560-48"><a href="two-real-example.html#cb560-48" aria-hidden="true" tabindex="-1"></a><span class="fu">input</span>(<span class="st">&quot;Aug25.26.csv&quot;</span>)</span></code></pre></div>
+<pre><code>##           y1        y2        y3 conc   ABS              smp
+## 1  0.2936615 0.3049720 0.2992099 5.00 0.440       Standard 5
+## 2  0.4140256 0.4299720 0.4218482 2.00 0.627       Standard 4
+## 3  0.5940661 0.6169468 0.6052903 1.00 0.947       Standard 3
+## 4  0.6793661 0.7055322 0.6922020 0.40 0.983       Standard 2
+## 5  0.8975051 0.9320728 0.9144624 0.15 1.319       Standard 1
+## 6  0.9814565 1.0192577 1.0000000 0.00 1.483       Standard 0
+## 7  0.5020229 0.5213585 0.5115081   NA 0.732 Positive Control
+## 8  0.9474039 0.9838936 0.9653040   NA 1.431            PIB F
+## 9  0.2936615 0.3049720 0.2992099 5.00 0.431       Standard 5
+## 10 0.4140256 0.4299720 0.4218482 2.00 0.601       Standard 4
+## 11 0.5940661 0.6169468 0.6052903 1.00 0.815       Standard 3
+## 12 0.6793661 0.7055322 0.6922020 0.40 1.032       Standard 2
+## 13 0.8975051 0.9320728 0.9144624 0.15 1.343       Standard 1
+## 14 0.9814565 1.0192577 1.0000000 0.00 1.428       Standard 0
+## 15 0.5020229 0.5213585 0.5115081   NA 0.757 Positive Control
+## 16 0.9474039 0.9838936 0.9653040   NA 1.379            PIB F
+## 17 0.7572488 0.7864146 0.7715562   NA 1.243            PIB R
+## 18 1.0279838 1.0675770 1.0474064   NA 1.554            LEU F
+## 19 0.3159137 0.3280812 0.3218825   NA 0.520            LEU R
+## 20 1.0276467 1.0672269 1.0470629   NA 1.501             MH F
+## 21 0.6078894 0.6313025 0.6193748   NA 0.951             MH R
+## 22 0.9386379 0.9747899 0.9563724   NA 1.346            Ver F
+## 23 0.9423466 0.9786415 0.9601512   NA 1.535            Ver R
+## 24 0.2845583 0.2955182 0.2899347   NA 0.408         MB Int A
+## 25 0.7572488 0.7864146 0.7715562   NA 1.003            PIB R
+## 26 1.0279838 1.0675770 1.0474064   NA 1.495            LEU F
+## 27 0.3159137 0.3280812 0.3218825   NA 0.417            LEU R
+## 28 1.0276467 1.0672269 1.0470629   NA 1.547             MH F
+## 29 0.6078894 0.6313025 0.6193748   NA 0.852             MH R
+## 30 0.9386379 0.9747899 0.9563724   NA 1.438            Ver F
+## 31 0.9423466 0.9786415 0.9601512   NA 1.260            Ver R
+## 32 0.2845583 0.2955182 0.2899347   NA 0.436         MB Int A
+## 33 0.3371544 0.3501401 0.3435246   NA 0.506         MB Int B
+## 34 0.3388402 0.3518908 0.3452422   NA 0.454             MB 1
+## 35 0.2612947 0.2713585 0.2662315   NA 0.437             MB 2
+## 36 0.2144302 0.2226891 0.2184816   NA 0.314             MB 3
+## 37 0.1904922 0.1978291 0.1940914   NA 0.270             MB 4
+## 38 0.2545516 0.2643557 0.2593610   NA 0.314             MB 5
+## 39 0.2262306 0.2349440 0.2305050   NA 0.344             MB 6
+## 40 0.3071477 0.3189776 0.3129509   NA 0.464             MB 7
+## 41 0.3371544 0.3501401 0.3435246   NA 0.494         MB Int B
+## 42 0.3388402 0.3518908 0.3452422   NA 0.551             MB 1
+## 43 0.2612947 0.2713585 0.2662315   NA 0.338             MB 2
+## 44 0.2144302 0.2226891 0.2184816   NA 0.322             MB 3
+## 45 0.1904922 0.1978291 0.1940914   NA 0.295             MB 4
+## 46 0.2545516 0.2643557 0.2593610   NA 0.441             MB 5
+## 47 0.2262306 0.2349440 0.2305050   NA 0.327             MB 6
+## 48 0.3071477 0.3189776 0.3129509   NA 0.447             MB 7
+## 49 0.2596089 0.2696078 0.2645139   NA 0.389             MB 8
+## 50 0.2636548 0.2738095 0.2686362   NA 0.335             MB 9
+## 51 0.2848955 0.2958683 0.2902783   NA 0.396            MB 10
+## 52 0.2322994 0.2412465 0.2366884   NA 0.317            MB 11
+## 53 0.2440998 0.2535014 0.2487118   NA 0.421            MB 12
+## 54 0.1739717 0.1806723 0.1772587   NA 0.232            MB 13
+## 55 0.2329737 0.2419468 0.2373755   NA 0.284            MB 14
+## 56 0.2596089 0.2696078 0.2645139   NA 0.295            MB 15
+## 57 0.2596089 0.2696078 0.2645139   NA 0.381             MB 8
+## 58 0.2636548 0.2738095 0.2686362   NA 0.447             MB 9
+## 59 0.2848955 0.2958683 0.2902783   NA 0.449            MB 10
+## 60 0.2322994 0.2412465 0.2366884   NA 0.372            MB 11
+## 61 0.2440998 0.2535014 0.2487118   NA 0.303            MB 12
+## 62 0.1739717 0.1806723 0.1772587   NA 0.284            MB 13
+## 63 0.2329737 0.2419468 0.2373755   NA 0.407            MB 14
+## 64 0.2596089 0.2696078 0.2645139   NA 0.475            MB 15
+## 65 0.2215105 0.2300420 0.2256956   NA 0.324            MB 16
+## 66 0.2167903 0.2251401 0.2208863   NA 0.356            MB 17
+## 67 0.2012812 0.2090336 0.2050842   NA 0.287            MB 18
+## 68 0.2070128 0.2149860 0.2109241   NA 0.322            MB 19
+## 69 0.2022927 0.2100840 0.2061147   NA 0.345            MB 20
+## 70 0.1850978 0.1922269 0.1885950   NA 0.250            MB 21
+## 71 0.1962239 0.2037815 0.1999313   NA 0.288            MB 22
+## 72 0.2697235 0.2801120 0.2748196   NA 0.299            MB 23
+## 73 0.2215105 0.2300420 0.2256956   NA 0.333            MB 16
+## 74 0.2167903 0.2251401 0.2208863   NA 0.287            MB 17
+## 75 0.2012812 0.2090336 0.2050842   NA 0.310            MB 18
+## 76 0.2070128 0.2149860 0.2109241   NA 0.292            MB 19
+## 77 0.2022927 0.2100840 0.2061147   NA 0.255            MB 20
+## 78 0.1850978 0.1922269 0.1885950   NA 0.299            MB 21
+## 79 0.1962239 0.2037815 0.1999313   NA 0.294            MB 22
+## 80 0.2697235 0.2801120 0.2748196   NA 0.501            MB 23
+## 81 0.2997303 0.3112745 0.3053933   NA 0.392            MB 24
+## 82 0.2454484 0.2549020 0.2500859   NA 0.349            MB 25
+## 83 0.2174646 0.2258403 0.2215733   NA 0.312            MB 26
+## 84 0.2110587 0.2191877 0.2150464   NA 0.320            MB 27
+## 85 1.0441672 1.0843838 1.0638956   NA 1.552            CC036
+## 86 0.8968307 0.9313725 0.9137753   NA 1.300            CC037
+## 87 1.0192178 1.0584734 1.0384748   NA 1.478            CC038
+## 88 0.2855698 0.2965686 0.2909653   NA 0.480            CC039
+## 89 0.2997303 0.3112745 0.3053933   NA 0.497            MB 24
+## 90 0.2454484 0.2549020 0.2500859   NA 0.379            MB 25
+## 91 0.2174646 0.2258403 0.2215733   NA 0.333            MB 26
+## 92 0.2110587 0.2191877 0.2150464   NA 0.306            MB 27
+## 93 1.0441672 1.0843838 1.0638956   NA 1.545            CC036
+## 94 0.8968307 0.9313725 0.9137753   NA 1.360            CC037
+## 95 1.0192178 1.0584734 1.0384748   NA 1.545            CC038
+## 96 0.2855698 0.2965686 0.2909653   NA 0.367            CC039</code></pre>
+</div>
+<div id="the-hockey-stick-model" class="section level2" number="26.2">
+<h2><span class="header-section-number">26.2</span> The Hockey Stick Model</h2>
+<p>I use the piece-wise linear model, also known as the hockey stick model, to analyze phenology data related to climate change. The model consists of two joint line segments. The objective of fitting a hockey stick model is to estimate the intercepts and slopes of the two lines, as well as the location where the two lines join. This model is nonlinear. When fitting a nonlinear model, we often need to calculate the first order derivatives of model coefficients. The hockey stick model, although simple, has a non-continuous first derivative of the change point, which makes the nonlinear model-fitting process unstable. To avoid this problem, we can use a small piece of quadratic curve to connect the two line segments. This quadratic piece can be determined algebraically by (1) setting the length of the curve and (2) constraining the slopes of the curve to be the same as the two line segments at points where they meet.</p>
+<p>The function is:</p>
+<div class="sourceCode" id="cb562"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb562-1"><a href="two-real-example.html#cb562-1" aria-hidden="true" tabindex="-1"></a>hockey <span class="ot">&lt;-</span> <span class="cf">function</span>(x, alpha, beta1, beta2, phi, <span class="at">eps=</span><span class="fu">diff</span>(<span class="fu">range</span>(x))<span class="sc">/</span><span class="dv">100</span>, <span class="at">delta=</span>T){</span>
+<span id="cb562-2"><a href="two-real-example.html#cb562-2" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> x<span class="sc">-</span>phi <span class="do">## center the data at the change point</span></span>
+<span id="cb562-3"><a href="two-real-example.html#cb562-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (delta) beta2 <span class="ot">&lt;-</span> beta1<span class="sc">+</span>beta2</span>
+<span id="cb562-4"><a href="two-real-example.html#cb562-4" aria-hidden="true" tabindex="-1"></a>  x1 <span class="ot">&lt;-</span> <span class="sc">-</span>eps</span>
+<span id="cb562-5"><a href="two-real-example.html#cb562-5" aria-hidden="true" tabindex="-1"></a>  x2 <span class="ot">&lt;-</span> <span class="sc">+</span>eps</span>
+<span id="cb562-6"><a href="two-real-example.html#cb562-6" aria-hidden="true" tabindex="-1"></a>  b <span class="ot">&lt;-</span> (x2<span class="sc">*</span>beta1<span class="sc">-</span>x1<span class="sc">*</span>beta2)<span class="sc">/</span>(x2<span class="sc">-</span>x1)</span>
+<span id="cb562-7"><a href="two-real-example.html#cb562-7" aria-hidden="true" tabindex="-1"></a>  cc <span class="ot">&lt;-</span> (beta2<span class="sc">-</span>b)<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span>x2)</span>
+<span id="cb562-8"><a href="two-real-example.html#cb562-8" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">&lt;-</span> alpha1<span class="sc">+</span>beta1<span class="sc">*</span>x1<span class="sc">-</span>b<span class="sc">*</span>x1<span class="sc">-</span>cc<span class="sc">*</span>x1<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb562-9"><a href="two-real-example.html#cb562-9" aria-hidden="true" tabindex="-1"></a>  alpha2 <span class="ot">&lt;-</span> <span class="sc">-</span>beta2<span class="sc">*</span>x2<span class="sc">+</span>(a<span class="sc">+</span>b<span class="sc">*</span>x2<span class="sc">+</span>xx<span class="sc">*</span>x2<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb562-10"><a href="two-real-example.html#cb562-10" aria-hidden="true" tabindex="-1"></a>  lephi <span class="ot">&lt;-</span> (x<span class="sc">&lt;=</span> <span class="sc">-</span>eps)</span>
+<span id="cb562-11"><a href="two-real-example.html#cb562-11" aria-hidden="true" tabindex="-1"></a>  gephi <span class="ot">&lt;-</span> (x<span class="sc">&gt;=</span> eps)</span>
+<span id="cb562-12"><a href="two-real-example.html#cb562-12" aria-hidden="true" tabindex="-1"></a>  eqphi <span class="ot">&lt;-</span> (x <span class="sc">&gt;</span> <span class="sc">-</span>eps <span class="sc">&amp;</span> x <span class="sc">&lt;</span> eps)</span>
+<span id="cb562-13"><a href="two-real-example.html#cb562-13" aria-hidden="true" tabindex="-1"></a>  result <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">length</span>(x))</span>
+<span id="cb562-14"><a href="two-real-example.html#cb562-14" aria-hidden="true" tabindex="-1"></a>  result[lephi] <span class="ot">&lt;-</span> alpha1 <span class="sc">+</span> beta1 <span class="sc">*</span> x[lephi]</span>
+<span id="cb562-15"><a href="two-real-example.html#cb562-15" aria-hidden="true" tabindex="-1"></a>  result[eqphi] <span class="ot">&lt;-</span> a <span class="sc">+</span> b<span class="sc">*</span>x[eqphi] <span class="sc">+</span> cc<span class="sc">*</span>x[eqphi]<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb562-16"><a href="two-real-example.html#cb562-16" aria-hidden="true" tabindex="-1"></a>  result[gephi] <span class="ot">&lt;-</span> alpha2 <span class="sc">+</span> beta2 <span class="sc">*</span> x[gephi]</span>
+<span id="cb562-17"><a href="two-real-example.html#cb562-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span> (result)</span>
+<span id="cb562-18"><a href="two-real-example.html#cb562-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>With this function, we can easily fit a hockey stick model in R using the nonlinear regression function <code>nls</code>. I used it to analyze phenological data, such as the timing of the onset of spring. Using the first bloom dates of a common flowering tree species (lilac) monitored throughout the conuntry, I suggested that the effect of climate change was first shown in the data in the 1980s. Unfortunately, this function was also used by a “researcher” to link autism to vaccine, after two EPA scientists used it to show an accelerated rate of increase in worldwide autism cases after 1988-89.</p>
+</div>
+<div id="sparrow-model" class="section level2" number="26.3">
+<h2><span class="header-section-number">26.3</span> SPARROW model</h2>
+<p>A watershed nutrient loading model known as SPARROW (Spatially Referenced Regressions On Watershed attributes) is used by USGS to estimate nutrient loadings. The model is a nonlinear regression model with the model form based on simple mass-balance. When using SPARROW, we locate long-term water quality monitoring stations in the watershed and calculate the nutrient load based on flow and concentration measurements. The observed nutrient load is linked to the sources of nutrient in the watershed through a mass-balance equation:</p>
+<p><span class="math display">\[
+y_{i} = \sum_j\sum_{k=1}(K\beta_j S_ke^{-\alpha_1Z_{ij}})e^{-\alpha_2L_i} + e_i
+\]</span></p>
+<p>where, <span class="math inline">\(y_{i}\)</span> is the observed nutrient load at the <span class="math inline">\(i\)</span>th watershed, <span class="math inline">\(j\)</span> is the index of stream reaches in watershed <span class="math inline">\(i\)</span>, <span class="math inline">\(S_k\)</span> is the <span class="math inline">\(k\)</span>th source of nutrient, <span class="math inline">\(Z_{ij}\)</span> is the soil characteristics in the catchment of stream reach <span class="math inline">\(j\)</span>, and <span class="math inline">\(L\)</span> is the length of stream in watershed <span class="math inline">\(i\)</span>. In a small watershed case study, there are only 2 sources (K=2), but as many as 53 stream reaches in a watershed. In other words, the formula will have a sum of 53 items. I wrote the following function:</p>
+<div class="sourceCode" id="cb563"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb563-1"><a href="two-real-example.html#cb563-1" aria-hidden="true" tabindex="-1"></a><span class="do">## The SPARROW model function</span></span>
+<span id="cb563-2"><a href="two-real-example.html#cb563-2" aria-hidden="true" tabindex="-1"></a>Sparrow.Neuse1 <span class="ot">&lt;-</span> <span class="cf">function</span>(beta2, beta4, beta5, alpha1, alpha2, alpha3, alpha4,</span>
+<span id="cb563-3"><a href="two-real-example.html#cb563-3" aria-hidden="true" tabindex="-1"></a>                           <span class="at">Upload=</span>X0.a, <span class="at">Point=</span>X2.a, <span class="at">S1=</span>X4.a, <span class="at">S2=</span>X5.a,</span>
+<span id="cb563-4"><a href="two-real-example.html#cb563-4" aria-hidden="true" tabindex="-1"></a>                           <span class="at">Z=</span>Z1.a, <span class="at">Strm1=</span>H1.a, <span class="at">Strm2=</span>H2.a, <span class="at">LR=</span>H3.a){</span>
+<span id="cb563-5"><a href="two-real-example.html#cb563-5" aria-hidden="true" tabindex="-1"></a>  nseg <span class="ot">&lt;-</span> <span class="fu">dim</span>(Upload) </span>
+<span id="cb563-6"><a href="two-real-example.html#cb563-6" aria-hidden="true" tabindex="-1"></a>  yield <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb563-7"><a href="two-real-example.html#cb563-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nseg){</span>
+<span id="cb563-8"><a href="two-real-example.html#cb563-8" aria-hidden="true" tabindex="-1"></a>    yield <span class="ot">&lt;-</span> yield<span class="sc">+</span> (Upload[,i] <span class="sc">+</span> beta2<span class="sc">*</span>Point[,i] <span class="sc">+</span> </span>
+<span id="cb563-9"><a href="two-real-example.html#cb563-9" aria-hidden="true" tabindex="-1"></a>                    (beta4<span class="sc">*</span>S1[,i] <span class="sc">+</span> beta5<span class="sc">*</span>S2[,i])<span class="sc">*</span> <span class="fu">exp</span>(alpha1<span class="sc">*</span>Z[,i]))<span class="sc">*</span></span>
+<span id="cb563-10"><a href="two-real-example.html#cb563-10" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">exp</span>(alpha2<span class="sc">*</span>Strm1[,i])<span class="sc">*</span><span class="fu">exp</span>(alpha3<span class="sc">*</span>Strm2[,i])<span class="sc">*</span></span>
+<span id="cb563-11"><a href="two-real-example.html#cb563-11" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">exp</span>(alpha4<span class="sc">*</span>LR[,i])</span>
+<span id="cb563-12"><a href="two-real-example.html#cb563-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb563-13"><a href="two-real-example.html#cb563-13" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span> (<span class="fu">log</span>(yield)) </span>
+<span id="cb563-14"><a href="two-real-example.html#cb563-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>With this function, the nonlinear regression can be written as:</p>
+<pre><code>sp1 &lt;- nls(log(Y) ~ Sparrow.Neuse1(beta2, beta4, beta5, alpha1, alpha2, alpha3, alpha4), 
+           data=Data1_reshaped,  
+           start=list(beta2=0.1, beta4=0.1, beta5=0.1, alpha1=1, alpha2=0, alpha3=0, alpha4 =0))</code></pre>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="recursive-function.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="good-function-writing-practices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

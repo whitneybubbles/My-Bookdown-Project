@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>39 Grouped operations | Advanced Environmental Data Management</title>
+  <meta name="description" content="39 Grouped operations | Advanced Environmental Data Management" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="39 Grouped operations | Advanced Environmental Data Management" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="39 Grouped operations | Advanced Environmental Data Management" />
+  
+  
+  
+
+<meta name="author" content="Whitney Adam" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="explaining-dplyr-a-more-complicated-example.html"/>
+<link rel="next" href="a-quick-recap.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html"><i class="fa fa-check"></i><b>2</b> Importing Data into R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#typing-vectors-and-matrices"><i class="fa fa-check"></i><b>2.1</b> Typing Vectors and Matrices</a></li>
+<li class="chapter" data-level="2.2" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#reading-data-frame"><i class="fa fa-check"></i><b>2.2</b> Reading Data Frame</a></li>
+<li class="chapter" data-level="2.3" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#fixed-with-input-files"><i class="fa fa-check"></i><b>2.3</b> Fixed-with Input Files</a></li>
+<li class="chapter" data-level="2.4" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#generating-data"><i class="fa fa-check"></i><b>2.4</b> Generating Data</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#sequences"><i class="fa fa-check"></i><b>2.4.1</b> Sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#random-number-generators"><i class="fa fa-check"></i><b>2.5</b> Random Number Generators</a></li>
+<li class="chapter" data-level="2.6" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#random-permutation"><i class="fa fa-check"></i><b>2.6</b> Random Permutation</a></li>
+<li class="chapter" data-level="2.7" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#spreadsheet"><i class="fa fa-check"></i><b>2.7</b> Spreadsheet</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="saving-r-data.html"><a href="saving-r-data.html"><i class="fa fa-check"></i><b>3</b> Saving R Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="saving-r-data.html"><a href="saving-r-data.html#writing-r-objects-to-files-in-ascii-format"><i class="fa fa-check"></i><b>3.1</b> Writing R Objects to Files in ASCII Format</a></li>
+<li class="chapter" data-level="3.2" data-path="saving-r-data.html"><a href="saving-r-data.html#reading-data-from-other-programs"><i class="fa fa-check"></i><b>3.2</b> Reading Data from Other Programs</a></li>
+<li class="chapter" data-level="3.3" data-path="saving-r-data.html"><a href="saving-r-data.html#functions-in-foreign-package"><i class="fa fa-check"></i><b>3.3</b> Functions in <code>foreign</code> package</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="date-objects.html"><a href="date-objects.html"><i class="fa fa-check"></i><b>4</b> Date Objects</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="date-objects.html"><a href="date-objects.html#date-formats-in-r-date-time-classes"><i class="fa fa-check"></i><b>4.1</b> Date formats in R date-time classes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="summary-statistics.html"><a href="summary-statistics.html"><i class="fa fa-check"></i><b>5</b> Summary Statistics</a></li>
+<li class="chapter" data-level="6" data-path="anatomy-of-a-plot.html"><a href="anatomy-of-a-plot.html"><i class="fa fa-check"></i><b>6</b> Anatomy of a Plot</a></li>
+<li class="chapter" data-level="7" data-path="customizing-a-plot.html"><a href="customizing-a-plot.html"><i class="fa fa-check"></i><b>7</b> Customizing a Plot</a></li>
+<li class="chapter" data-level="8" data-path="graphical-functions.html"><a href="graphical-functions.html"><i class="fa fa-check"></i><b>8</b> Graphical Functions</a></li>
+<li class="chapter" data-level="9" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html"><i class="fa fa-check"></i><b>9</b> Example: Lake Erie Harmful Algal Bloom Monitoring</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#data"><i class="fa fa-check"></i><b>9.1</b> Data</a></li>
+<li class="chapter" data-level="9.2" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#mc-distribution"><i class="fa fa-check"></i><b>9.2</b> MC Distribution</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#histogram-and-boxplot"><i class="fa fa-check"></i><b>9.2.1</b> Histogram and boxplot</a></li>
+<li class="chapter" data-level="9.2.2" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#comparing-to-the-normal-distribution"><i class="fa fa-check"></i><b>9.2.2</b> Comparing to the normal distribution</a></li>
+<li class="chapter" data-level="9.2.3" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#comparing-two-distributions"><i class="fa fa-check"></i><b>9.2.3</b> Comparing Two Distributions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="introduction-1.html"><a href="introduction-1.html"><i class="fa fa-check"></i><b>10</b> Introduction</a></li>
+<li class="chapter" data-level="11" data-path="data-1.html"><a href="data-1.html"><i class="fa fa-check"></i><b>11</b> Data</a></li>
+<li class="chapter" data-level="12" data-path="using-package-reshape.html"><a href="using-package-reshape.html"><i class="fa fa-check"></i><b>12</b> Using package <code>reshape</code></a></li>
+<li class="chapter" data-level="13" data-path="subscripting.html"><a href="subscripting.html"><i class="fa fa-check"></i><b>13</b> Subscripting</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="subscripting.html"><a href="subscripting.html#numerical-subscripts"><i class="fa fa-check"></i><b>13.1</b> Numerical Subscripts</a></li>
+<li class="chapter" data-level="13.2" data-path="subscripting.html"><a href="subscripting.html#character-subscripts"><i class="fa fa-check"></i><b>13.2</b> Character Subscripts</a></li>
+<li class="chapter" data-level="13.3" data-path="subscripting.html"><a href="subscripting.html#logical-subscripts"><i class="fa fa-check"></i><b>13.3</b> Logical Subscripts</a></li>
+<li class="chapter" data-level="13.4" data-path="subscripting.html"><a href="subscripting.html#subscripting-matrices"><i class="fa fa-check"></i><b>13.4</b> Subscripting Matrices</a></li>
+<li class="chapter" data-level="13.5" data-path="subscripting.html"><a href="subscripting.html#dropfalse"><i class="fa fa-check"></i><b>13.5</b> <code>drop=FALSE</code></a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="two-useful-functions-for-matrix.html"><a href="two-useful-functions-for-matrix.html"><i class="fa fa-check"></i><b>14</b> Two Useful Functions for Matrix</a></li>
+<li class="chapter" data-level="15" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>15</b> List</a></li>
+<li class="chapter" data-level="16" data-path="aggregation.html"><a href="aggregation.html"><i class="fa fa-check"></i><b>16</b> Aggregation</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="aggregation.html"><a href="aggregation.html#tabulation"><i class="fa fa-check"></i><b>16.1</b> Tabulation</a></li>
+<li class="chapter" data-level="16.2" data-path="aggregation.html"><a href="aggregation.html#general-considerations-of-aggregation"><i class="fa fa-check"></i><b>16.2</b> General Considerations of Aggregation</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="aggregation.html"><a href="aggregation.html#sapply"><i class="fa fa-check"></i><b>16.2.1</b> <code>sapply</code></a></li>
+<li class="chapter" data-level="16.2.2" data-path="aggregation.html"><a href="aggregation.html#apply"><i class="fa fa-check"></i><b>16.2.2</b> <code>apply</code></a></li>
+<li class="chapter" data-level="16.2.3" data-path="aggregation.html"><a href="aggregation.html#mapping-a-function-based-on-groups"><i class="fa fa-check"></i><b>16.2.3</b> Mapping a Function Based on Groups</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>17</b> Data transformation</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="transform.html"><a href="transform.html#introduction-2"><i class="fa fa-check"></i><b>17.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="transform.html"><a href="transform.html#prerequisites"><i class="fa fa-check"></i><b>17.1.1</b> Prerequisites</a></li>
+<li class="chapter" data-level="17.1.2" data-path="transform.html"><a href="transform.html#nycflights13"><i class="fa fa-check"></i><b>17.1.2</b> nycflights13</a></li>
+<li class="chapter" data-level="17.1.3" data-path="transform.html"><a href="transform.html#dplyr-basics"><i class="fa fa-check"></i><b>17.1.3</b> dplyr basics</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="transform.html"><a href="transform.html#filter-rows-with-filter"><i class="fa fa-check"></i><b>17.2</b> Filter rows with <code>filter()</code></a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="transform.html"><a href="transform.html#comparisons"><i class="fa fa-check"></i><b>17.2.1</b> Comparisons</a></li>
+<li class="chapter" data-level="17.2.2" data-path="transform.html"><a href="transform.html#logical-operators"><i class="fa fa-check"></i><b>17.2.2</b> Logical operators</a></li>
+<li class="chapter" data-level="17.2.3" data-path="transform.html"><a href="transform.html#missing-values"><i class="fa fa-check"></i><b>17.2.3</b> Missing values</a></li>
+<li class="chapter" data-level="17.2.4" data-path="transform.html"><a href="transform.html#exercises"><i class="fa fa-check"></i><b>17.2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="transform.html"><a href="transform.html#arrange-rows-with-arrange"><i class="fa fa-check"></i><b>17.3</b> Arrange rows with <code>arrange()</code></a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="transform.html"><a href="transform.html#exercises-1"><i class="fa fa-check"></i><b>17.3.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="transform.html"><a href="transform.html#select"><i class="fa fa-check"></i><b>17.4</b> Select columns with <code>select()</code></a>
+<ul>
+<li class="chapter" data-level="17.4.1" data-path="transform.html"><a href="transform.html#exercises-2"><i class="fa fa-check"></i><b>17.4.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.5" data-path="transform.html"><a href="transform.html#add-new-variables-with-mutate"><i class="fa fa-check"></i><b>17.5</b> Add new variables with <code>mutate()</code></a>
+<ul>
+<li class="chapter" data-level="17.5.1" data-path="transform.html"><a href="transform.html#mutate-funs"><i class="fa fa-check"></i><b>17.5.1</b> Useful creation functions</a></li>
+<li class="chapter" data-level="17.5.2" data-path="transform.html"><a href="transform.html#exercises-3"><i class="fa fa-check"></i><b>17.5.2</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.6" data-path="transform.html"><a href="transform.html#grouped-summaries-with-summarise"><i class="fa fa-check"></i><b>17.6</b> Grouped summaries with <code>summarise()</code></a>
+<ul>
+<li class="chapter" data-level="17.6.1" data-path="transform.html"><a href="transform.html#combining-multiple-operations-with-the-pipe"><i class="fa fa-check"></i><b>17.6.1</b> Combining multiple operations with the pipe</a></li>
+<li class="chapter" data-level="17.6.2" data-path="transform.html"><a href="transform.html#missing-values-1"><i class="fa fa-check"></i><b>17.6.2</b> Missing values</a></li>
+<li class="chapter" data-level="17.6.3" data-path="transform.html"><a href="transform.html#counts"><i class="fa fa-check"></i><b>17.6.3</b> Counts</a></li>
+<li class="chapter" data-level="17.6.4" data-path="transform.html"><a href="transform.html#summarise-funs"><i class="fa fa-check"></i><b>17.6.4</b> Useful summary functions</a></li>
+<li class="chapter" data-level="17.6.5" data-path="transform.html"><a href="transform.html#grouping-by-multiple-variables"><i class="fa fa-check"></i><b>17.6.5</b> Grouping by multiple variables</a></li>
+<li class="chapter" data-level="17.6.6" data-path="transform.html"><a href="transform.html#ungrouping"><i class="fa fa-check"></i><b>17.6.6</b> Ungrouping</a></li>
+<li class="chapter" data-level="17.6.7" data-path="transform.html"><a href="transform.html#exercises-4"><i class="fa fa-check"></i><b>17.6.7</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.7" data-path="transform.html"><a href="transform.html#grouped-mutates-and-filters"><i class="fa fa-check"></i><b>17.7</b> Grouped mutates (and filters)</a>
+<ul>
+<li class="chapter" data-level="17.7.1" data-path="transform.html"><a href="transform.html#exercises-5"><i class="fa fa-check"></i><b>17.7.1</b> Exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="package-reshape.html"><a href="package-reshape.html"><i class="fa fa-check"></i><b>18</b> Package <code>reshape</code></a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="package-reshape.html"><a href="package-reshape.html#melting-data"><i class="fa fa-check"></i><b>18.1</b> Melting data</a></li>
+<li class="chapter" data-level="18.2" data-path="package-reshape.html"><a href="package-reshape.html#casting-molten-data"><i class="fa fa-check"></i><b>18.2</b> Casting molten data</a></li>
+<li class="chapter" data-level="18.3" data-path="package-reshape.html"><a href="package-reshape.html#the-french-fries-example"><i class="fa fa-check"></i><b>18.3</b> The French Fries Example</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="package-reshape2.html"><a href="package-reshape2.html"><i class="fa fa-check"></i><b>19</b> Package <code>reshape2</code></a></li>
+<li class="chapter" data-level="20" data-path="reshaping-data.html"><a href="reshaping-data.html"><i class="fa fa-check"></i><b>20</b> Reshaping Data</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="reshaping-data.html"><a href="reshaping-data.html#modifying-data-frame-variables"><i class="fa fa-check"></i><b>20.1</b> Modifying data frame variables</a></li>
+<li class="chapter" data-level="20.2" data-path="reshaping-data.html"><a href="reshaping-data.html#reshaping-a-data-frame"><i class="fa fa-check"></i><b>20.2</b> Reshaping a data frame</a></li>
+<li class="chapter" data-level="20.3" data-path="reshaping-data.html"><a href="reshaping-data.html#function-reshape"><i class="fa fa-check"></i><b>20.3</b> Function <code>reshape</code></a></li>
+<li class="chapter" data-level="20.4" data-path="reshaping-data.html"><a href="reshaping-data.html#combining-data-frames"><i class="fa fa-check"></i><b>20.4</b> Combining Data Frames</a></li>
+<li class="chapter" data-level="20.5" data-path="reshaping-data.html"><a href="reshaping-data.html#merging-using-index"><i class="fa fa-check"></i><b>20.5</b> Merging using index</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="a-quick-review.html"><a href="a-quick-review.html"><i class="fa fa-check"></i><b>21</b> A quick review</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="a-quick-review.html"><a href="a-quick-review.html#data-in-r"><i class="fa fa-check"></i><b>21.1</b> Data in R</a></li>
+<li class="chapter" data-level="21.2" data-path="a-quick-review.html"><a href="a-quick-review.html#reading-and-writing-data"><i class="fa fa-check"></i><b>21.2</b> Reading and writing data</a></li>
+<li class="chapter" data-level="21.3" data-path="a-quick-review.html"><a href="a-quick-review.html#dates"><i class="fa fa-check"></i><b>21.3</b> Dates</a></li>
+<li class="chapter" data-level="21.4" data-path="a-quick-review.html"><a href="a-quick-review.html#subscripting-1"><i class="fa fa-check"></i><b>21.4</b> Subscripting</a></li>
+<li class="chapter" data-level="21.5" data-path="a-quick-review.html"><a href="a-quick-review.html#data-aggregation"><i class="fa fa-check"></i><b>21.5</b> Data aggregation</a></li>
+<li class="chapter" data-level="21.6" data-path="a-quick-review.html"><a href="a-quick-review.html#data-reshaping"><i class="fa fa-check"></i><b>21.6</b> Data reshaping</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="introduction-3.html"><a href="introduction-3.html"><i class="fa fa-check"></i><b>22</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="22.1" data-path="introduction-3.html"><a href="introduction-3.html#example-1"><i class="fa fa-check"></i><b>22.1</b> Example 1:</a></li>
+<li class="chapter" data-level="22.2" data-path="introduction-3.html"><a href="introduction-3.html#example-2"><i class="fa fa-check"></i><b>22.2</b> Example 2:</a></li>
+<li class="chapter" data-level="22.3" data-path="introduction-3.html"><a href="introduction-3.html#example-4"><i class="fa fa-check"></i><b>22.3</b> Example 4:</a></li>
+<li class="chapter" data-level="22.4" data-path="introduction-3.html"><a href="introduction-3.html#example-5"><i class="fa fa-check"></i><b>22.4</b> Example 5:</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="types-of-arguments.html"><a href="types-of-arguments.html"><i class="fa fa-check"></i><b>23</b> Types of arguments</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="types-of-arguments.html"><a href="types-of-arguments.html#example-6"><i class="fa fa-check"></i><b>23.1</b> Example 6:</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="default-arguments.html"><a href="default-arguments.html"><i class="fa fa-check"></i><b>24</b> Default arguments</a>
+<ul>
+<li class="chapter" data-level="24.1" data-path="default-arguments.html"><a href="default-arguments.html#example-7"><i class="fa fa-check"></i><b>24.1</b> Example 7:</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="recursive-function.html"><a href="recursive-function.html"><i class="fa fa-check"></i><b>25</b> Recursive Function</a></li>
+<li class="chapter" data-level="26" data-path="two-real-example.html"><a href="two-real-example.html"><i class="fa fa-check"></i><b>26</b> Two Real Example</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="two-real-example.html"><a href="two-real-example.html#importing-elisa-test-data"><i class="fa fa-check"></i><b>26.1</b> Importing ELISA Test Data</a></li>
+<li class="chapter" data-level="26.2" data-path="two-real-example.html"><a href="two-real-example.html#the-hockey-stick-model"><i class="fa fa-check"></i><b>26.2</b> The Hockey Stick Model</a></li>
+<li class="chapter" data-level="26.3" data-path="two-real-example.html"><a href="two-real-example.html#sparrow-model"><i class="fa fa-check"></i><b>26.3</b> SPARROW model</a></li>
+</ul></li>
+<li class="chapter" data-level="27" data-path="good-function-writing-practices.html"><a href="good-function-writing-practices.html"><i class="fa fa-check"></i><b>27</b> Good function writing practices</a></li>
+<li class="chapter" data-level="28" data-path="package-tidyr.html"><a href="package-tidyr.html"><i class="fa fa-check"></i><b>28</b> Package <code>tidyr</code></a></li>
+<li class="chapter" data-level="29" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html"><i class="fa fa-check"></i><b>29</b> Package <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="29.1" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#long-versus-wide"><i class="fa fa-check"></i><b>29.1</b> Long versus Wide</a></li>
+<li class="chapter" data-level="29.2" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#reshape2"><i class="fa fa-check"></i><b>29.2</b> <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="29.2.1" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#wide--to-long-format-data-the-melt-function"><i class="fa fa-check"></i><b>29.2.1</b> Wide- to long-format data: the <code>melt</code> function</a></li>
+<li class="chapter" data-level="29.2.2" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#long--to-wide-format-data-the-cast-functions"><i class="fa fa-check"></i><b>29.2.2</b> Long- to wide-format data: the cast functions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html"><i class="fa fa-check"></i><b>30</b> <code>tidyr</code> versus <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#data-tidying"><i class="fa fa-check"></i><b>30.1</b> Data tidying</a>
+<ul>
+<li class="chapter" data-level="30.1.1" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#from-the-wide-to-the-long-format-gather-vs-melt"><i class="fa fa-check"></i><b>30.1.1</b> From the wide to the long format: <code>gather()</code> vs <code>melt()</code></a></li>
+<li class="chapter" data-level="30.1.2" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#split-a-column-separate-vs-colsplit"><i class="fa fa-check"></i><b>30.1.2</b> Split a column: <code>separate()</code> vs <code>colsplit()</code></a></li>
+<li class="chapter" data-level="30.1.3" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#from-the-long-to-the-wide-format-spread-vs-dcast"><i class="fa fa-check"></i><b>30.1.3</b> From the long to the wide format: <code>spread()</code> vs <code>dcast()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="30.2" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#data-aggregation-1"><i class="fa fa-check"></i><b>30.2</b> Data aggregation</a></li>
+</ul></li>
+<li class="chapter" data-level="31" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>31</b> Factors</a>
+<ul>
+<li class="chapter" data-level="31.1" data-path="factors.html"><a href="factors.html#numeric-factors"><i class="fa fa-check"></i><b>31.1</b> Numeric Factors</a></li>
+<li class="chapter" data-level="31.2" data-path="factors.html"><a href="factors.html#manipulating-factors"><i class="fa fa-check"></i><b>31.2</b> Manipulating Factors</a></li>
+<li class="chapter" data-level="31.3" data-path="factors.html"><a href="factors.html#creating-factors-from-continuous-variables"><i class="fa fa-check"></i><b>31.3</b> Creating Factors from Continuous Variables</a></li>
+<li class="chapter" data-level="31.4" data-path="factors.html"><a href="factors.html#factors-based-on-dates-and-times"><i class="fa fa-check"></i><b>31.4</b> Factors Based on Dates and Times</a></li>
+<li class="chapter" data-level="31.5" data-path="factors.html"><a href="factors.html#interactions"><i class="fa fa-check"></i><b>31.5</b> Interactions</a></li>
+</ul></li>
+<li class="chapter" data-level="32" data-path="character-manipulation.html"><a href="character-manipulation.html"><i class="fa fa-check"></i><b>32</b> Character Manipulation</a>
+<ul>
+<li class="chapter" data-level="32.1" data-path="character-manipulation.html"><a href="character-manipulation.html#regular-expressions-in-r"><i class="fa fa-check"></i><b>32.1</b> Regular Expressions in R</a></li>
+<li class="chapter" data-level="32.2" data-path="character-manipulation.html"><a href="character-manipulation.html#breaking-apart-character-values"><i class="fa fa-check"></i><b>32.2</b> Breaking Apart Character Values</a></li>
+<li class="chapter" data-level="32.3" data-path="character-manipulation.html"><a href="character-manipulation.html#substitutions-and-tagging"><i class="fa fa-check"></i><b>32.3</b> Substitutions and Tagging</a></li>
+<li class="chapter" data-level="32.4" data-path="character-manipulation.html"><a href="character-manipulation.html#a-quick-summary"><i class="fa fa-check"></i><b>32.4</b> A Quick Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="33" data-path="introduction-4.html"><a href="introduction-4.html"><i class="fa fa-check"></i><b>33</b> Introduction</a></li>
+<li class="chapter" data-level="34" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i><b>34</b> Examples</a>
+<ul>
+<li class="chapter" data-level="34.1" data-path="examples.html"><a href="examples.html#example-1-1"><i class="fa fa-check"></i><b>34.1</b> Example 1</a></li>
+<li class="chapter" data-level="34.2" data-path="examples.html"><a href="examples.html#example-2-1"><i class="fa fa-check"></i><b>34.2</b> Example 2</a></li>
+<li class="chapter" data-level="34.3" data-path="examples.html"><a href="examples.html#using-lattice-package"><i class="fa fa-check"></i><b>34.3</b> Using Lattice Package</a></li>
+<li class="chapter" data-level="34.4" data-path="examples.html"><a href="examples.html#using-lattice-functions"><i class="fa fa-check"></i><b>34.4</b> Using Lattice Functions</a></li>
+<li class="chapter" data-level="34.5" data-path="examples.html"><a href="examples.html#custom-panel-functions"><i class="fa fa-check"></i><b>34.5</b> Custom Panel Functions</a></li>
+<li class="chapter" data-level="34.6" data-path="examples.html"><a href="examples.html#the-example-that-started-trellis"><i class="fa fa-check"></i><b>34.6</b> The Example That Started Trellis</a></li>
+<li class="chapter" data-level="34.7" data-path="examples.html"><a href="examples.html#an-example-of-graphical-exploratory-data-analysis"><i class="fa fa-check"></i><b>34.7</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="35" data-path="introduction-5.html"><a href="introduction-5.html"><i class="fa fa-check"></i><b>35</b> Introduction</a></li>
+<li class="chapter" data-level="36" data-path="examples-1.html"><a href="examples-1.html"><i class="fa fa-check"></i><b>36</b> Examples</a>
+<ul>
+<li class="chapter" data-level="36.1" data-path="examples-1.html"><a href="examples-1.html#example-1-2"><i class="fa fa-check"></i><b>36.1</b> Example 1</a></li>
+<li class="chapter" data-level="36.2" data-path="examples-1.html"><a href="examples-1.html#example-2-2"><i class="fa fa-check"></i><b>36.2</b> Example 2</a></li>
+<li class="chapter" data-level="36.3" data-path="examples-1.html"><a href="examples-1.html#using-lattice-package-1"><i class="fa fa-check"></i><b>36.3</b> Using Lattice Package</a></li>
+<li class="chapter" data-level="36.4" data-path="examples-1.html"><a href="examples-1.html#using-lattice-functions-1"><i class="fa fa-check"></i><b>36.4</b> Using Lattice Functions</a></li>
+<li class="chapter" data-level="36.5" data-path="examples-1.html"><a href="examples-1.html#costom-panel-functions"><i class="fa fa-check"></i><b>36.5</b> Costom Panel Functions</a></li>
+<li class="chapter" data-level="36.6" data-path="examples-1.html"><a href="examples-1.html#the-example-that-started-trellis-1"><i class="fa fa-check"></i><b>36.6</b> The Example That Started Trellis</a></li>
+<li class="chapter" data-level="36.7" data-path="examples-1.html"><a href="examples-1.html#an-example-of-graphical-exploratory-data-analysis-1"><i class="fa fa-check"></i><b>36.7</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="37" data-path="introduction-6.html"><a href="introduction-6.html"><i class="fa fa-check"></i><b>37</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="37.1" data-path="introduction-6.html"><a href="introduction-6.html#filter"><i class="fa fa-check"></i><b>37.1</b> Filter</a></li>
+<li class="chapter" data-level="37.2" data-path="introduction-6.html"><a href="introduction-6.html#mutate"><i class="fa fa-check"></i><b>37.2</b> Mutate</a></li>
+<li class="chapter" data-level="37.3" data-path="introduction-6.html"><a href="introduction-6.html#summarise"><i class="fa fa-check"></i><b>37.3</b> Summarise</a></li>
+<li class="chapter" data-level="37.4" data-path="introduction-6.html"><a href="introduction-6.html#group-by"><i class="fa fa-check"></i><b>37.4</b> Group By</a></li>
+<li class="chapter" data-level="37.5" data-path="introduction-6.html"><a href="introduction-6.html#sample"><i class="fa fa-check"></i><b>37.5</b> Sample</a></li>
+<li class="chapter" data-level="37.6" data-path="introduction-6.html"><a href="introduction-6.html#count"><i class="fa fa-check"></i><b>37.6</b> Count</a></li>
+<li class="chapter" data-level="37.7" data-path="introduction-6.html"><a href="introduction-6.html#arrange"><i class="fa fa-check"></i><b>37.7</b> Arrange</a></li>
+<li class="chapter" data-level="37.8" data-path="introduction-6.html"><a href="introduction-6.html#pipe"><i class="fa fa-check"></i><b>37.8</b> Pipe</a></li>
+</ul></li>
+<li class="chapter" data-level="38" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html"><i class="fa fa-check"></i><b>38</b> Explaining <code>dplyr</code> – A More Complicated Example</a>
+<ul>
+<li class="chapter" data-level="38.1" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#data-nycflights13"><i class="fa fa-check"></i><b>38.1</b> Data: <code>nycflights13</code></a></li>
+<li class="chapter" data-level="38.2" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#single-table-verbs"><i class="fa fa-check"></i><b>38.2</b> Single table verbs</a></li>
+<li class="chapter" data-level="38.3" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#filter-rows-with-filter-1"><i class="fa fa-check"></i><b>38.3</b> Filter rows with <code>filter()</code></a></li>
+<li class="chapter" data-level="38.4" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#arrange-rows-with-arrange-1"><i class="fa fa-check"></i><b>38.4</b> Arrange rows with <code>arrange()</code></a></li>
+<li class="chapter" data-level="38.5" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#select-columns-with-select"><i class="fa fa-check"></i><b>38.5</b> Select columns with <code>select()</code></a></li>
+<li class="chapter" data-level="38.6" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#extract-distinct-unique-rows"><i class="fa fa-check"></i><b>38.6</b> Extract distinct (unique) rows</a></li>
+<li class="chapter" data-level="38.7" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#add-new-columns-with-mutate"><i class="fa fa-check"></i><b>38.7</b> Add new columns with mutate()</a></li>
+<li class="chapter" data-level="38.8" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#summarise-values-with-summarise"><i class="fa fa-check"></i><b>38.8</b> Summarise values with <code>summarise()</code></a></li>
+<li class="chapter" data-level="38.9" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#randomly-sample-rows-with-sample_n-and-sample_frac"><i class="fa fa-check"></i><b>38.9</b> Randomly sample rows with sample_n() and sample_frac()</a></li>
+<li class="chapter" data-level="38.10" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#commonalities"><i class="fa fa-check"></i><b>38.10</b> Commonalities</a></li>
+</ul></li>
+<li class="chapter" data-level="39" data-path="grouped-operations.html"><a href="grouped-operations.html"><i class="fa fa-check"></i><b>39</b> Grouped operations</a>
+<ul>
+<li class="chapter" data-level="39.1" data-path="grouped-operations.html"><a href="grouped-operations.html#chaining"><i class="fa fa-check"></i><b>39.1</b> Chaining</a></li>
+<li class="chapter" data-level="39.2" data-path="grouped-operations.html"><a href="grouped-operations.html#a-quick-summary-1"><i class="fa fa-check"></i><b>39.2</b> A quick Summary</a>
+<ul>
+<li class="chapter" data-level="39.2.1" data-path="grouped-operations.html"><a href="grouped-operations.html#dplyr-verbs-in-action"><i class="fa fa-check"></i><b>39.2.1</b> dplyr verbs in action</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="40" data-path="a-quick-recap.html"><a href="a-quick-recap.html"><i class="fa fa-check"></i><b>40</b> A Quick Recap</a>
+<ul>
+<li class="chapter" data-level="40.1" data-path="a-quick-recap.html"><a href="a-quick-recap.html#costom-panel-functions-1"><i class="fa fa-check"></i><b>40.1</b> Costom Panel Functions</a></li>
+<li class="chapter" data-level="40.2" data-path="a-quick-recap.html"><a href="a-quick-recap.html#the-example-that-started-trellis-2"><i class="fa fa-check"></i><b>40.2</b> The Example That Started Trellis</a></li>
+</ul></li>
+<li class="chapter" data-level="41" data-path="types-of-data.html"><a href="types-of-data.html"><i class="fa fa-check"></i><b>41</b> Types of Data</a>
+<ul>
+<li class="chapter" data-level="41.1" data-path="types-of-data.html"><a href="types-of-data.html#univariate-data"><i class="fa fa-check"></i><b>41.1</b> Univariate data</a></li>
+<li class="chapter" data-level="41.2" data-path="types-of-data.html"><a href="types-of-data.html#fits-and-residuals"><i class="fa fa-check"></i><b>41.2</b> Fits and Residuals</a>
+<ul>
+<li class="chapter" data-level="41.2.1" data-path="types-of-data.html"><a href="types-of-data.html#homogeneity-and-pooling"><i class="fa fa-check"></i><b>41.2.1</b> Homogeneity and Pooling</a></li>
+<li class="chapter" data-level="41.2.2" data-path="types-of-data.html"><a href="types-of-data.html#checking-for-normality-of-the-pooled-residuals"><i class="fa fa-check"></i><b>41.2.2</b> Checking for normality of the pooled residuals</a></li>
+<li class="chapter" data-level="41.2.3" data-path="types-of-data.html"><a href="types-of-data.html#the-rfs-plot"><i class="fa fa-check"></i><b>41.2.3</b> The <code>rfs</code> plot</a></li>
+</ul></li>
+<li class="chapter" data-level="41.3" data-path="types-of-data.html"><a href="types-of-data.html#bivariate-data"><i class="fa fa-check"></i><b>41.3</b> Bivariate data</a></li>
+<li class="chapter" data-level="41.4" data-path="types-of-data.html"><a href="types-of-data.html#trivariate-and-hypervariate-data"><i class="fa fa-check"></i><b>41.4</b> Trivariate and hypervariate data</a></li>
+<li class="chapter" data-level="41.5" data-path="types-of-data.html"><a href="types-of-data.html#multiway-data"><i class="fa fa-check"></i><b>41.5</b> Multiway data</a></li>
+</ul></li>
+<li class="chapter" data-level="42" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html"><i class="fa fa-check"></i><b>42</b> Univariate Data – Displaying and Comparing Distributions</a>
+<ul>
+<li class="chapter" data-level="42.1" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#displaying-distribution"><i class="fa fa-check"></i><b>42.1</b> Displaying distribution</a></li>
+<li class="chapter" data-level="42.2" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#comparing-distributions"><i class="fa fa-check"></i><b>42.2</b> Comparing distributions</a></li>
+<li class="chapter" data-level="42.3" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#an-example-of-graphical-exploratory-data-analysis-2"><i class="fa fa-check"></i><b>42.3</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="43" data-path="a-summary.html"><a href="a-summary.html"><i class="fa fa-check"></i><b>43</b> A Summary</a>
+<ul>
+<li class="chapter" data-level="43.1" data-path="a-summary.html"><a href="a-summary.html#types-of-data-1"><i class="fa fa-check"></i><b>43.1</b> Types of Data</a>
+<ul>
+<li class="chapter" data-level="43.1.1" data-path="a-summary.html"><a href="a-summary.html#checking-for-normality-of-the-pooled-residuals-1"><i class="fa fa-check"></i><b>43.1.1</b> Checking for normality of the pooled residuals</a></li>
+<li class="chapter" data-level="43.1.2" data-path="a-summary.html"><a href="a-summary.html#the-rfs-plot-1"><i class="fa fa-check"></i><b>43.1.2</b> The <code>rfs</code> plot</a></li>
+</ul></li>
+<li class="chapter" data-level="43.2" data-path="a-summary.html"><a href="a-summary.html#additive-versus-multiplicative-shifts"><i class="fa fa-check"></i><b>43.2</b> Additive versus multiplicative shifts</a></li>
+<li class="chapter" data-level="43.3" data-path="a-summary.html"><a href="a-summary.html#using-q-q-plot-to-check-for-additive-shift"><i class="fa fa-check"></i><b>43.3</b> Using Q-Q plot to Check for Additive Shift</a></li>
+<li class="chapter" data-level="43.4" data-path="a-summary.html"><a href="a-summary.html#transformation-to-normality"><i class="fa fa-check"></i><b>43.4</b> Transformation to Normality</a></li>
+<li class="chapter" data-level="43.5" data-path="a-summary.html"><a href="a-summary.html#an-example-of-graphical-exploratory-data-analysis-3"><i class="fa fa-check"></i><b>43.5</b> An Example of Graphical Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="43.6" data-path="a-summary.html"><a href="a-summary.html#nutrient-loading-and-flow-from-maumee"><i class="fa fa-check"></i><b>43.6</b> Nutrient Loading and Flow from Maumee</a>
+<ul>
+<li class="chapter" data-level="43.6.1" data-path="a-summary.html"><a href="a-summary.html#objectives"><i class="fa fa-check"></i><b>43.6.1</b> Objectives</a></li>
+<li class="chapter" data-level="43.6.2" data-path="a-summary.html"><a href="a-summary.html#methods"><i class="fa fa-check"></i><b>43.6.2</b> Methods</a></li>
+<li class="chapter" data-level="43.6.3" data-path="a-summary.html"><a href="a-summary.html#results"><i class="fa fa-check"></i><b>43.6.3</b> Results</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Environmental Data Management</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="grouped-operations" class="section level1" number="39">
+<h1><span class="header-section-number">39</span> Grouped operations</h1>
+<p>These verbs are useful on their own, but they become really powerful when you apply them to groups of observations within a dataset. In <code>dplyr</code>, you do this by with the <code>group_by()</code> function. It breaks down a dataset into specified groups of rows. When you then apply the verbs above on the resulting object they’ll be automatically applied “by group”. Most importantly, all this is achieved by using the same exact syntax you’d use with an ungrouped object.</p>
+<p>Grouping affects the verbs as follows:</p>
+<p>grouped <code>select()</code> is the same as ungrouped <code>select()</code>, except that grouping variables are always retained.</p>
+<p>grouped <code>arrange()</code> orders first by the grouping variables</p>
+<p><code>mutate()</code> and <code>filter()</code> are most useful in conjunction with window functions (like <code>rank()</code>, or <code>min(x) == x</code>). They are described in detail in <code>vignette("window-functions")</code>.</p>
+<p><code>sample_n()</code> and <code>sample_frac()</code> sample the specified number/fraction of rows in each group.</p>
+<p><code>slice()</code> extracts rows within each group.</p>
+<p><code>summarise()</code> is powerful and easy to understand, as described in more detail below.</p>
+<p>In the following example, we split the complete dataset into individual planes and then summarise each plane by counting the number of flights (<code>count = n()</code>) and computing the average distance (<code>dist = mean(Distance, na.rm = TRUE)</code>) and arrival delay (<code>delay = mean(ArrDelay, na.rm = TRUE)</code>).</p>
+<div class="sourceCode" id="cb949"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb949-1"><a href="grouped-operations.html#cb949-1" aria-hidden="true" tabindex="-1"></a>by_tailnum <span class="ot">&lt;-</span> <span class="fu">group_by</span>(flights, tailnum)</span>
+<span id="cb949-2"><a href="grouped-operations.html#cb949-2" aria-hidden="true" tabindex="-1"></a>delay <span class="ot">&lt;-</span> <span class="fu">summarise</span>(by_tailnum,</span>
+<span id="cb949-3"><a href="grouped-operations.html#cb949-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">count =</span> <span class="fu">n</span>(),</span>
+<span id="cb949-4"><a href="grouped-operations.html#cb949-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">dist =</span> <span class="fu">mean</span>(distance, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb949-5"><a href="grouped-operations.html#cb949-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">delay =</span> <span class="fu">mean</span>(arr_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb949-6"><a href="grouped-operations.html#cb949-6" aria-hidden="true" tabindex="-1"></a>delay <span class="ot">&lt;-</span> <span class="fu">filter</span>(delay, count <span class="sc">&gt;</span> <span class="dv">20</span>, dist <span class="sc">&lt;</span> <span class="dv">2000</span>)</span>
+<span id="cb949-7"><a href="grouped-operations.html#cb949-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Interestingly, the average delay is only slightly related to the</span></span>
+<span id="cb949-8"><a href="grouped-operations.html#cb949-8" aria-hidden="true" tabindex="-1"></a><span class="co"># average distance flown by a plane.</span></span>
+<span id="cb949-9"><a href="grouped-operations.html#cb949-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>( delay<span class="sc">~</span>dist, <span class="at">data=</span>delay)</span></code></pre></div>
+<p><img src="Package_dplyr_and_the_Split-Apply-Combine_Strategy_files/figure-html/unnamed-chunk-32-1.png" width="480" style="display: block; margin: auto;" />
+You use <code>summarise()</code> with aggregate functions, which take a vector of values and return a single number. There are many useful examples of such functions in base R like <code>min()</code>, <code>max()</code>, <code>mean()</code>, <code>sum()</code>, <code>sd()</code>, <code>median()</code>, and <code>IQR()</code>. <code>dplyr</code> provides a handful of others:</p>
+<ul>
+<li><code>n()</code>: the number of observations in the current group</li>
+<li><code>n_distinct(x)</code>: the number of unique values in x.</li>
+<li><code>first(x)</code>, <code>last(x)</code> and <code>nth(x, n)</code> - these work similarly to <code>x[1]</code>, <code>x[length(x)]</code>, and <code>x[n]</code> but give you more control over the result if the value is missing.</li>
+</ul>
+<p>For example, we could use these to find the number of planes and the number of flights that go to each possible destination:</p>
+<div class="sourceCode" id="cb950"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb950-1"><a href="grouped-operations.html#cb950-1" aria-hidden="true" tabindex="-1"></a>destinations <span class="ot">&lt;-</span> <span class="fu">group_by</span>(flights, dest)</span>
+<span id="cb950-2"><a href="grouped-operations.html#cb950-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(destinations,</span>
+<span id="cb950-3"><a href="grouped-operations.html#cb950-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">planes =</span> <span class="fu">n_distinct</span>(tailnum),</span>
+<span id="cb950-4"><a href="grouped-operations.html#cb950-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">flights =</span> <span class="fu">n</span>()</span>
+<span id="cb950-5"><a href="grouped-operations.html#cb950-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## # A tibble: 105 × 3
+##    dest  planes flights
+##    &lt;chr&gt;  &lt;int&gt;   &lt;int&gt;
+##  1 ABQ      108     254
+##  2 ACK       58     265
+##  3 ALB      172     439
+##  4 ANC        6       8
+##  5 ATL     1180   17215
+##  6 AUS      993    2439
+##  7 AVL      159     275
+##  8 BDL      186     443
+##  9 BGR       46     375
+## 10 BHM       45     297
+## # … with 95 more rows</code></pre>
+<p>You can also use any function that you write yourself. For performance, <code>dplyr</code> provides optimised <code>C++</code> versions of many of these functions. If you want to provide your own <code>C++</code> function, see the hybrid-evaluation vignette for more details.</p>
+<p>When you group by multiple variables, each summary peels off one level of the grouping. That makes it easy to progressively roll-up a dataset:</p>
+<div class="sourceCode" id="cb952"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb952-1"><a href="grouped-operations.html#cb952-1" aria-hidden="true" tabindex="-1"></a>daily <span class="ot">&lt;-</span> <span class="fu">group_by</span>(flights, year, month, day)</span>
+<span id="cb952-2"><a href="grouped-operations.html#cb952-2" aria-hidden="true" tabindex="-1"></a>(per_day   <span class="ot">&lt;-</span> <span class="fu">summarise</span>(daily, <span class="at">flights =</span> <span class="fu">n</span>()))</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;year&#39;, &#39;month&#39;. You can override using the `.groups` argument.</code></pre>
+<pre><code>## # A tibble: 365 × 4
+## # Groups:   year, month [12]
+##     year month   day flights
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt;
+##  1  2013     1     1     842
+##  2  2013     1     2     943
+##  3  2013     1     3     914
+##  4  2013     1     4     915
+##  5  2013     1     5     720
+##  6  2013     1     6     832
+##  7  2013     1     7     933
+##  8  2013     1     8     899
+##  9  2013     1     9     902
+## 10  2013     1    10     932
+## # … with 355 more rows</code></pre>
+<div class="sourceCode" id="cb955"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb955-1"><a href="grouped-operations.html#cb955-1" aria-hidden="true" tabindex="-1"></a>(per_month <span class="ot">&lt;-</span> <span class="fu">summarise</span>(per_day, <span class="at">flights =</span> <span class="fu">sum</span>(flights)))</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;year&#39;. You can override using the `.groups` argument.</code></pre>
+<pre><code>## # A tibble: 12 × 3
+## # Groups:   year [1]
+##     year month flights
+##    &lt;int&gt; &lt;int&gt;   &lt;int&gt;
+##  1  2013     1   27004
+##  2  2013     2   24951
+##  3  2013     3   28834
+##  4  2013     4   28330
+##  5  2013     5   28796
+##  6  2013     6   28243
+##  7  2013     7   29425
+##  8  2013     8   29327
+##  9  2013     9   27574
+## 10  2013    10   28889
+## 11  2013    11   27268
+## 12  2013    12   28135</code></pre>
+<div class="sourceCode" id="cb958"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb958-1"><a href="grouped-operations.html#cb958-1" aria-hidden="true" tabindex="-1"></a>(per_year  <span class="ot">&lt;-</span> <span class="fu">summarise</span>(per_month, <span class="at">flights =</span> <span class="fu">sum</span>(flights)))</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 2
+##    year flights
+##   &lt;int&gt;   &lt;int&gt;
+## 1  2013  336776</code></pre>
+<p>However you need to be careful when progressively rolling up summaries like this: it’s ok for sums and counts, but you need to think about weighting for means and variances (it’s not possible to do this exactly for medians).</p>
+<div id="chaining" class="section level2" number="39.1">
+<h2><span class="header-section-number">39.1</span> Chaining</h2>
+<p>The <code>dplyr</code> API is functional in the sense that function calls don’t have side-effects. You must always save their results. This doesn’t lead to particularly elegant code, especially if you want to do many operations at once. You either have to do it step-by-step:</p>
+<div class="sourceCode" id="cb960"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb960-1"><a href="grouped-operations.html#cb960-1" aria-hidden="true" tabindex="-1"></a>a1 <span class="ot">&lt;-</span> <span class="fu">group_by</span>(flights, year, month, day)</span>
+<span id="cb960-2"><a href="grouped-operations.html#cb960-2" aria-hidden="true" tabindex="-1"></a>a2 <span class="ot">&lt;-</span> <span class="fu">select</span>(a1, arr_delay, dep_delay)</span></code></pre></div>
+<pre><code>## Adding missing grouping variables: `year`, `month`, `day`</code></pre>
+<div class="sourceCode" id="cb962"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb962-1"><a href="grouped-operations.html#cb962-1" aria-hidden="true" tabindex="-1"></a>a3 <span class="ot">&lt;-</span> <span class="fu">summarise</span>(a2,</span>
+<span id="cb962-2"><a href="grouped-operations.html#cb962-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">arr =</span> <span class="fu">mean</span>(arr_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb962-3"><a href="grouped-operations.html#cb962-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">dep =</span> <span class="fu">mean</span>(dep_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;year&#39;, &#39;month&#39;. You can override using the `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb964"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb964-1"><a href="grouped-operations.html#cb964-1" aria-hidden="true" tabindex="-1"></a>a4 <span class="ot">&lt;-</span> <span class="fu">filter</span>(a3, arr <span class="sc">&gt;</span> <span class="dv">30</span> <span class="sc">|</span> dep <span class="sc">&gt;</span> <span class="dv">30</span>)</span></code></pre></div>
+<p>Or if you don’t want to save the intermediate results, you need to wrap the function calls inside each other:</p>
+<div class="sourceCode" id="cb965"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb965-1"><a href="grouped-operations.html#cb965-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(</span>
+<span id="cb965-2"><a href="grouped-operations.html#cb965-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb965-3"><a href="grouped-operations.html#cb965-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(</span>
+<span id="cb965-4"><a href="grouped-operations.html#cb965-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">group_by</span>(flights, year, month, day),</span>
+<span id="cb965-5"><a href="grouped-operations.html#cb965-5" aria-hidden="true" tabindex="-1"></a>      arr_delay, dep_delay</span>
+<span id="cb965-6"><a href="grouped-operations.html#cb965-6" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb965-7"><a href="grouped-operations.html#cb965-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">arr =</span> <span class="fu">mean</span>(arr_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb965-8"><a href="grouped-operations.html#cb965-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">dep =</span> <span class="fu">mean</span>(dep_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb965-9"><a href="grouped-operations.html#cb965-9" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb965-10"><a href="grouped-operations.html#cb965-10" aria-hidden="true" tabindex="-1"></a>  arr <span class="sc">&gt;</span> <span class="dv">30</span> <span class="sc">|</span> dep <span class="sc">&gt;</span> <span class="dv">30</span></span>
+<span id="cb965-11"><a href="grouped-operations.html#cb965-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## Adding missing grouping variables: `year`, `month`, `day`</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;year&#39;, &#39;month&#39;. You can override using the `.groups` argument.</code></pre>
+<pre><code>## # A tibble: 49 × 5
+## # Groups:   year, month [11]
+##     year month   day   arr   dep
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  2013     1    16  34.2  24.6
+##  2  2013     1    31  32.6  28.7
+##  3  2013     2    11  36.3  39.1
+##  4  2013     2    27  31.3  37.8
+##  5  2013     3     8  85.9  83.5
+##  6  2013     3    18  41.3  30.1
+##  7  2013     4    10  38.4  33.0
+##  8  2013     4    12  36.0  34.8
+##  9  2013     4    18  36.0  34.9
+## 10  2013     4    19  47.9  46.1
+## # … with 39 more rows</code></pre>
+<p>This is difficult to read because the order of the operations is from inside to out. Thus, the arguments are a long way away from the function. To get around this problem, <code>dplyr</code> provides the <code>%&gt;%</code> operator. <code>x %&gt;% f(y)</code> turns into <code>f(x, y)</code> so you can use it to rewrite multiple operations that you can read left-to-right, top-to-bottom:</p>
+<div class="sourceCode" id="cb969"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb969-1"><a href="grouped-operations.html#cb969-1" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">%&gt;%</span></span>
+<span id="cb969-2"><a href="grouped-operations.html#cb969-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, month, day) <span class="sc">%&gt;%</span></span>
+<span id="cb969-3"><a href="grouped-operations.html#cb969-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(arr_delay, dep_delay) <span class="sc">%&gt;%</span></span>
+<span id="cb969-4"><a href="grouped-operations.html#cb969-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb969-5"><a href="grouped-operations.html#cb969-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">arr =</span> <span class="fu">mean</span>(arr_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb969-6"><a href="grouped-operations.html#cb969-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">dep =</span> <span class="fu">mean</span>(dep_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb969-7"><a href="grouped-operations.html#cb969-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb969-8"><a href="grouped-operations.html#cb969-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(arr <span class="sc">&gt;</span> <span class="dv">30</span> <span class="sc">|</span> dep <span class="sc">&gt;</span> <span class="dv">30</span>)</span></code></pre></div>
+<pre><code>## Adding missing grouping variables: `year`, `month`, `day`</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;year&#39;, &#39;month&#39;. You can override using the `.groups` argument.</code></pre>
+<pre><code>## # A tibble: 49 × 5
+## # Groups:   year, month [11]
+##     year month   day   arr   dep
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1  2013     1    16  34.2  24.6
+##  2  2013     1    31  32.6  28.7
+##  3  2013     2    11  36.3  39.1
+##  4  2013     2    27  31.3  37.8
+##  5  2013     3     8  85.9  83.5
+##  6  2013     3    18  41.3  30.1
+##  7  2013     4    10  38.4  33.0
+##  8  2013     4    12  36.0  34.8
+##  9  2013     4    18  36.0  34.9
+## 10  2013     4    19  47.9  46.1
+## # … with 39 more rows</code></pre>
+</div>
+<div id="a-quick-summary-1" class="section level2" number="39.2">
+<h2><span class="header-section-number">39.2</span> A quick Summary</h2>
+<p>I will use the mammals sleep data to illustrate the verbs of <code>dplyr</code></p>
+<div class="sourceCode" id="cb973"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb973-1"><a href="grouped-operations.html#cb973-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packages</span>(downloader)</span></code></pre></div>
+<pre><code>## Loading required package: downloader</code></pre>
+<div class="sourceCode" id="cb975"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb975-1"><a href="grouped-operations.html#cb975-1" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">&quot;https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv&quot;</span></span>
+<span id="cb975-2"><a href="grouped-operations.html#cb975-2" aria-hidden="true" tabindex="-1"></a>filename <span class="ot">&lt;-</span> <span class="st">&quot;msleep_ggplot2.csv&quot;</span></span>
+<span id="cb975-3"><a href="grouped-operations.html#cb975-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(filename)) <span class="fu">download</span>(url,filename)</span>
+<span id="cb975-4"><a href="grouped-operations.html#cb975-4" aria-hidden="true" tabindex="-1"></a>msleep <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;msleep_ggplot2.csv&quot;</span>)</span>
+<span id="cb975-5"><a href="grouped-operations.html#cb975-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(msleep)</span></code></pre></div>
+<pre><code>##                         name      genus  vore        order conservation
+## 1                    Cheetah   Acinonyx carni    Carnivora           lc
+## 2                 Owl monkey      Aotus  omni     Primates         &lt;NA&gt;
+## 3            Mountain beaver Aplodontia herbi     Rodentia           nt
+## 4 Greater short-tailed shrew    Blarina  omni Soricomorpha           lc
+## 5                        Cow        Bos herbi Artiodactyla domesticated
+## 6           Three-toed sloth   Bradypus herbi       Pilosa         &lt;NA&gt;
+##   sleep_total sleep_rem sleep_cycle awake brainwt  bodywt
+## 1        12.1        NA          NA  11.9      NA  50.000
+## 2        17.0       1.8          NA   7.0 0.01550   0.480
+## 3        14.4       2.4          NA   9.6      NA   1.350
+## 4        14.9       2.3   0.1333333   9.1 0.00029   0.019
+## 5         4.0       0.7   0.6666667  20.0 0.42300 600.000
+## 6        14.4       2.2   0.7666667   9.6      NA   3.850</code></pre>
+<p>The columns (in order) correspond to the following:</p>
+<p>|————|————|
+|column name | Description|
+|name | common name|
+|genus | taxonomic rank|
+|vore | carnivore, omnivore or herbivore?|
+|order | taxonomic rank|
+|conservation |the conservation status of the mammal|
+|sleep_total | total amount of sleep, in hours|
+|sleep_rem |rem sleep, in hours|
+|sleep_cycle | length of sleep cycle, in hours|
+|awake | amount of time spent awake, in hours|
+|brainwt | brain weight in kilograms|
+|bodywt | body weight in kilograms|
+——–|——————-|</p>
+<p>Important dplyr verbs to remember</p>
+<p>|———–|————-|
+|dplyr verbs| Description |
+|select() | select columns|
+|filter() | filter rows|
+|arrange() | re-order or arrange rows|
+|mutate() | create new columns|
+|summarise()| summarise values|
+|group_by() | allows for group operations in the “split-apply-combine” concept |
+———–|————|</p>
+<div id="dplyr-verbs-in-action" class="section level3" number="39.2.1">
+<h3><span class="header-section-number">39.2.1</span> dplyr verbs in action</h3>
+<p>The two most basic functions are <code>select()</code> and <code>filter()</code> which selects columns and filters rows, respectively.</p>
+<p>Selecting columns using <code>select()</code></p>
+<div class="sourceCode" id="cb977"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb977-1"><a href="grouped-operations.html#cb977-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Select a set of columns: the name and the sleep_total columns.</span></span>
+<span id="cb977-2"><a href="grouped-operations.html#cb977-2" aria-hidden="true" tabindex="-1"></a>sleepData <span class="ot">&lt;-</span> <span class="fu">select</span>(msleep, name, sleep_total)</span>
+<span id="cb977-3"><a href="grouped-operations.html#cb977-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(sleepData)</span></code></pre></div>
+<pre><code>##                         name sleep_total
+## 1                    Cheetah        12.1
+## 2                 Owl monkey        17.0
+## 3            Mountain beaver        14.4
+## 4 Greater short-tailed shrew        14.9
+## 5                        Cow         4.0
+## 6           Three-toed sloth        14.4</code></pre>
+<p>To select all the columns except a specific column, use the “-” (subtraction) operator (also known as negative indexing)</p>
+<div class="sourceCode" id="cb979"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb979-1"><a href="grouped-operations.html#cb979-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">select</span>(msleep, <span class="sc">-</span>name))</span></code></pre></div>
+<pre><code>##        genus  vore        order conservation sleep_total sleep_rem sleep_cycle
+## 1   Acinonyx carni    Carnivora           lc        12.1        NA          NA
+## 2      Aotus  omni     Primates         &lt;NA&gt;        17.0       1.8          NA
+## 3 Aplodontia herbi     Rodentia           nt        14.4       2.4          NA
+## 4    Blarina  omni Soricomorpha           lc        14.9       2.3   0.1333333
+## 5        Bos herbi Artiodactyla domesticated         4.0       0.7   0.6666667
+## 6   Bradypus herbi       Pilosa         &lt;NA&gt;        14.4       2.2   0.7666667
+##   awake brainwt  bodywt
+## 1  11.9      NA  50.000
+## 2   7.0 0.01550   0.480
+## 3   9.6      NA   1.350
+## 4   9.1 0.00029   0.019
+## 5  20.0 0.42300 600.000
+## 6   9.6      NA   3.850</code></pre>
+<p>To select a range of columns by name, use the “:” (colon) operator</p>
+<div class="sourceCode" id="cb981"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb981-1"><a href="grouped-operations.html#cb981-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">select</span>(msleep, name<span class="sc">:</span>order))</span></code></pre></div>
+<pre><code>##                         name      genus  vore        order
+## 1                    Cheetah   Acinonyx carni    Carnivora
+## 2                 Owl monkey      Aotus  omni     Primates
+## 3            Mountain beaver Aplodontia herbi     Rodentia
+## 4 Greater short-tailed shrew    Blarina  omni Soricomorpha
+## 5                        Cow        Bos herbi Artiodactyla
+## 6           Three-toed sloth   Bradypus herbi       Pilosa</code></pre>
+<p>To select all columns that start with the character string “sl”, use the function <code>starts_with()</code></p>
+<div class="sourceCode" id="cb983"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb983-1"><a href="grouped-operations.html#cb983-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">select</span>(msleep, <span class="fu">starts_with</span>(<span class="st">&quot;sl&quot;</span>)))</span></code></pre></div>
+<pre><code>##   sleep_total sleep_rem sleep_cycle
+## 1        12.1        NA          NA
+## 2        17.0       1.8          NA
+## 3        14.4       2.4          NA
+## 4        14.9       2.3   0.1333333
+## 5         4.0       0.7   0.6666667
+## 6        14.4       2.2   0.7666667</code></pre>
+<p>Some additional options to select columns based on a specific criteria include</p>
+<p><code>ends_with()</code> = Select columns that end with a character string</p>
+<p><code>contains()</code> = Select columns that contain a character string</p>
+<p><code>matches()</code> = Select columns that match a regular expression</p>
+<p><code>one_of()</code> = Select columns names that are from a group of names</p>
+<p>Selecting rows using <code>filter()</code></p>
+<div class="sourceCode" id="cb985"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb985-1"><a href="grouped-operations.html#cb985-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Filter the rows for mammals that sleep a total of more than 16 hours.</span></span>
+<span id="cb985-2"><a href="grouped-operations.html#cb985-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(msleep, sleep_total <span class="sc">&gt;=</span> <span class="dv">16</span>)</span></code></pre></div>
+<pre><code>##                     name        genus    vore           order conservation
+## 1             Owl monkey        Aotus    omni        Primates         &lt;NA&gt;
+## 2   Long-nosed armadillo      Dasypus   carni       Cingulata           lc
+## 3 North American Opossum    Didelphis    omni Didelphimorphia           lc
+## 4          Big brown bat    Eptesicus insecti      Chiroptera           lc
+## 5   Thick-tailed opposum   Lutreolina   carni Didelphimorphia           lc
+## 6       Little brown bat       Myotis insecti      Chiroptera         &lt;NA&gt;
+## 7        Giant armadillo   Priodontes insecti       Cingulata           en
+## 8 Arctic ground squirrel Spermophilus   herbi        Rodentia           lc
+##   sleep_total sleep_rem sleep_cycle awake brainwt bodywt
+## 1        17.0       1.8          NA   7.0 0.01550  0.480
+## 2        17.4       3.1   0.3833333   6.6 0.01080  3.500
+## 3        18.0       4.9   0.3333333   6.0 0.00630  1.700
+## 4        19.7       3.9   0.1166667   4.3 0.00030  0.023
+## 5        19.4       6.6          NA   4.6      NA  0.370
+## 6        19.9       2.0   0.2000000   4.1 0.00025  0.010
+## 7        18.1       6.1          NA   5.9 0.08100 60.000
+## 8        16.6        NA          NA   7.4 0.00570  0.920</code></pre>
+<p>Filter the rows for mammals that sleep a total of more than 16 hours and have a body weight of greater than 1 kilogram.</p>
+<div class="sourceCode" id="cb987"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb987-1"><a href="grouped-operations.html#cb987-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(msleep, sleep_total <span class="sc">&gt;=</span> <span class="dv">16</span>, bodywt <span class="sc">&gt;=</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>##                     name      genus    vore           order conservation
+## 1   Long-nosed armadillo    Dasypus   carni       Cingulata           lc
+## 2 North American Opossum  Didelphis    omni Didelphimorphia           lc
+## 3        Giant armadillo Priodontes insecti       Cingulata           en
+##   sleep_total sleep_rem sleep_cycle awake brainwt bodywt
+## 1        17.4       3.1   0.3833333   6.6  0.0108    3.5
+## 2        18.0       4.9   0.3333333   6.0  0.0063    1.7
+## 3        18.1       6.1          NA   5.9  0.0810   60.0</code></pre>
+<p>Filter the rows for mammals in the <em>Perissodactyla</em> and <em>Primates</em> taxonomic order</p>
+<div class="sourceCode" id="cb989"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb989-1"><a href="grouped-operations.html#cb989-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(msleep, order <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Perissodactyla&quot;</span>, <span class="st">&quot;Primates&quot;</span>))</span></code></pre></div>
+<pre><code>##               name         genus  vore          order conservation sleep_total
+## 1       Owl monkey         Aotus  omni       Primates         &lt;NA&gt;        17.0
+## 2           Grivet Cercopithecus  omni       Primates           lc        10.0
+## 3            Horse         Equus herbi Perissodactyla domesticated         2.9
+## 4           Donkey         Equus herbi Perissodactyla domesticated         3.1
+## 5     Patas monkey  Erythrocebus  omni       Primates           lc        10.9
+## 6           Galago        Galago  omni       Primates         &lt;NA&gt;         9.8
+## 7            Human          Homo  omni       Primates         &lt;NA&gt;         8.0
+## 8   Mongoose lemur         Lemur herbi       Primates           vu         9.5
+## 9          Macaque        Macaca  omni       Primates         &lt;NA&gt;        10.1
+## 10      Slow loris     Nyctibeus carni       Primates         &lt;NA&gt;        11.0
+## 11      Chimpanzee           Pan  omni       Primates         &lt;NA&gt;         9.7
+## 12          Baboon         Papio  omni       Primates         &lt;NA&gt;         9.4
+## 13           Potto  Perodicticus  omni       Primates           lc        11.0
+## 14 Squirrel monkey       Saimiri  omni       Primates         &lt;NA&gt;         9.6
+## 15 Brazilian tapir       Tapirus herbi Perissodactyla           vu         4.4
+##    sleep_rem sleep_cycle awake brainwt  bodywt
+## 1        1.8          NA   7.0  0.0155   0.480
+## 2        0.7          NA  14.0      NA   4.750
+## 3        0.6   1.0000000  21.1  0.6550 521.000
+## 4        0.4          NA  20.9  0.4190 187.000
+## 5        1.1          NA  13.1  0.1150  10.000
+## 6        1.1   0.5500000  14.2  0.0050   0.200
+## 7        1.9   1.5000000  16.0  1.3200  62.000
+## 8        0.9          NA  14.5      NA   1.670
+## 9        1.2   0.7500000  13.9  0.1790   6.800
+## 10        NA          NA  13.0  0.0125   1.400
+## 11       1.4   1.4166667  14.3  0.4400  52.200
+## 12       1.0   0.6666667  14.6  0.1800  25.235
+## 13        NA          NA  13.0      NA   1.100
+## 14       1.4          NA  14.4  0.0200   0.743
+## 15       1.0   0.9000000  19.6  0.1690 207.501</code></pre>
+<p>You can use the boolean operators (e.g. <code>&gt;, &lt;, &gt;=, &lt;=, !=, %in%</code>) to create the logical tests.</p>
+<p>Pipe operator: <code>%&gt;%</code></p>
+<p>Before we go any futher, let’s introduce the pipe operator: <code>%&gt;%</code>. <code>dplyr</code> imports this operator from another package (<code>magrittr</code>). This operator allows you to pipe the output from one function to the input of another function. Instead of nesting functions (reading from the inside to the outside), the idea of of piping is to read the functions from left to right.</p>
+<p>Here’s an example you have seen:</p>
+<div class="sourceCode" id="cb991"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb991-1"><a href="grouped-operations.html#cb991-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">select</span>(msleep, name, sleep_total))</span></code></pre></div>
+<pre><code>##                         name sleep_total
+## 1                    Cheetah        12.1
+## 2                 Owl monkey        17.0
+## 3            Mountain beaver        14.4
+## 4 Greater short-tailed shrew        14.9
+## 5                        Cow         4.0
+## 6           Three-toed sloth        14.4</code></pre>
+<p>Now in this case, we will pipe the msleep data frame to the function that will select two columns (name and sleep_total) and then pipe the new data frame to the function head() which will return the head of the new data frame.</p>
+<div class="sourceCode" id="cb993"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb993-1"><a href="grouped-operations.html#cb993-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">%&gt;%</span> </span>
+<span id="cb993-2"><a href="grouped-operations.html#cb993-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(name, sleep_total) <span class="sc">%&gt;%</span> </span>
+<span id="cb993-3"><a href="grouped-operations.html#cb993-3" aria-hidden="true" tabindex="-1"></a>    head</span></code></pre></div>
+<pre><code>##                         name sleep_total
+## 1                    Cheetah        12.1
+## 2                 Owl monkey        17.0
+## 3            Mountain beaver        14.4
+## 4 Greater short-tailed shrew        14.9
+## 5                        Cow         4.0
+## 6           Three-toed sloth        14.4</code></pre>
+<p>You will soon see how useful the pipe operator is when we start to combine many functions.</p>
+<p>Back to <code>dplyr</code> verbs in action</p>
+<p>Now that you know about the pipe operator (<code>%&gt;%</code>), we will use it throughout the rest of the summary.</p>
+<p>Arrange or re-order rows using <code>arrange()</code></p>
+<div class="sourceCode" id="cb995"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb995-1"><a href="grouped-operations.html#cb995-1" aria-hidden="true" tabindex="-1"></a><span class="do">##To arrange (or re-order) rows by a particular column such as the taxonomic order, list the name of the column you want to arrange the rows by</span></span>
+<span id="cb995-2"><a href="grouped-operations.html#cb995-2" aria-hidden="true" tabindex="-1"></a> msleep <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(order) <span class="sc">%&gt;%</span> head</span></code></pre></div>
+<pre><code>##       name     genus  vore        order conservation sleep_total sleep_rem
+## 1   Tenrec    Tenrec  omni Afrosoricida         &lt;NA&gt;        15.6       2.3
+## 2      Cow       Bos herbi Artiodactyla domesticated         4.0       0.7
+## 3 Roe deer Capreolus herbi Artiodactyla           lc         3.0        NA
+## 4     Goat     Capri herbi Artiodactyla           lc         5.3       0.6
+## 5  Giraffe   Giraffa herbi Artiodactyla           cd         1.9       0.4
+## 6    Sheep      Ovis herbi Artiodactyla domesticated         3.8       0.6
+##   sleep_cycle awake brainwt  bodywt
+## 1          NA   8.4  0.0026   0.900
+## 2   0.6666667  20.0  0.4230 600.000
+## 3          NA  21.0  0.0982  14.800
+## 4          NA  18.7  0.1150  33.500
+## 5          NA  22.1      NA 899.995
+## 6          NA  20.2  0.1750  55.500</code></pre>
+<p>Now, we will select three columns from <code>msleep</code>, arrange the rows by the taxonomic order and then arrange the rows by <code>sleep_total</code>. Finally show the head of the final data frame</p>
+<div class="sourceCode" id="cb997"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb997-1"><a href="grouped-operations.html#cb997-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">%&gt;%</span> </span>
+<span id="cb997-2"><a href="grouped-operations.html#cb997-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(name, order, sleep_total) <span class="sc">%&gt;%</span></span>
+<span id="cb997-3"><a href="grouped-operations.html#cb997-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(order, sleep_total) <span class="sc">%&gt;%</span> </span>
+<span id="cb997-4"><a href="grouped-operations.html#cb997-4" aria-hidden="true" tabindex="-1"></a>    head</span></code></pre></div>
+<pre><code>##       name        order sleep_total
+## 1   Tenrec Afrosoricida        15.6
+## 2  Giraffe Artiodactyla         1.9
+## 3 Roe deer Artiodactyla         3.0
+## 4    Sheep Artiodactyla         3.8
+## 5      Cow Artiodactyla         4.0
+## 6     Goat Artiodactyla         5.3</code></pre>
+<p>Same as above, except here we filter the rows for mammals that sleep for 16 or more hours instead of showing the head of the final data frame</p>
+<div class="sourceCode" id="cb999"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb999-1"><a href="grouped-operations.html#cb999-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">%&gt;%</span> </span>
+<span id="cb999-2"><a href="grouped-operations.html#cb999-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(name, order, sleep_total) <span class="sc">%&gt;%</span></span>
+<span id="cb999-3"><a href="grouped-operations.html#cb999-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(order, sleep_total) <span class="sc">%&gt;%</span> </span>
+<span id="cb999-4"><a href="grouped-operations.html#cb999-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(sleep_total <span class="sc">&gt;=</span> <span class="dv">16</span>)</span></code></pre></div>
+<pre><code>##                     name           order sleep_total
+## 1          Big brown bat      Chiroptera        19.7
+## 2       Little brown bat      Chiroptera        19.9
+## 3   Long-nosed armadillo       Cingulata        17.4
+## 4        Giant armadillo       Cingulata        18.1
+## 5 North American Opossum Didelphimorphia        18.0
+## 6   Thick-tailed opposum Didelphimorphia        19.4
+## 7             Owl monkey        Primates        17.0
+## 8 Arctic ground squirrel        Rodentia        16.6</code></pre>
+<p>Something slightly more complicated: same as above, except arrange the rows in the <code>sleep_total</code> column in a descending order. For this, use the function <code>desc()</code></p>
+<div class="sourceCode" id="cb1001"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1001-1"><a href="grouped-operations.html#cb1001-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">%&gt;%</span> </span>
+<span id="cb1001-2"><a href="grouped-operations.html#cb1001-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(name, order, sleep_total) <span class="sc">%&gt;%</span></span>
+<span id="cb1001-3"><a href="grouped-operations.html#cb1001-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(order, <span class="fu">desc</span>(sleep_total)) <span class="sc">%&gt;%</span> </span>
+<span id="cb1001-4"><a href="grouped-operations.html#cb1001-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(sleep_total <span class="sc">&gt;=</span> <span class="dv">16</span>)</span></code></pre></div>
+<pre><code>##                     name           order sleep_total
+## 1       Little brown bat      Chiroptera        19.9
+## 2          Big brown bat      Chiroptera        19.7
+## 3        Giant armadillo       Cingulata        18.1
+## 4   Long-nosed armadillo       Cingulata        17.4
+## 5   Thick-tailed opposum Didelphimorphia        19.4
+## 6 North American Opossum Didelphimorphia        18.0
+## 7             Owl monkey        Primates        17.0
+## 8 Arctic ground squirrel        Rodentia        16.6</code></pre>
+<p>Create new columns using <code>mutate()</code></p>
+<p>The <code>mutate()</code> function will add new columns to the data frame. Create a new column called <code>rem_proportion</code> which is the ratio of rem sleep to total amount of sleep.</p>
+<div class="sourceCode" id="cb1003"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1003-1"><a href="grouped-operations.html#cb1003-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">%&gt;%</span> </span>
+<span id="cb1003-2"><a href="grouped-operations.html#cb1003-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">rem_proportion =</span> sleep_rem <span class="sc">/</span> sleep_total) <span class="sc">%&gt;%</span></span>
+<span id="cb1003-3"><a href="grouped-operations.html#cb1003-3" aria-hidden="true" tabindex="-1"></a>    head</span></code></pre></div>
+<pre><code>##                         name      genus  vore        order conservation
+## 1                    Cheetah   Acinonyx carni    Carnivora           lc
+## 2                 Owl monkey      Aotus  omni     Primates         &lt;NA&gt;
+## 3            Mountain beaver Aplodontia herbi     Rodentia           nt
+## 4 Greater short-tailed shrew    Blarina  omni Soricomorpha           lc
+## 5                        Cow        Bos herbi Artiodactyla domesticated
+## 6           Three-toed sloth   Bradypus herbi       Pilosa         &lt;NA&gt;
+##   sleep_total sleep_rem sleep_cycle awake brainwt  bodywt rem_proportion
+## 1        12.1        NA          NA  11.9      NA  50.000             NA
+## 2        17.0       1.8          NA   7.0 0.01550   0.480      0.1058824
+## 3        14.4       2.4          NA   9.6      NA   1.350      0.1666667
+## 4        14.9       2.3   0.1333333   9.1 0.00029   0.019      0.1543624
+## 5         4.0       0.7   0.6666667  20.0 0.42300 600.000      0.1750000
+## 6        14.4       2.2   0.7666667   9.6      NA   3.850      0.1527778</code></pre>
+<p>You can many new columns using <code>mutate</code> (separated by commas). Here we add a second column called <code>bodywt_grams</code> which is the <code>bodywt</code> column in grams.</p>
+<div class="sourceCode" id="cb1005"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1005-1"><a href="grouped-operations.html#cb1005-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">%&gt;%</span> </span>
+<span id="cb1005-2"><a href="grouped-operations.html#cb1005-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">rem_proportion =</span> sleep_rem <span class="sc">/</span> sleep_total, </span>
+<span id="cb1005-3"><a href="grouped-operations.html#cb1005-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">bodywt_grams =</span> bodywt <span class="sc">*</span> <span class="dv">1000</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1005-4"><a href="grouped-operations.html#cb1005-4" aria-hidden="true" tabindex="-1"></a>    head</span></code></pre></div>
+<pre><code>##                         name      genus  vore        order conservation
+## 1                    Cheetah   Acinonyx carni    Carnivora           lc
+## 2                 Owl monkey      Aotus  omni     Primates         &lt;NA&gt;
+## 3            Mountain beaver Aplodontia herbi     Rodentia           nt
+## 4 Greater short-tailed shrew    Blarina  omni Soricomorpha           lc
+## 5                        Cow        Bos herbi Artiodactyla domesticated
+## 6           Three-toed sloth   Bradypus herbi       Pilosa         &lt;NA&gt;
+##   sleep_total sleep_rem sleep_cycle awake brainwt  bodywt rem_proportion
+## 1        12.1        NA          NA  11.9      NA  50.000             NA
+## 2        17.0       1.8          NA   7.0 0.01550   0.480      0.1058824
+## 3        14.4       2.4          NA   9.6      NA   1.350      0.1666667
+## 4        14.9       2.3   0.1333333   9.1 0.00029   0.019      0.1543624
+## 5         4.0       0.7   0.6666667  20.0 0.42300 600.000      0.1750000
+## 6        14.4       2.2   0.7666667   9.6      NA   3.850      0.1527778
+##   bodywt_grams
+## 1        50000
+## 2          480
+## 3         1350
+## 4           19
+## 5       600000
+## 6         3850</code></pre>
+<p>Create summaries of the data frame using <code>summarise()</code></p>
+<p>The <code>summarise()</code> function will create summary statistics for a given column in the data frame such as finding the mean. For example, to compute the average number of hours of sleep, apply the mean() function to the column sleep_total and call the summary value avg_sleep.</p>
+<div class="sourceCode" id="cb1007"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1007-1"><a href="grouped-operations.html#cb1007-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">%&gt;%</span> </span>
+<span id="cb1007-2"><a href="grouped-operations.html#cb1007-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">avg_sleep =</span> <span class="fu">mean</span>(sleep_total))</span></code></pre></div>
+<pre><code>##   avg_sleep
+## 1  10.43373</code></pre>
+<p>There are many other summary statistics you could consider such <code>sd(), min(), max(), median(), sum(), n()</code> (returns the length of vector), <code>first()</code> (returns first value in vector), <code>last()</code> (returns last value in vector) and <code>n_distinct()</code> (number of distinct values in vector).</p>
+<div class="sourceCode" id="cb1009"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1009-1"><a href="grouped-operations.html#cb1009-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">%&gt;%</span> </span>
+<span id="cb1009-2"><a href="grouped-operations.html#cb1009-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">avg_sleep =</span> <span class="fu">mean</span>(sleep_total), </span>
+<span id="cb1009-3"><a href="grouped-operations.html#cb1009-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">min_sleep =</span> <span class="fu">min</span>(sleep_total),</span>
+<span id="cb1009-4"><a href="grouped-operations.html#cb1009-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">max_sleep =</span> <span class="fu">max</span>(sleep_total),</span>
+<span id="cb1009-5"><a href="grouped-operations.html#cb1009-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">total =</span> <span class="fu">n</span>())</span></code></pre></div>
+<pre><code>##   avg_sleep min_sleep max_sleep total
+## 1  10.43373       1.9      19.9    83</code></pre>
+<p>Group operations using <code>group_by()</code></p>
+<p>The <code>group_by()</code> verb is an important function in <code>dplyr</code>. As we mentioned before it’s related to concept of “split-apply-combine”. We literally want to split the data frame by some variable (e.g. taxonomic order), apply a function to the individual data frames and then combine the output.</p>
+<p>Let’s do that: split the <code>msleep</code> data frame by the taxonomic order, then ask for the same summary statistics as above. We expect a set of summary statistics for each taxonomic order.</p>
+<div class="sourceCode" id="cb1011"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1011-1"><a href="grouped-operations.html#cb1011-1" aria-hidden="true" tabindex="-1"></a>msleep <span class="sc">%&gt;%</span> </span>
+<span id="cb1011-2"><a href="grouped-operations.html#cb1011-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(order) <span class="sc">%&gt;%</span></span>
+<span id="cb1011-3"><a href="grouped-operations.html#cb1011-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">avg_sleep =</span> <span class="fu">mean</span>(sleep_total), </span>
+<span id="cb1011-4"><a href="grouped-operations.html#cb1011-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">min_sleep =</span> <span class="fu">min</span>(sleep_total), </span>
+<span id="cb1011-5"><a href="grouped-operations.html#cb1011-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">max_sleep =</span> <span class="fu">max</span>(sleep_total),</span>
+<span id="cb1011-6"><a href="grouped-operations.html#cb1011-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">total =</span> <span class="fu">n</span>())</span></code></pre></div>
+<pre><code>## # A tibble: 19 × 5
+##    order           avg_sleep min_sleep max_sleep total
+##    &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;int&gt;
+##  1 Afrosoricida        15.6       15.6      15.6     1
+##  2 Artiodactyla         4.52       1.9       9.1     6
+##  3 Carnivora           10.1        3.5      15.8    12
+##  4 Cetacea              4.5        2.7       5.6     3
+##  5 Chiroptera          19.8       19.7      19.9     2
+##  6 Cingulata           17.8       17.4      18.1     2
+##  7 Didelphimorphia     18.7       18        19.4     2
+##  8 Diprotodontia       12.4       11.1      13.7     2
+##  9 Erinaceomorpha      10.2       10.1      10.3     2
+## 10 Hyracoidea           5.67       5.3       6.3     3
+## 11 Lagomorpha           8.4        8.4       8.4     1
+## 12 Monotremata          8.6        8.6       8.6     1
+## 13 Perissodactyla       3.47       2.9       4.4     3
+## 14 Pilosa              14.4       14.4      14.4     1
+## 15 Primates            10.5        8        17      12
+## 16 Proboscidea          3.6        3.3       3.9     2
+## 17 Rodentia            12.5        7        16.6    22
+## 18 Scandentia           8.9        8.9       8.9     1
+## 19 Soricomorpha        11.1        8.4      14.9     5</code></pre>
+
+<p>#Math Symbols in Plots</p>
+<p>Any R graphics function that draws text should accept both a normal
+string and an R expression, which is typically the result of a call
+to the <code>expression()</code> function. If an expression is specified as
+the text to draw, then it is interpreted as a mathematical formula
+and is formatted appropriately. We cover some simple examples of
+what can be achieved. For a complete description of the available
+features, type</p>
+<p><code>?plotmath</code> or <code>demo(plotmath)</code></p>
+<p>in an R session.</p>
+<p>When an R expression is provided as text to draw in graphical output,
+the expression is evaluated to produce a mathematical formula. This
+evaluation us very different from the normal evaluation of R
+expressions: certain names are interpreted as special mathematical
+symbols, e.g., <code>alpha</code> is interpreted as the Greek symbol <span class="math inline">\(\alpha\)</span>;
+certain mathematical operators are interpreted as literal symbols,
+e.g., a <code>+</code> is interpreted as a plus sign symbol; and certain functions
+are interpreted as mathematical operators, e.g., <code>sum(x, i==1, n)</code> is
+interpreted as as <span class="math inline">\(\sum_{i=1}^n x\)</span>. Below are some simple examples.</p>
+<div class="sourceCode" id="cb1013"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1013-1"><a href="grouped-operations.html#cb1013-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">type=</span><span class="st">&quot;n&quot;</span>, <span class="at">ann=</span>F, <span class="at">axes=</span>F)</span>
+<span id="cb1013-2"><a href="grouped-operations.html#cb1013-2" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x=</span><span class="fl">0.5</span>, <span class="at">y=</span><span class="fl">0.9</span>, <span class="fu">expression</span>(z[i] <span class="sc">==</span> <span class="fu">sqrt</span>(x[i]<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> y[i]<span class="sc">^</span><span class="dv">2</span>)))</span>
+<span id="cb1013-3"><a href="grouped-operations.html#cb1013-3" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x=</span><span class="fl">0.5</span>, <span class="at">y=</span><span class="fl">0.7</span>, <span class="fu">expression</span>(<span class="fu">hat</span>(beta) <span class="sc">==</span> (X<span class="sc">^</span>t <span class="sc">*</span> X)<span class="sc">^</span>{<span class="sc">-</span><span class="dv">1</span>} <span class="sc">*</span> X<span class="sc">^</span>t <span class="sc">*</span> y))</span>
+<span id="cb1013-4"><a href="grouped-operations.html#cb1013-4" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x=</span><span class="fl">0.5</span>, <span class="at">y=</span><span class="fl">0.5</span>, <span class="fu">expression</span>(<span class="fu">bar</span>(x) <span class="sc">==</span> <span class="fu">sum</span>(<span class="fu">frac</span>(x[i], n), i<span class="sc">==</span><span class="dv">1</span>, n)))</span>
+<span id="cb1013-5"><a href="grouped-operations.html#cb1013-5" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x=</span><span class="fl">0.5</span>, <span class="at">y=</span><span class="fl">0.3</span>, <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">&quot;Temperature (&quot;</span>, degree, <span class="st">&quot;C) in 2003&quot;</span>, <span class="at">sep=</span><span class="st">&quot;&quot;</span>)))</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-1-1.png" width="624" style="display: block; margin: auto;" /></p>
+<p>If using <code>paste</code> inside the function <code>expression</code> is not intuitive,
+we can directly use a partial substitution function <code>bquote</code>. Here
+is an example:</p>
+<div class="sourceCode" id="cb1014"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1014-1"><a href="grouped-operations.html#cb1014-1" aria-hidden="true" tabindex="-1"></a>cor <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fl">0.321</span></span>
+<span id="cb1014-2"><a href="grouped-operations.html#cb1014-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">main=</span><span class="fu">bquote</span>(<span class="st">&quot;Hello&quot;</span> <span class="sc">~</span> r[xy] <span class="sc">==</span> .(cor) <span class="sc">~</span> <span class="st">&quot;and&quot;</span> <span class="sc">~</span> <span class="dv">2</span><span class="sc">*</span>B<span class="sc">^</span><span class="dv">2</span>))</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>All you need to remember is the following rules:</p>
+<ol style="list-style-type: decimal">
+<li>Strings – require quotes wrapped with tilde separator (e.f., “my
+text” ~ “and more”)</li>
+<li>Math expressions – unquoted and follow the rules discussed above
+(see <code>?plotmath</code>)</li>
+<li>Numbers – unquoted when part of math notation</li>
+<li>Variables – use <code>.()</code> (pass in string or numeric)</li>
+</ol>
+<p>Here is another example:</p>
+<div class="sourceCode" id="cb1015"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1015-1"><a href="grouped-operations.html#cb1015-1" aria-hidden="true" tabindex="-1"></a>cor2 <span class="ot">&lt;-</span> <span class="st">&#39;-.321&#39;</span></span>
+<span id="cb1015-2"><a href="grouped-operations.html#cb1015-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1015-3"><a href="grouped-operations.html#cb1015-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, </span>
+<span id="cb1015-4"><a href="grouped-operations.html#cb1015-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">main =</span> <span class="fu">bquote</span>(<span class="st">&quot;Eq 1:&quot;</span> <span class="sc">~</span> y[i] <span class="sc">==</span> alpha <span class="sc">+</span> beta <span class="sc">*</span> x[i] <span class="sc">+</span> epsilon[i] <span class="sc">~</span> <span class="st">&quot;or&quot;</span> <span class="sc">~</span> .(cor2))</span>
+<span id="cb1015-5"><a href="grouped-operations.html#cb1015-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>The same works in <code>ggplot2</code>:</p>
+<div class="sourceCode" id="cb1016"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1016-1"><a href="grouped-operations.html#cb1016-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ggplot2)</span>
+<span id="cb1016-2"><a href="grouped-operations.html#cb1016-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">data.frame</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">y=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="fu">aes</span>(x, y)) <span class="sc">+</span> <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb1016-3"><a href="grouped-operations.html#cb1016-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">bquote</span>(<span class="st">&quot;Eq 1:&quot;</span> <span class="sc">~</span> y[i] <span class="sc">==</span> alpha <span class="sc">+</span> beta <span class="sc">*</span> x[i] <span class="sc">+</span> epsilon[i] <span class="sc">~</span> <span class="st">&quot;or&quot;</span> <span class="sc">~</span> .(cor2)),</span>
+<span id="cb1016-4"><a href="grouped-operations.html#cb1016-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">x=</span><span class="fu">expression</span>(x[i]), <span class="at">y=</span><span class="fu">bquote</span>(y[i]))</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>If you are familiar with , equations become so much simpler to
+type:</p>
+<div class="sourceCode" id="cb1017"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1017-1"><a href="grouped-operations.html#cb1017-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packages</span>(latex2exp)</span></code></pre></div>
+<pre><code>## Loading required package: latex2exp</code></pre>
+<div class="sourceCode" id="cb1019"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1019-1"><a href="grouped-operations.html#cb1019-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>,,<span class="dv">100</span>)</span>
+<span id="cb1019-2"><a href="grouped-operations.html#cb1019-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(a, a<span class="sc">^</span><span class="dv">2</span>, <span class="at">xlab=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">alpha$&quot;</span>), <span class="at">ylab=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">alpha^2$&quot;</span>))</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1020"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1020-1"><a href="grouped-operations.html#cb1020-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">data.frame</span>(<span class="at">x=</span>a, <span class="at">y=</span>a<span class="sc">^</span><span class="dv">2</span>), <span class="fu">aes</span>(x, y)) <span class="sc">+</span> <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb1020-2"><a href="grouped-operations.html#cb1020-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="fu">TeX</span>(<span class="st">&quot;Eq 1: $y_i = </span><span class="sc">\\</span><span class="st">alpha + </span><span class="sc">\\</span><span class="st">beta </span><span class="sc">\\</span><span class="st">times x_i + </span><span class="sc">\\</span><span class="st">epsilon_i$&quot;</span>),</span>
+<span id="cb1020-3"><a href="grouped-operations.html#cb1020-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">x=</span><span class="fu">expression</span>(x[i]), <span class="at">y=</span><span class="fu">bquote</span>(y[i]))</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-5-2.png" width="672" />
+Here is an example: a figure I used in a poster</p>
+<div class="sourceCode" id="cb1021"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1021-1"><a href="grouped-operations.html#cb1021-1" aria-hidden="true" tabindex="-1"></a>hockey <span class="ot">&lt;-</span> <span class="cf">function</span>(x, beta0, beta1, phi) <span class="fu">return</span>(beta0<span class="sc">+</span>beta1<span class="sc">*</span>(x<span class="sc">-</span>phi)<span class="sc">*</span>(x<span class="sc">&gt;</span>phi))</span>
+<span id="cb1021-2"><a href="grouped-operations.html#cb1021-2" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">file=</span><span class="st">&quot;hockey.png&quot;</span>, <span class="at">width=</span><span class="dv">480</span>, <span class="at">height=</span><span class="dv">300</span>)</span>
+<span id="cb1021-3"><a href="grouped-operations.html#cb1021-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">20</span>), <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">25</span>), <span class="at">type=</span><span class="st">&quot;n&quot;</span>, <span class="at">ann=</span>F, <span class="at">axes=</span>F)</span>
+<span id="cb1021-4"><a href="grouped-operations.html#cb1021-4" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">hockey</span>(x,  <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">10</span>), <span class="at">add=</span>T)</span>
+<span id="cb1021-5"><a href="grouped-operations.html#cb1021-5" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">4.5</span>, <span class="dv">20</span>, <span class="fu">TeX</span>(<span class="st">&quot;$y=</span><span class="sc">\\</span><span class="st">beta_0+</span><span class="sc">\\</span><span class="st">beta_1 x, $&quot;</span>), <span class="at">adj=</span><span class="dv">0</span>)</span>
+<span id="cb1021-6"><a href="grouped-operations.html#cb1021-6" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">7.5</span>, <span class="dv">20</span>, <span class="fu">TeX</span>(<span class="st">&quot;$x </span><span class="sc">\\</span><span class="st">leq </span><span class="sc">\\</span><span class="st">phi$&quot;</span>), <span class="at">adj=</span><span class="dv">0</span>)</span>
+<span id="cb1021-7"><a href="grouped-operations.html#cb1021-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1021-8"><a href="grouped-operations.html#cb1021-8" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">4.5</span>, <span class="dv">18</span>, <span class="fu">TeX</span>(<span class="st">&quot;$y=</span><span class="sc">\\</span><span class="st">alpha_0+</span><span class="sc">\\</span><span class="st">alpha_1 x, $&quot;</span>), <span class="at">adj=</span><span class="dv">0</span>)</span>
+<span id="cb1021-9"><a href="grouped-operations.html#cb1021-9" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">7.5</span>, <span class="dv">18</span>, <span class="fu">TeX</span>(<span class="st">&quot;$x &gt; </span><span class="sc">\\</span><span class="st">phi$&quot;</span>), <span class="at">adj=</span><span class="dv">0</span>)</span>
+<span id="cb1021-10"><a href="grouped-operations.html#cb1021-10" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">5</span>, <span class="dv">16</span>, <span class="st">&quot;Or&quot;</span>)</span>
+<span id="cb1021-11"><a href="grouped-operations.html#cb1021-11" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">4.5</span>, <span class="dv">14</span>, <span class="fu">TeX</span>(<span class="st">&quot;$y=</span><span class="sc">\\</span><span class="st">beta_0+</span><span class="sc">\\</span><span class="st">alpha_1 (x-</span><span class="sc">\\</span><span class="st">phi) I(x-</span><span class="sc">\\</span><span class="st">phi)$&quot;</span>), <span class="at">adj=</span><span class="dv">0</span>)</span>
+<span id="cb1021-12"><a href="grouped-operations.html#cb1021-12" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">14</span>, <span class="dv">15</span>, <span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">alpha_1$&quot;</span>))</span>
+<span id="cb1021-13"><a href="grouped-operations.html#cb1021-13" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">5</span>, <span class="fl">5.5</span>, <span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">beta_1=0$&quot;</span>), <span class="at">adj=</span><span class="dv">1</span>)</span>
+<span id="cb1021-14"><a href="grouped-operations.html#cb1021-14" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>, <span class="at">at=</span><span class="dv">10</span>, <span class="at">labels=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">phi$&quot;</span>))</span>
+<span id="cb1021-15"><a href="grouped-operations.html#cb1021-15" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">2</span>, <span class="at">at=</span><span class="dv">5</span>, <span class="at">labels=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">beta_0$&quot;</span>))</span>
+<span id="cb1021-16"><a href="grouped-operations.html#cb1021-16" aria-hidden="true" tabindex="-1"></a><span class="fu">box</span>()</span>
+<span id="cb1021-17"><a href="grouped-operations.html#cb1021-17" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<pre><code>## quartz_off_screen 
+##                 2</code></pre>
+<div class="sourceCode" id="cb1023"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1023-1"><a href="grouped-operations.html#cb1023-1" aria-hidden="true" tabindex="-1"></a><span class="do">## ggplot</span></span>
+<span id="cb1023-2"><a href="grouped-operations.html#cb1023-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="at">file=</span><span class="st">&quot;hockey_gg.pdf&quot;</span>, <span class="at">width=</span><span class="fl">4.80</span>, <span class="at">height=</span><span class="fl">3.00</span>)</span>
+<span id="cb1023-3"><a href="grouped-operations.html#cb1023-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">data.frame</span>(<span class="at">x=</span><span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">20</span>, <span class="fl">0.1</span>), <span class="at">y=</span><span class="fu">hockey</span>(<span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">20</span>,<span class="fl">0.1</span>), <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">10</span>)), <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y))<span class="sc">+</span></span>
+<span id="cb1023-4"><a href="grouped-operations.html#cb1023-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb1023-5"><a href="grouped-operations.html#cb1023-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="fl">4.5</span>, <span class="at">y=</span><span class="dv">20</span>, <span class="at">label=</span><span class="fu">TeX</span>(<span class="st">&quot;$y=</span><span class="sc">\\</span><span class="st">beta_0+</span><span class="sc">\\</span><span class="st">beta_1 x, $&quot;</span>), <span class="at">adj=</span><span class="dv">0</span>)<span class="sc">+</span></span>
+<span id="cb1023-6"><a href="grouped-operations.html#cb1023-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="fl">7.5</span>, <span class="at">y=</span><span class="dv">20</span>, <span class="at">label=</span><span class="fu">TeX</span>(<span class="st">&quot;$x </span><span class="sc">\\</span><span class="st">leq </span><span class="sc">\\</span><span class="st">phi$&quot;</span>), <span class="at">adj=</span><span class="dv">0</span>)<span class="sc">+</span></span>
+<span id="cb1023-7"><a href="grouped-operations.html#cb1023-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="fl">4.5</span>, <span class="at">y=</span><span class="dv">18</span>, <span class="at">label=</span><span class="fu">TeX</span>(<span class="st">&quot;$y=</span><span class="sc">\\</span><span class="st">alpha_0+</span><span class="sc">\\</span><span class="st">alpha_1 x, $&quot;</span>), <span class="at">adj=</span><span class="dv">0</span>)<span class="sc">+</span></span>
+<span id="cb1023-8"><a href="grouped-operations.html#cb1023-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="fl">7.5</span>, <span class="at">y=</span><span class="dv">18</span>, <span class="at">label=</span><span class="fu">TeX</span>(<span class="st">&quot;$x &gt; </span><span class="sc">\\</span><span class="st">phi$&quot;</span>), <span class="at">adj=</span><span class="dv">0</span>)<span class="sc">+</span></span>
+<span id="cb1023-9"><a href="grouped-operations.html#cb1023-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="dv">5</span>, <span class="at">y=</span><span class="dv">16</span>, <span class="at">label=</span><span class="st">&quot;Or&quot;</span>)<span class="sc">+</span></span>
+<span id="cb1023-10"><a href="grouped-operations.html#cb1023-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="fl">4.5</span>, <span class="at">y=</span><span class="dv">14</span>, <span class="at">label=</span><span class="fu">TeX</span>(<span class="st">&quot;$y=</span><span class="sc">\\</span><span class="st">beta_0+</span><span class="sc">\\</span><span class="st">alpha_1 (x-</span><span class="sc">\\</span><span class="st">phi) I(x-</span><span class="sc">\\</span><span class="st">phi)$&quot;</span>), <span class="at">adj=</span><span class="dv">0</span>)<span class="sc">+</span></span>
+<span id="cb1023-11"><a href="grouped-operations.html#cb1023-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="dv">14</span>, <span class="at">y=</span><span class="dv">15</span>, <span class="at">label=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">alpha_1$&quot;</span>), <span class="at">adj=</span><span class="dv">0</span>)<span class="sc">+</span></span>
+<span id="cb1023-12"><a href="grouped-operations.html#cb1023-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="dv">5</span>, <span class="at">y=</span><span class="fl">5.5</span>, <span class="at">label=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">beta_1=0$&quot;</span>), <span class="at">adj=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb1023-13"><a href="grouped-operations.html#cb1023-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">name=</span><span class="st">&quot;TP Loading&quot;</span>, <span class="at">breaks=</span><span class="dv">10</span>, <span class="at">labels =</span> <span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">phi$&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb1023-14"><a href="grouped-operations.html#cb1023-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name=</span><span class="st">&quot;TP Concentration&quot;</span>, <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">25</span>), <span class="at">breaks=</span><span class="dv">5</span>, <span class="at">labels =</span> <span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">beta_0$&quot;</span>))</span></code></pre></div>
+<pre><code>## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;
+
+## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;
+
+## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;
+
+## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;
+
+## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;
+
+## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;
+
+## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;</code></pre>
+<div class="sourceCode" id="cb1025"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1025-1"><a href="grouped-operations.html#cb1025-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
+<pre><code>## quartz_off_screen 
+##                 2</code></pre>
+<p>To interpret <code>lab</code> as a <code>plotmath</code> expression, use <code>parse</code>:</p>
+<pre><code>print(p2 &lt;- p + geom_text(aes(x, y, label=&quot;.&quot;), parse=T))
+p2+xlab(expression(beta)) + ylab(bquote(alpha)) + labs(title=TeX(&quot;$\\gamma$&quot;), hjust=&#39;center&#39;)</code></pre>
+<p>We can also make facet labels using <code>plotmath</code> expression:</p>
+<div class="sourceCode" id="cb1028"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1028-1"><a href="grouped-operations.html#cb1028-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span><span class="fu">data.frame</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,<span class="at">y=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">f =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;alpha&quot;</span>,<span class="st">&quot;beta&quot;</span>))),</span>
+<span id="cb1028-2"><a href="grouped-operations.html#cb1028-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y) ) <span class="sc">+</span></span>
+<span id="cb1028-3"><a href="grouped-operations.html#cb1028-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1028-4"><a href="grouped-operations.html#cb1028-4" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_grid</span>(.<span class="sc">~</span>f, <span class="at">labeller=</span> label_parsed)</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Now labeling legend:</p>
+<div class="sourceCode" id="cb1029"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1029-1"><a href="grouped-operations.html#cb1029-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,<span class="at">y=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,<span class="at">f=</span><span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;alpha&quot;</span>,<span class="st">&quot;beta&quot;</span>),<span class="at">each=</span><span class="dv">5</span>), <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span>
+<span id="cb1029-2"><a href="grouped-operations.html#cb1029-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1029-3"><a href="grouped-operations.html#cb1029-3" aria-hidden="true" tabindex="-1"></a>value <span class="ot">&lt;-</span> <span class="fl">3.1415</span></span>
+<span id="cb1029-4"><a href="grouped-operations.html#cb1029-4" aria-hidden="true" tabindex="-1"></a>my.labs <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">bquote</span>(alpha<span class="sc">==</span>.(value)),<span class="fu">bquote</span>(beta<span class="sc">==</span>.(value)))</span>
+<span id="cb1029-5"><a href="grouped-operations.html#cb1029-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1029-6"><a href="grouped-operations.html#cb1029-6" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(x,y,<span class="at">data=</span>d,<span class="at">colour=</span>f) <span class="sc">+</span></span>
+<span id="cb1029-7"><a href="grouped-operations.html#cb1029-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,<span class="at">breaks=</span><span class="fu">c</span>(<span class="st">&quot;alpha&quot;</span>,<span class="st">&quot;beta&quot;</span>),</span>
+<span id="cb1029-8"><a href="grouped-operations.html#cb1029-8" aria-hidden="true" tabindex="-1"></a>                      <span class="at">labels=</span>my.labs)</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Here are more examples of using <code>latex2exp</code>:</p>
+<div class="sourceCode" id="cb1030"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1030-1"><a href="grouped-operations.html#cb1030-1" aria-hidden="true" tabindex="-1"></a><span class="do">## traditional plots</span></span>
+<span id="cb1030-2"><a href="grouped-operations.html#cb1030-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">4</span>, <span class="at">length.out=</span><span class="dv">100</span>)</span>
+<span id="cb1030-3"><a href="grouped-operations.html#cb1030-3" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb1030-4"><a href="grouped-operations.html#cb1030-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1030-5"><a href="grouped-operations.html#cb1030-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">4</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>), <span class="at">type=</span><span class="st">&#39;n&#39;</span>, </span>
+<span id="cb1030-6"><a href="grouped-operations.html#cb1030-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&#39;x&#39;</span>, <span class="at">ylab=</span><span class="fu">TeX</span>(<span class="st">&#39;$</span><span class="sc">\\</span><span class="st">alpha  x^</span><span class="sc">\\</span><span class="st">alpha$, where $</span><span class="sc">\\</span><span class="st">alpha </span><span class="sc">\\</span><span class="st">in 1</span><span class="sc">\\</span><span class="st">ldots 5$&#39;</span>), </span>
+<span id="cb1030-7"><a href="grouped-operations.html#cb1030-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="fu">TeX</span>(<span class="st">&#39;Using $</span><span class="sc">\\</span><span class="st">LaTeX$ for plotting in base graphics!&#39;</span>))</span>
+<span id="cb1030-8"><a href="grouped-operations.html#cb1030-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1030-9"><a href="grouped-operations.html#cb1030-9" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">sapply</span>(alpha, <span class="cf">function</span>(a) <span class="fu">lines</span>(x, a<span class="sc">*</span>x<span class="sc">^</span>a, <span class="at">col=</span>a)))</span>
+<span id="cb1030-10"><a href="grouped-operations.html#cb1030-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1030-11"><a href="grouped-operations.html#cb1030-11" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&#39;topleft&#39;</span>, <span class="at">legend=</span><span class="fu">TeX</span>(<span class="fu">sprintf</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">alpha = %d$&quot;</span>, alpha)), </span>
+<span id="cb1030-12"><a href="grouped-operations.html#cb1030-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">lwd=</span><span class="dv">1</span>, <span class="at">col=</span>alpha, <span class="at">bty=</span><span class="st">&quot;n&quot;</span>)</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1031"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1031-1"><a href="grouped-operations.html#cb1031-1" aria-hidden="true" tabindex="-1"></a><span class="do">## ggplots:</span></span>
+<span id="cb1031-2"><a href="grouped-operations.html#cb1031-2" aria-hidden="true" tabindex="-1"></a><span class="fu">packages</span>(plyr)</span></code></pre></div>
+<pre><code>## Loading required package: plyr</code></pre>
+<pre><code>## ------------------------------------------------------------------------------</code></pre>
+<pre><code>## You have loaded plyr after dplyr - this is likely to cause problems.
+## If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+## library(plyr); library(dplyr)</code></pre>
+<pre><code>## ------------------------------------------------------------------------------</code></pre>
+<pre><code>## 
+## Attaching package: &#39;plyr&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     compact</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     arrange, count, desc, failwith, id, mutate, rename, summarise,
+##     summarize</code></pre>
+<pre><code>## The following objects are masked from &#39;package:reshape&#39;:
+## 
+##     rename, round_any</code></pre>
+<pre><code>## The following object is masked from &#39;package:maps&#39;:
+## 
+##     ozone</code></pre>
+<pre><code>## The following objects are masked from &#39;package:Hmisc&#39;:
+## 
+##     is.discrete, summarize</code></pre>
+<div class="sourceCode" id="cb1042"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1042-1"><a href="grouped-operations.html#cb1042-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">4</span>, <span class="at">length.out=</span><span class="dv">100</span>)</span>
+<span id="cb1042-2"><a href="grouped-operations.html#cb1042-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb1042-3"><a href="grouped-operations.html#cb1042-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">mdply</span>(alpha, <span class="cf">function</span>(a, x) <span class="fu">data.frame</span>(<span class="at">v=</span>a<span class="sc">*</span>x<span class="sc">^</span>a, <span class="at">x=</span>x), x)</span>
+<span id="cb1042-4"><a href="grouped-operations.html#cb1042-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1042-5"><a href="grouped-operations.html#cb1042-5" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>v, <span class="at">color=</span>X1)) <span class="sc">+</span></span>
+<span id="cb1042-6"><a href="grouped-operations.html#cb1042-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb1042-7"><a href="grouped-operations.html#cb1042-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="fu">TeX</span>(<span class="st">&#39;$</span><span class="sc">\\</span><span class="st">alpha  x^</span><span class="sc">\\</span><span class="st">alpha$, where $</span><span class="sc">\\</span><span class="st">alpha </span><span class="sc">\\</span><span class="st">in 1</span><span class="sc">\\</span><span class="st">ldots 5$&#39;</span>)) <span class="sc">+</span></span>
+<span id="cb1042-8"><a href="grouped-operations.html#cb1042-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggtitle</span>(<span class="fu">TeX</span>(<span class="st">&#39;Using $</span><span class="sc">\\</span><span class="st">LaTeX$ for plotting in ggplot2. I $</span><span class="sc">\\</span><span class="st">heartsuit$ ggplot!&#39;</span>)) <span class="sc">+</span></span>
+<span id="cb1042-9"><a href="grouped-operations.html#cb1042-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_cartesian</span>(<span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb1042-10"><a href="grouped-operations.html#cb1042-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">guides</span>(<span class="at">color=</span><span class="fu">guide_legend</span>(<span class="at">title=</span><span class="cn">NULL</span>)) <span class="sc">+</span></span>
+<span id="cb1042-11"><a href="grouped-operations.html#cb1042-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_discrete</span>(<span class="at">labels=</span><span class="fu">lapply</span>(<span class="fu">sprintf</span>(<span class="st">&#39;$</span><span class="sc">\\</span><span class="st">alpha = %d$&#39;</span>, alpha), TeX)) </span>
+<span id="cb1042-12"><a href="grouped-operations.html#cb1042-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Note that ggplot2 legend labels must be lists of expressions, not vectors of expressions</span></span>
+<span id="cb1042-13"><a href="grouped-operations.html#cb1042-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1042-14"><a href="grouped-operations.html#cb1042-14" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(p)</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
+<p>If you are not sure what a line of equation represents, you can
+quickly plot it out</p>
+<div class="sourceCode" id="cb1043"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1043-1"><a href="grouped-operations.html#cb1043-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">TeX</span>(<span class="st">&quot;A $</span><span class="sc">\\</span><span class="st">LaTeX$ formula: $</span><span class="sc">\\</span><span class="st">frac{2hc^2}{</span><span class="sc">\\</span><span class="st">lambda^5} </span><span class="sc">\\</span><span class="st">, </span></span>
+<span id="cb1043-2"><a href="grouped-operations.html#cb1043-2" aria-hidden="true" tabindex="-1"></a><span class="st">               </span><span class="sc">\\</span><span class="st">frac{1}{e^{</span><span class="sc">\\</span><span class="st">frac{hc}{</span><span class="sc">\\</span><span class="st">lambda k_B T}} - 1}$&quot;</span>), <span class="at">cex=</span><span class="dv">2</span>)</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>To see what you can do (or what is supported in the <code>latex2exp</code>
+package):</p>
+<div class="sourceCode" id="cb1044"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1044-1"><a href="grouped-operations.html#cb1044-1" aria-hidden="true" tabindex="-1"></a><span class="fu">latex2exp_supported</span>(<span class="at">plot=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1045"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1045-1"><a href="grouped-operations.html#cb1045-1" aria-hidden="true" tabindex="-1"></a><span class="do">## and examples:</span></span>
+<span id="cb1045-2"><a href="grouped-operations.html#cb1045-2" aria-hidden="true" tabindex="-1"></a><span class="fu">latex2exp_examples</span>()</span></code></pre></div>
+<p><img src="MathSymbols_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
+<pre><code>## [1] TRUE</code></pre>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="explaining-dplyr-a-more-complicated-example.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a-quick-recap.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>41 Types of Data | Advanced Environmental Data Management</title>
+  <meta name="description" content="41 Types of Data | Advanced Environmental Data Management" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="41 Types of Data | Advanced Environmental Data Management" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="41 Types of Data | Advanced Environmental Data Management" />
+  
+  
+  
+
+<meta name="author" content="Whitney Adam" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="a-quick-recap.html"/>
+<link rel="next" href="univariate-data-displaying-and-comparing-distributions.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html"><i class="fa fa-check"></i><b>2</b> Importing Data into R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#typing-vectors-and-matrices"><i class="fa fa-check"></i><b>2.1</b> Typing Vectors and Matrices</a></li>
+<li class="chapter" data-level="2.2" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#reading-data-frame"><i class="fa fa-check"></i><b>2.2</b> Reading Data Frame</a></li>
+<li class="chapter" data-level="2.3" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#fixed-with-input-files"><i class="fa fa-check"></i><b>2.3</b> Fixed-with Input Files</a></li>
+<li class="chapter" data-level="2.4" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#generating-data"><i class="fa fa-check"></i><b>2.4</b> Generating Data</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#sequences"><i class="fa fa-check"></i><b>2.4.1</b> Sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#random-number-generators"><i class="fa fa-check"></i><b>2.5</b> Random Number Generators</a></li>
+<li class="chapter" data-level="2.6" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#random-permutation"><i class="fa fa-check"></i><b>2.6</b> Random Permutation</a></li>
+<li class="chapter" data-level="2.7" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#spreadsheet"><i class="fa fa-check"></i><b>2.7</b> Spreadsheet</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="saving-r-data.html"><a href="saving-r-data.html"><i class="fa fa-check"></i><b>3</b> Saving R Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="saving-r-data.html"><a href="saving-r-data.html#writing-r-objects-to-files-in-ascii-format"><i class="fa fa-check"></i><b>3.1</b> Writing R Objects to Files in ASCII Format</a></li>
+<li class="chapter" data-level="3.2" data-path="saving-r-data.html"><a href="saving-r-data.html#reading-data-from-other-programs"><i class="fa fa-check"></i><b>3.2</b> Reading Data from Other Programs</a></li>
+<li class="chapter" data-level="3.3" data-path="saving-r-data.html"><a href="saving-r-data.html#functions-in-foreign-package"><i class="fa fa-check"></i><b>3.3</b> Functions in <code>foreign</code> package</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="date-objects.html"><a href="date-objects.html"><i class="fa fa-check"></i><b>4</b> Date Objects</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="date-objects.html"><a href="date-objects.html#date-formats-in-r-date-time-classes"><i class="fa fa-check"></i><b>4.1</b> Date formats in R date-time classes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="summary-statistics.html"><a href="summary-statistics.html"><i class="fa fa-check"></i><b>5</b> Summary Statistics</a></li>
+<li class="chapter" data-level="6" data-path="anatomy-of-a-plot.html"><a href="anatomy-of-a-plot.html"><i class="fa fa-check"></i><b>6</b> Anatomy of a Plot</a></li>
+<li class="chapter" data-level="7" data-path="customizing-a-plot.html"><a href="customizing-a-plot.html"><i class="fa fa-check"></i><b>7</b> Customizing a Plot</a></li>
+<li class="chapter" data-level="8" data-path="graphical-functions.html"><a href="graphical-functions.html"><i class="fa fa-check"></i><b>8</b> Graphical Functions</a></li>
+<li class="chapter" data-level="9" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html"><i class="fa fa-check"></i><b>9</b> Example: Lake Erie Harmful Algal Bloom Monitoring</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#data"><i class="fa fa-check"></i><b>9.1</b> Data</a></li>
+<li class="chapter" data-level="9.2" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#mc-distribution"><i class="fa fa-check"></i><b>9.2</b> MC Distribution</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#histogram-and-boxplot"><i class="fa fa-check"></i><b>9.2.1</b> Histogram and boxplot</a></li>
+<li class="chapter" data-level="9.2.2" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#comparing-to-the-normal-distribution"><i class="fa fa-check"></i><b>9.2.2</b> Comparing to the normal distribution</a></li>
+<li class="chapter" data-level="9.2.3" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#comparing-two-distributions"><i class="fa fa-check"></i><b>9.2.3</b> Comparing Two Distributions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="introduction-1.html"><a href="introduction-1.html"><i class="fa fa-check"></i><b>10</b> Introduction</a></li>
+<li class="chapter" data-level="11" data-path="data-1.html"><a href="data-1.html"><i class="fa fa-check"></i><b>11</b> Data</a></li>
+<li class="chapter" data-level="12" data-path="using-package-reshape.html"><a href="using-package-reshape.html"><i class="fa fa-check"></i><b>12</b> Using package <code>reshape</code></a></li>
+<li class="chapter" data-level="13" data-path="subscripting.html"><a href="subscripting.html"><i class="fa fa-check"></i><b>13</b> Subscripting</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="subscripting.html"><a href="subscripting.html#numerical-subscripts"><i class="fa fa-check"></i><b>13.1</b> Numerical Subscripts</a></li>
+<li class="chapter" data-level="13.2" data-path="subscripting.html"><a href="subscripting.html#character-subscripts"><i class="fa fa-check"></i><b>13.2</b> Character Subscripts</a></li>
+<li class="chapter" data-level="13.3" data-path="subscripting.html"><a href="subscripting.html#logical-subscripts"><i class="fa fa-check"></i><b>13.3</b> Logical Subscripts</a></li>
+<li class="chapter" data-level="13.4" data-path="subscripting.html"><a href="subscripting.html#subscripting-matrices"><i class="fa fa-check"></i><b>13.4</b> Subscripting Matrices</a></li>
+<li class="chapter" data-level="13.5" data-path="subscripting.html"><a href="subscripting.html#dropfalse"><i class="fa fa-check"></i><b>13.5</b> <code>drop=FALSE</code></a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="two-useful-functions-for-matrix.html"><a href="two-useful-functions-for-matrix.html"><i class="fa fa-check"></i><b>14</b> Two Useful Functions for Matrix</a></li>
+<li class="chapter" data-level="15" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>15</b> List</a></li>
+<li class="chapter" data-level="16" data-path="aggregation.html"><a href="aggregation.html"><i class="fa fa-check"></i><b>16</b> Aggregation</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="aggregation.html"><a href="aggregation.html#tabulation"><i class="fa fa-check"></i><b>16.1</b> Tabulation</a></li>
+<li class="chapter" data-level="16.2" data-path="aggregation.html"><a href="aggregation.html#general-considerations-of-aggregation"><i class="fa fa-check"></i><b>16.2</b> General Considerations of Aggregation</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="aggregation.html"><a href="aggregation.html#sapply"><i class="fa fa-check"></i><b>16.2.1</b> <code>sapply</code></a></li>
+<li class="chapter" data-level="16.2.2" data-path="aggregation.html"><a href="aggregation.html#apply"><i class="fa fa-check"></i><b>16.2.2</b> <code>apply</code></a></li>
+<li class="chapter" data-level="16.2.3" data-path="aggregation.html"><a href="aggregation.html#mapping-a-function-based-on-groups"><i class="fa fa-check"></i><b>16.2.3</b> Mapping a Function Based on Groups</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>17</b> Data transformation</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="transform.html"><a href="transform.html#introduction-2"><i class="fa fa-check"></i><b>17.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="transform.html"><a href="transform.html#prerequisites"><i class="fa fa-check"></i><b>17.1.1</b> Prerequisites</a></li>
+<li class="chapter" data-level="17.1.2" data-path="transform.html"><a href="transform.html#nycflights13"><i class="fa fa-check"></i><b>17.1.2</b> nycflights13</a></li>
+<li class="chapter" data-level="17.1.3" data-path="transform.html"><a href="transform.html#dplyr-basics"><i class="fa fa-check"></i><b>17.1.3</b> dplyr basics</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="transform.html"><a href="transform.html#filter-rows-with-filter"><i class="fa fa-check"></i><b>17.2</b> Filter rows with <code>filter()</code></a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="transform.html"><a href="transform.html#comparisons"><i class="fa fa-check"></i><b>17.2.1</b> Comparisons</a></li>
+<li class="chapter" data-level="17.2.2" data-path="transform.html"><a href="transform.html#logical-operators"><i class="fa fa-check"></i><b>17.2.2</b> Logical operators</a></li>
+<li class="chapter" data-level="17.2.3" data-path="transform.html"><a href="transform.html#missing-values"><i class="fa fa-check"></i><b>17.2.3</b> Missing values</a></li>
+<li class="chapter" data-level="17.2.4" data-path="transform.html"><a href="transform.html#exercises"><i class="fa fa-check"></i><b>17.2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="transform.html"><a href="transform.html#arrange-rows-with-arrange"><i class="fa fa-check"></i><b>17.3</b> Arrange rows with <code>arrange()</code></a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="transform.html"><a href="transform.html#exercises-1"><i class="fa fa-check"></i><b>17.3.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="transform.html"><a href="transform.html#select"><i class="fa fa-check"></i><b>17.4</b> Select columns with <code>select()</code></a>
+<ul>
+<li class="chapter" data-level="17.4.1" data-path="transform.html"><a href="transform.html#exercises-2"><i class="fa fa-check"></i><b>17.4.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.5" data-path="transform.html"><a href="transform.html#add-new-variables-with-mutate"><i class="fa fa-check"></i><b>17.5</b> Add new variables with <code>mutate()</code></a>
+<ul>
+<li class="chapter" data-level="17.5.1" data-path="transform.html"><a href="transform.html#mutate-funs"><i class="fa fa-check"></i><b>17.5.1</b> Useful creation functions</a></li>
+<li class="chapter" data-level="17.5.2" data-path="transform.html"><a href="transform.html#exercises-3"><i class="fa fa-check"></i><b>17.5.2</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.6" data-path="transform.html"><a href="transform.html#grouped-summaries-with-summarise"><i class="fa fa-check"></i><b>17.6</b> Grouped summaries with <code>summarise()</code></a>
+<ul>
+<li class="chapter" data-level="17.6.1" data-path="transform.html"><a href="transform.html#combining-multiple-operations-with-the-pipe"><i class="fa fa-check"></i><b>17.6.1</b> Combining multiple operations with the pipe</a></li>
+<li class="chapter" data-level="17.6.2" data-path="transform.html"><a href="transform.html#missing-values-1"><i class="fa fa-check"></i><b>17.6.2</b> Missing values</a></li>
+<li class="chapter" data-level="17.6.3" data-path="transform.html"><a href="transform.html#counts"><i class="fa fa-check"></i><b>17.6.3</b> Counts</a></li>
+<li class="chapter" data-level="17.6.4" data-path="transform.html"><a href="transform.html#summarise-funs"><i class="fa fa-check"></i><b>17.6.4</b> Useful summary functions</a></li>
+<li class="chapter" data-level="17.6.5" data-path="transform.html"><a href="transform.html#grouping-by-multiple-variables"><i class="fa fa-check"></i><b>17.6.5</b> Grouping by multiple variables</a></li>
+<li class="chapter" data-level="17.6.6" data-path="transform.html"><a href="transform.html#ungrouping"><i class="fa fa-check"></i><b>17.6.6</b> Ungrouping</a></li>
+<li class="chapter" data-level="17.6.7" data-path="transform.html"><a href="transform.html#exercises-4"><i class="fa fa-check"></i><b>17.6.7</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.7" data-path="transform.html"><a href="transform.html#grouped-mutates-and-filters"><i class="fa fa-check"></i><b>17.7</b> Grouped mutates (and filters)</a>
+<ul>
+<li class="chapter" data-level="17.7.1" data-path="transform.html"><a href="transform.html#exercises-5"><i class="fa fa-check"></i><b>17.7.1</b> Exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="package-reshape.html"><a href="package-reshape.html"><i class="fa fa-check"></i><b>18</b> Package <code>reshape</code></a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="package-reshape.html"><a href="package-reshape.html#melting-data"><i class="fa fa-check"></i><b>18.1</b> Melting data</a></li>
+<li class="chapter" data-level="18.2" data-path="package-reshape.html"><a href="package-reshape.html#casting-molten-data"><i class="fa fa-check"></i><b>18.2</b> Casting molten data</a></li>
+<li class="chapter" data-level="18.3" data-path="package-reshape.html"><a href="package-reshape.html#the-french-fries-example"><i class="fa fa-check"></i><b>18.3</b> The French Fries Example</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="package-reshape2.html"><a href="package-reshape2.html"><i class="fa fa-check"></i><b>19</b> Package <code>reshape2</code></a></li>
+<li class="chapter" data-level="20" data-path="reshaping-data.html"><a href="reshaping-data.html"><i class="fa fa-check"></i><b>20</b> Reshaping Data</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="reshaping-data.html"><a href="reshaping-data.html#modifying-data-frame-variables"><i class="fa fa-check"></i><b>20.1</b> Modifying data frame variables</a></li>
+<li class="chapter" data-level="20.2" data-path="reshaping-data.html"><a href="reshaping-data.html#reshaping-a-data-frame"><i class="fa fa-check"></i><b>20.2</b> Reshaping a data frame</a></li>
+<li class="chapter" data-level="20.3" data-path="reshaping-data.html"><a href="reshaping-data.html#function-reshape"><i class="fa fa-check"></i><b>20.3</b> Function <code>reshape</code></a></li>
+<li class="chapter" data-level="20.4" data-path="reshaping-data.html"><a href="reshaping-data.html#combining-data-frames"><i class="fa fa-check"></i><b>20.4</b> Combining Data Frames</a></li>
+<li class="chapter" data-level="20.5" data-path="reshaping-data.html"><a href="reshaping-data.html#merging-using-index"><i class="fa fa-check"></i><b>20.5</b> Merging using index</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="a-quick-review.html"><a href="a-quick-review.html"><i class="fa fa-check"></i><b>21</b> A quick review</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="a-quick-review.html"><a href="a-quick-review.html#data-in-r"><i class="fa fa-check"></i><b>21.1</b> Data in R</a></li>
+<li class="chapter" data-level="21.2" data-path="a-quick-review.html"><a href="a-quick-review.html#reading-and-writing-data"><i class="fa fa-check"></i><b>21.2</b> Reading and writing data</a></li>
+<li class="chapter" data-level="21.3" data-path="a-quick-review.html"><a href="a-quick-review.html#dates"><i class="fa fa-check"></i><b>21.3</b> Dates</a></li>
+<li class="chapter" data-level="21.4" data-path="a-quick-review.html"><a href="a-quick-review.html#subscripting-1"><i class="fa fa-check"></i><b>21.4</b> Subscripting</a></li>
+<li class="chapter" data-level="21.5" data-path="a-quick-review.html"><a href="a-quick-review.html#data-aggregation"><i class="fa fa-check"></i><b>21.5</b> Data aggregation</a></li>
+<li class="chapter" data-level="21.6" data-path="a-quick-review.html"><a href="a-quick-review.html#data-reshaping"><i class="fa fa-check"></i><b>21.6</b> Data reshaping</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="introduction-3.html"><a href="introduction-3.html"><i class="fa fa-check"></i><b>22</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="22.1" data-path="introduction-3.html"><a href="introduction-3.html#example-1"><i class="fa fa-check"></i><b>22.1</b> Example 1:</a></li>
+<li class="chapter" data-level="22.2" data-path="introduction-3.html"><a href="introduction-3.html#example-2"><i class="fa fa-check"></i><b>22.2</b> Example 2:</a></li>
+<li class="chapter" data-level="22.3" data-path="introduction-3.html"><a href="introduction-3.html#example-4"><i class="fa fa-check"></i><b>22.3</b> Example 4:</a></li>
+<li class="chapter" data-level="22.4" data-path="introduction-3.html"><a href="introduction-3.html#example-5"><i class="fa fa-check"></i><b>22.4</b> Example 5:</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="types-of-arguments.html"><a href="types-of-arguments.html"><i class="fa fa-check"></i><b>23</b> Types of arguments</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="types-of-arguments.html"><a href="types-of-arguments.html#example-6"><i class="fa fa-check"></i><b>23.1</b> Example 6:</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="default-arguments.html"><a href="default-arguments.html"><i class="fa fa-check"></i><b>24</b> Default arguments</a>
+<ul>
+<li class="chapter" data-level="24.1" data-path="default-arguments.html"><a href="default-arguments.html#example-7"><i class="fa fa-check"></i><b>24.1</b> Example 7:</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="recursive-function.html"><a href="recursive-function.html"><i class="fa fa-check"></i><b>25</b> Recursive Function</a></li>
+<li class="chapter" data-level="26" data-path="two-real-example.html"><a href="two-real-example.html"><i class="fa fa-check"></i><b>26</b> Two Real Example</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="two-real-example.html"><a href="two-real-example.html#importing-elisa-test-data"><i class="fa fa-check"></i><b>26.1</b> Importing ELISA Test Data</a></li>
+<li class="chapter" data-level="26.2" data-path="two-real-example.html"><a href="two-real-example.html#the-hockey-stick-model"><i class="fa fa-check"></i><b>26.2</b> The Hockey Stick Model</a></li>
+<li class="chapter" data-level="26.3" data-path="two-real-example.html"><a href="two-real-example.html#sparrow-model"><i class="fa fa-check"></i><b>26.3</b> SPARROW model</a></li>
+</ul></li>
+<li class="chapter" data-level="27" data-path="good-function-writing-practices.html"><a href="good-function-writing-practices.html"><i class="fa fa-check"></i><b>27</b> Good function writing practices</a></li>
+<li class="chapter" data-level="28" data-path="package-tidyr.html"><a href="package-tidyr.html"><i class="fa fa-check"></i><b>28</b> Package <code>tidyr</code></a></li>
+<li class="chapter" data-level="29" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html"><i class="fa fa-check"></i><b>29</b> Package <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="29.1" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#long-versus-wide"><i class="fa fa-check"></i><b>29.1</b> Long versus Wide</a></li>
+<li class="chapter" data-level="29.2" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#reshape2"><i class="fa fa-check"></i><b>29.2</b> <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="29.2.1" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#wide--to-long-format-data-the-melt-function"><i class="fa fa-check"></i><b>29.2.1</b> Wide- to long-format data: the <code>melt</code> function</a></li>
+<li class="chapter" data-level="29.2.2" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#long--to-wide-format-data-the-cast-functions"><i class="fa fa-check"></i><b>29.2.2</b> Long- to wide-format data: the cast functions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html"><i class="fa fa-check"></i><b>30</b> <code>tidyr</code> versus <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#data-tidying"><i class="fa fa-check"></i><b>30.1</b> Data tidying</a>
+<ul>
+<li class="chapter" data-level="30.1.1" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#from-the-wide-to-the-long-format-gather-vs-melt"><i class="fa fa-check"></i><b>30.1.1</b> From the wide to the long format: <code>gather()</code> vs <code>melt()</code></a></li>
+<li class="chapter" data-level="30.1.2" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#split-a-column-separate-vs-colsplit"><i class="fa fa-check"></i><b>30.1.2</b> Split a column: <code>separate()</code> vs <code>colsplit()</code></a></li>
+<li class="chapter" data-level="30.1.3" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#from-the-long-to-the-wide-format-spread-vs-dcast"><i class="fa fa-check"></i><b>30.1.3</b> From the long to the wide format: <code>spread()</code> vs <code>dcast()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="30.2" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#data-aggregation-1"><i class="fa fa-check"></i><b>30.2</b> Data aggregation</a></li>
+</ul></li>
+<li class="chapter" data-level="31" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>31</b> Factors</a>
+<ul>
+<li class="chapter" data-level="31.1" data-path="factors.html"><a href="factors.html#numeric-factors"><i class="fa fa-check"></i><b>31.1</b> Numeric Factors</a></li>
+<li class="chapter" data-level="31.2" data-path="factors.html"><a href="factors.html#manipulating-factors"><i class="fa fa-check"></i><b>31.2</b> Manipulating Factors</a></li>
+<li class="chapter" data-level="31.3" data-path="factors.html"><a href="factors.html#creating-factors-from-continuous-variables"><i class="fa fa-check"></i><b>31.3</b> Creating Factors from Continuous Variables</a></li>
+<li class="chapter" data-level="31.4" data-path="factors.html"><a href="factors.html#factors-based-on-dates-and-times"><i class="fa fa-check"></i><b>31.4</b> Factors Based on Dates and Times</a></li>
+<li class="chapter" data-level="31.5" data-path="factors.html"><a href="factors.html#interactions"><i class="fa fa-check"></i><b>31.5</b> Interactions</a></li>
+</ul></li>
+<li class="chapter" data-level="32" data-path="character-manipulation.html"><a href="character-manipulation.html"><i class="fa fa-check"></i><b>32</b> Character Manipulation</a>
+<ul>
+<li class="chapter" data-level="32.1" data-path="character-manipulation.html"><a href="character-manipulation.html#regular-expressions-in-r"><i class="fa fa-check"></i><b>32.1</b> Regular Expressions in R</a></li>
+<li class="chapter" data-level="32.2" data-path="character-manipulation.html"><a href="character-manipulation.html#breaking-apart-character-values"><i class="fa fa-check"></i><b>32.2</b> Breaking Apart Character Values</a></li>
+<li class="chapter" data-level="32.3" data-path="character-manipulation.html"><a href="character-manipulation.html#substitutions-and-tagging"><i class="fa fa-check"></i><b>32.3</b> Substitutions and Tagging</a></li>
+<li class="chapter" data-level="32.4" data-path="character-manipulation.html"><a href="character-manipulation.html#a-quick-summary"><i class="fa fa-check"></i><b>32.4</b> A Quick Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="33" data-path="introduction-4.html"><a href="introduction-4.html"><i class="fa fa-check"></i><b>33</b> Introduction</a></li>
+<li class="chapter" data-level="34" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i><b>34</b> Examples</a>
+<ul>
+<li class="chapter" data-level="34.1" data-path="examples.html"><a href="examples.html#example-1-1"><i class="fa fa-check"></i><b>34.1</b> Example 1</a></li>
+<li class="chapter" data-level="34.2" data-path="examples.html"><a href="examples.html#example-2-1"><i class="fa fa-check"></i><b>34.2</b> Example 2</a></li>
+<li class="chapter" data-level="34.3" data-path="examples.html"><a href="examples.html#using-lattice-package"><i class="fa fa-check"></i><b>34.3</b> Using Lattice Package</a></li>
+<li class="chapter" data-level="34.4" data-path="examples.html"><a href="examples.html#using-lattice-functions"><i class="fa fa-check"></i><b>34.4</b> Using Lattice Functions</a></li>
+<li class="chapter" data-level="34.5" data-path="examples.html"><a href="examples.html#custom-panel-functions"><i class="fa fa-check"></i><b>34.5</b> Custom Panel Functions</a></li>
+<li class="chapter" data-level="34.6" data-path="examples.html"><a href="examples.html#the-example-that-started-trellis"><i class="fa fa-check"></i><b>34.6</b> The Example That Started Trellis</a></li>
+<li class="chapter" data-level="34.7" data-path="examples.html"><a href="examples.html#an-example-of-graphical-exploratory-data-analysis"><i class="fa fa-check"></i><b>34.7</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="35" data-path="introduction-5.html"><a href="introduction-5.html"><i class="fa fa-check"></i><b>35</b> Introduction</a></li>
+<li class="chapter" data-level="36" data-path="examples-1.html"><a href="examples-1.html"><i class="fa fa-check"></i><b>36</b> Examples</a>
+<ul>
+<li class="chapter" data-level="36.1" data-path="examples-1.html"><a href="examples-1.html#example-1-2"><i class="fa fa-check"></i><b>36.1</b> Example 1</a></li>
+<li class="chapter" data-level="36.2" data-path="examples-1.html"><a href="examples-1.html#example-2-2"><i class="fa fa-check"></i><b>36.2</b> Example 2</a></li>
+<li class="chapter" data-level="36.3" data-path="examples-1.html"><a href="examples-1.html#using-lattice-package-1"><i class="fa fa-check"></i><b>36.3</b> Using Lattice Package</a></li>
+<li class="chapter" data-level="36.4" data-path="examples-1.html"><a href="examples-1.html#using-lattice-functions-1"><i class="fa fa-check"></i><b>36.4</b> Using Lattice Functions</a></li>
+<li class="chapter" data-level="36.5" data-path="examples-1.html"><a href="examples-1.html#costom-panel-functions"><i class="fa fa-check"></i><b>36.5</b> Costom Panel Functions</a></li>
+<li class="chapter" data-level="36.6" data-path="examples-1.html"><a href="examples-1.html#the-example-that-started-trellis-1"><i class="fa fa-check"></i><b>36.6</b> The Example That Started Trellis</a></li>
+<li class="chapter" data-level="36.7" data-path="examples-1.html"><a href="examples-1.html#an-example-of-graphical-exploratory-data-analysis-1"><i class="fa fa-check"></i><b>36.7</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="37" data-path="introduction-6.html"><a href="introduction-6.html"><i class="fa fa-check"></i><b>37</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="37.1" data-path="introduction-6.html"><a href="introduction-6.html#filter"><i class="fa fa-check"></i><b>37.1</b> Filter</a></li>
+<li class="chapter" data-level="37.2" data-path="introduction-6.html"><a href="introduction-6.html#mutate"><i class="fa fa-check"></i><b>37.2</b> Mutate</a></li>
+<li class="chapter" data-level="37.3" data-path="introduction-6.html"><a href="introduction-6.html#summarise"><i class="fa fa-check"></i><b>37.3</b> Summarise</a></li>
+<li class="chapter" data-level="37.4" data-path="introduction-6.html"><a href="introduction-6.html#group-by"><i class="fa fa-check"></i><b>37.4</b> Group By</a></li>
+<li class="chapter" data-level="37.5" data-path="introduction-6.html"><a href="introduction-6.html#sample"><i class="fa fa-check"></i><b>37.5</b> Sample</a></li>
+<li class="chapter" data-level="37.6" data-path="introduction-6.html"><a href="introduction-6.html#count"><i class="fa fa-check"></i><b>37.6</b> Count</a></li>
+<li class="chapter" data-level="37.7" data-path="introduction-6.html"><a href="introduction-6.html#arrange"><i class="fa fa-check"></i><b>37.7</b> Arrange</a></li>
+<li class="chapter" data-level="37.8" data-path="introduction-6.html"><a href="introduction-6.html#pipe"><i class="fa fa-check"></i><b>37.8</b> Pipe</a></li>
+</ul></li>
+<li class="chapter" data-level="38" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html"><i class="fa fa-check"></i><b>38</b> Explaining <code>dplyr</code> – A More Complicated Example</a>
+<ul>
+<li class="chapter" data-level="38.1" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#data-nycflights13"><i class="fa fa-check"></i><b>38.1</b> Data: <code>nycflights13</code></a></li>
+<li class="chapter" data-level="38.2" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#single-table-verbs"><i class="fa fa-check"></i><b>38.2</b> Single table verbs</a></li>
+<li class="chapter" data-level="38.3" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#filter-rows-with-filter-1"><i class="fa fa-check"></i><b>38.3</b> Filter rows with <code>filter()</code></a></li>
+<li class="chapter" data-level="38.4" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#arrange-rows-with-arrange-1"><i class="fa fa-check"></i><b>38.4</b> Arrange rows with <code>arrange()</code></a></li>
+<li class="chapter" data-level="38.5" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#select-columns-with-select"><i class="fa fa-check"></i><b>38.5</b> Select columns with <code>select()</code></a></li>
+<li class="chapter" data-level="38.6" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#extract-distinct-unique-rows"><i class="fa fa-check"></i><b>38.6</b> Extract distinct (unique) rows</a></li>
+<li class="chapter" data-level="38.7" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#add-new-columns-with-mutate"><i class="fa fa-check"></i><b>38.7</b> Add new columns with mutate()</a></li>
+<li class="chapter" data-level="38.8" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#summarise-values-with-summarise"><i class="fa fa-check"></i><b>38.8</b> Summarise values with <code>summarise()</code></a></li>
+<li class="chapter" data-level="38.9" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#randomly-sample-rows-with-sample_n-and-sample_frac"><i class="fa fa-check"></i><b>38.9</b> Randomly sample rows with sample_n() and sample_frac()</a></li>
+<li class="chapter" data-level="38.10" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#commonalities"><i class="fa fa-check"></i><b>38.10</b> Commonalities</a></li>
+</ul></li>
+<li class="chapter" data-level="39" data-path="grouped-operations.html"><a href="grouped-operations.html"><i class="fa fa-check"></i><b>39</b> Grouped operations</a>
+<ul>
+<li class="chapter" data-level="39.1" data-path="grouped-operations.html"><a href="grouped-operations.html#chaining"><i class="fa fa-check"></i><b>39.1</b> Chaining</a></li>
+<li class="chapter" data-level="39.2" data-path="grouped-operations.html"><a href="grouped-operations.html#a-quick-summary-1"><i class="fa fa-check"></i><b>39.2</b> A quick Summary</a>
+<ul>
+<li class="chapter" data-level="39.2.1" data-path="grouped-operations.html"><a href="grouped-operations.html#dplyr-verbs-in-action"><i class="fa fa-check"></i><b>39.2.1</b> dplyr verbs in action</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="40" data-path="a-quick-recap.html"><a href="a-quick-recap.html"><i class="fa fa-check"></i><b>40</b> A Quick Recap</a>
+<ul>
+<li class="chapter" data-level="40.1" data-path="a-quick-recap.html"><a href="a-quick-recap.html#costom-panel-functions-1"><i class="fa fa-check"></i><b>40.1</b> Costom Panel Functions</a></li>
+<li class="chapter" data-level="40.2" data-path="a-quick-recap.html"><a href="a-quick-recap.html#the-example-that-started-trellis-2"><i class="fa fa-check"></i><b>40.2</b> The Example That Started Trellis</a></li>
+</ul></li>
+<li class="chapter" data-level="41" data-path="types-of-data.html"><a href="types-of-data.html"><i class="fa fa-check"></i><b>41</b> Types of Data</a>
+<ul>
+<li class="chapter" data-level="41.1" data-path="types-of-data.html"><a href="types-of-data.html#univariate-data"><i class="fa fa-check"></i><b>41.1</b> Univariate data</a></li>
+<li class="chapter" data-level="41.2" data-path="types-of-data.html"><a href="types-of-data.html#fits-and-residuals"><i class="fa fa-check"></i><b>41.2</b> Fits and Residuals</a>
+<ul>
+<li class="chapter" data-level="41.2.1" data-path="types-of-data.html"><a href="types-of-data.html#homogeneity-and-pooling"><i class="fa fa-check"></i><b>41.2.1</b> Homogeneity and Pooling</a></li>
+<li class="chapter" data-level="41.2.2" data-path="types-of-data.html"><a href="types-of-data.html#checking-for-normality-of-the-pooled-residuals"><i class="fa fa-check"></i><b>41.2.2</b> Checking for normality of the pooled residuals</a></li>
+<li class="chapter" data-level="41.2.3" data-path="types-of-data.html"><a href="types-of-data.html#the-rfs-plot"><i class="fa fa-check"></i><b>41.2.3</b> The <code>rfs</code> plot</a></li>
+</ul></li>
+<li class="chapter" data-level="41.3" data-path="types-of-data.html"><a href="types-of-data.html#bivariate-data"><i class="fa fa-check"></i><b>41.3</b> Bivariate data</a></li>
+<li class="chapter" data-level="41.4" data-path="types-of-data.html"><a href="types-of-data.html#trivariate-and-hypervariate-data"><i class="fa fa-check"></i><b>41.4</b> Trivariate and hypervariate data</a></li>
+<li class="chapter" data-level="41.5" data-path="types-of-data.html"><a href="types-of-data.html#multiway-data"><i class="fa fa-check"></i><b>41.5</b> Multiway data</a></li>
+</ul></li>
+<li class="chapter" data-level="42" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html"><i class="fa fa-check"></i><b>42</b> Univariate Data – Displaying and Comparing Distributions</a>
+<ul>
+<li class="chapter" data-level="42.1" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#displaying-distribution"><i class="fa fa-check"></i><b>42.1</b> Displaying distribution</a></li>
+<li class="chapter" data-level="42.2" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#comparing-distributions"><i class="fa fa-check"></i><b>42.2</b> Comparing distributions</a></li>
+<li class="chapter" data-level="42.3" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#an-example-of-graphical-exploratory-data-analysis-2"><i class="fa fa-check"></i><b>42.3</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="43" data-path="a-summary.html"><a href="a-summary.html"><i class="fa fa-check"></i><b>43</b> A Summary</a>
+<ul>
+<li class="chapter" data-level="43.1" data-path="a-summary.html"><a href="a-summary.html#types-of-data-1"><i class="fa fa-check"></i><b>43.1</b> Types of Data</a>
+<ul>
+<li class="chapter" data-level="43.1.1" data-path="a-summary.html"><a href="a-summary.html#checking-for-normality-of-the-pooled-residuals-1"><i class="fa fa-check"></i><b>43.1.1</b> Checking for normality of the pooled residuals</a></li>
+<li class="chapter" data-level="43.1.2" data-path="a-summary.html"><a href="a-summary.html#the-rfs-plot-1"><i class="fa fa-check"></i><b>43.1.2</b> The <code>rfs</code> plot</a></li>
+</ul></li>
+<li class="chapter" data-level="43.2" data-path="a-summary.html"><a href="a-summary.html#additive-versus-multiplicative-shifts"><i class="fa fa-check"></i><b>43.2</b> Additive versus multiplicative shifts</a></li>
+<li class="chapter" data-level="43.3" data-path="a-summary.html"><a href="a-summary.html#using-q-q-plot-to-check-for-additive-shift"><i class="fa fa-check"></i><b>43.3</b> Using Q-Q plot to Check for Additive Shift</a></li>
+<li class="chapter" data-level="43.4" data-path="a-summary.html"><a href="a-summary.html#transformation-to-normality"><i class="fa fa-check"></i><b>43.4</b> Transformation to Normality</a></li>
+<li class="chapter" data-level="43.5" data-path="a-summary.html"><a href="a-summary.html#an-example-of-graphical-exploratory-data-analysis-3"><i class="fa fa-check"></i><b>43.5</b> An Example of Graphical Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="43.6" data-path="a-summary.html"><a href="a-summary.html#nutrient-loading-and-flow-from-maumee"><i class="fa fa-check"></i><b>43.6</b> Nutrient Loading and Flow from Maumee</a>
+<ul>
+<li class="chapter" data-level="43.6.1" data-path="a-summary.html"><a href="a-summary.html#objectives"><i class="fa fa-check"></i><b>43.6.1</b> Objectives</a></li>
+<li class="chapter" data-level="43.6.2" data-path="a-summary.html"><a href="a-summary.html#methods"><i class="fa fa-check"></i><b>43.6.2</b> Methods</a></li>
+<li class="chapter" data-level="43.6.3" data-path="a-summary.html"><a href="a-summary.html#results"><i class="fa fa-check"></i><b>43.6.3</b> Results</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Environmental Data Management</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="types-of-data" class="section level1" number="41">
+<h1><span class="header-section-number">41</span> Types of Data</h1>
+<p>Data used here are from Cleveland’s <em>Visualizing Data</em>.</p>
+<div id="univariate-data" class="section level2" number="41.1">
+<h2><span class="header-section-number">41.1</span> Univariate data</h2>
+<ul>
+<li>Show and compare distributions
+<ul>
+<li>Dot-plot</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb1058"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1058-1"><a href="types-of-data.html#cb1058-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">1.1</span> <span class="ot">&lt;-</span></span>
+<span id="cb1058-2"><a href="types-of-data.html#cb1058-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>()</span>
+<span id="cb1058-3"><a href="types-of-data.html#cb1058-3" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1058-4"><a href="types-of-data.html#cb1058-4" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">levels</span>(barley<span class="sc">$</span>year))</span>
+<span id="cb1058-5"><a href="types-of-data.html#cb1058-5" aria-hidden="true" tabindex="-1"></a>    obj<span class="ot">&lt;-</span><span class="fu">dotplot</span>(variety <span class="sc">~</span> yield <span class="sc">|</span> site, </span>
+<span id="cb1058-6"><a href="types-of-data.html#cb1058-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> barley,</span>
+<span id="cb1058-7"><a href="types-of-data.html#cb1058-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">groups =</span> year,</span>
+<span id="cb1058-8"><a href="types-of-data.html#cb1058-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">layout =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">6</span>),</span>
+<span id="cb1058-9"><a href="types-of-data.html#cb1058-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">aspect =</span> .<span class="dv">5</span>,</span>
+<span id="cb1058-10"><a href="types-of-data.html#cb1058-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 1.1&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1058-11"><a href="types-of-data.html#cb1058-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">xlab =</span> <span class="st">&quot;Barley Yield (bushels/acre)&quot;</span>,</span>
+<span id="cb1058-12"><a href="types-of-data.html#cb1058-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">key =</span> <span class="fu">list</span>(<span class="at">points =</span> </span>
+<span id="cb1058-13"><a href="types-of-data.html#cb1058-13" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">Rows</span>(<span class="fu">trellis.par.get</span>(<span class="st">&quot;superpose.symbol&quot;</span>), <span class="dv">1</span><span class="sc">:</span>n),</span>
+<span id="cb1058-14"><a href="types-of-data.html#cb1058-14" aria-hidden="true" tabindex="-1"></a>                       <span class="at">text =</span> <span class="fu">list</span>(<span class="fu">levels</span>(barley<span class="sc">$</span>year)),</span>
+<span id="cb1058-15"><a href="types-of-data.html#cb1058-15" aria-hidden="true" tabindex="-1"></a>                       <span class="at">columns =</span> n))</span>
+<span id="cb1058-16"><a href="types-of-data.html#cb1058-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(obj)</span>
+<span id="cb1058-17"><a href="types-of-data.html#cb1058-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1058-18"><a href="types-of-data.html#cb1058-18" aria-hidden="true" tabindex="-1"></a><span class="fu">book.1.1</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1059"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1059-1"><a href="types-of-data.html#cb1059-1" aria-hidden="true" tabindex="-1"></a>ggVD_1<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">asp_rt=</span><span class="fl">0.5</span>){</span>
+<span id="cb1059-2"><a href="types-of-data.html#cb1059-2" aria-hidden="true" tabindex="-1"></a>    p<span class="ot">&lt;-</span><span class="fu">ggplot</span>(barley, <span class="fu">aes</span>(<span class="at">x=</span>yield, <span class="at">y=</span>variety, <span class="at">color=</span>year))<span class="sc">+</span></span>
+<span id="cb1059-3"><a href="types-of-data.html#cb1059-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">xlab</span>( <span class="st">&quot;Barley Yield (bushels/acre)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1059-4"><a href="types-of-data.html#cb1059-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>(site<span class="sc">~</span>., <span class="at">ncol=</span><span class="dv">1</span>)</span>
+<span id="cb1059-5"><a href="types-of-data.html#cb1059-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(p <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">aspect.ratio =</span> asp_rt))</span>
+<span id="cb1059-6"><a href="types-of-data.html#cb1059-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1059-7"><a href="types-of-data.html#cb1059-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1059-8"><a href="types-of-data.html#cb1059-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_1.1</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-3-2.png" width="672" />
+- Histogram
+Figure 1.2</p>
+<div class="sourceCode" id="cb1060"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1060-1"><a href="types-of-data.html#cb1060-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">1.2</span> <span class="ot">&lt;-</span></span>
+<span id="cb1060-2"><a href="types-of-data.html#cb1060-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>()</span>
+<span id="cb1060-3"><a href="types-of-data.html#cb1060-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">histogram</span>(<span class="sc">~</span> height <span class="sc">|</span> voice.part,</span>
+<span id="cb1060-4"><a href="types-of-data.html#cb1060-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">data =</span> singer, </span>
+<span id="cb1060-5"><a href="types-of-data.html#cb1060-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">nint =</span> <span class="dv">17</span>, </span>
+<span id="cb1060-6"><a href="types-of-data.html#cb1060-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">endpoints =</span> <span class="fu">c</span>(<span class="fl">59.5</span>, <span class="fl">76.5</span>),</span>
+<span id="cb1060-7"><a href="types-of-data.html#cb1060-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">layout =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>), </span>
+<span id="cb1060-8"><a href="types-of-data.html#cb1060-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">aspect =</span> <span class="dv">1</span>, </span>
+<span id="cb1060-9"><a href="types-of-data.html#cb1060-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 1.2&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1060-10"><a href="types-of-data.html#cb1060-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">&quot;Height (inches)&quot;</span>)</span>
+<span id="cb1060-11"><a href="types-of-data.html#cb1060-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1060-12"><a href="types-of-data.html#cb1060-12" aria-hidden="true" tabindex="-1"></a><span class="fu">book.1.2</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1061"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1061-1"><a href="types-of-data.html#cb1061-1" aria-hidden="true" tabindex="-1"></a>ggVD_1<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1061-2"><a href="types-of-data.html#cb1061-2" aria-hidden="true" tabindex="-1"></a>    p <span class="ot">&lt;-</span> <span class="fu">qplot</span>(height, <span class="at">data =</span> singer, <span class="at">xlab =</span> <span class="st">&quot;Height (inches)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1061-3"><a href="types-of-data.html#cb1061-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_histogram</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>( <span class="sc">~</span> voice.part, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb1061-4"><a href="types-of-data.html#cb1061-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(p<span class="sc">+</span><span class="fu">theme</span>(<span class="at">aspect.ratio =</span> <span class="dv">1</span>))</span>
+<span id="cb1061-5"><a href="types-of-data.html#cb1061-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1061-6"><a href="types-of-data.html#cb1061-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggVD_1.2</span>()</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-4-2.png" width="672" />
+- Quantile plot</p>
+<div class="sourceCode" id="cb1063"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1063-1"><a href="types-of-data.html#cb1063-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.2</span> <span class="ot">&lt;-</span></span>
+<span id="cb1063-2"><a href="types-of-data.html#cb1063-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>()</span>
+<span id="cb1063-3"><a href="types-of-data.html#cb1063-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">qqmath</span>(<span class="sc">~</span> <span class="fu">sort</span>(singer<span class="sc">$</span>height[singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Tenor 1&quot;</span>]),</span>
+<span id="cb1063-4"><a href="types-of-data.html#cb1063-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">distribution =</span> qunif, </span>
+<span id="cb1063-5"><a href="types-of-data.html#cb1063-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">panel =</span> <span class="cf">function</span>(x, ...) {</span>
+<span id="cb1063-6"><a href="types-of-data.html#cb1063-6" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">panel.qqmath</span>(x, <span class="at">type =</span> <span class="st">&quot;b&quot;</span>, ...)</span>
+<span id="cb1063-7"><a href="types-of-data.html#cb1063-7" aria-hidden="true" tabindex="-1"></a>                   <span class="do">##panel.qqmath(x, col = 0, pch = 16) </span></span>
+<span id="cb1063-8"><a href="types-of-data.html#cb1063-8" aria-hidden="true" tabindex="-1"></a>                   <span class="do">##panel.qqmath(x, ...)</span></span>
+<span id="cb1063-9"><a href="types-of-data.html#cb1063-9" aria-hidden="true" tabindex="-1"></a>               },</span>
+<span id="cb1063-10"><a href="types-of-data.html#cb1063-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">aspect =</span> <span class="dv">1</span>, </span>
+<span id="cb1063-11"><a href="types-of-data.html#cb1063-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.2&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1063-12"><a href="types-of-data.html#cb1063-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">xlab =</span> <span class="st">&quot;f-value&quot;</span>,</span>
+<span id="cb1063-13"><a href="types-of-data.html#cb1063-13" aria-hidden="true" tabindex="-1"></a>               <span class="at">ylab =</span> <span class="st">&quot;Tenor 1 Height (inches)&quot;</span>)</span>
+<span id="cb1063-14"><a href="types-of-data.html#cb1063-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1063-15"><a href="types-of-data.html#cb1063-15" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.2</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1064"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1064-1"><a href="types-of-data.html#cb1064-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1064-2"><a href="types-of-data.html#cb1064-2" aria-hidden="true" tabindex="-1"></a>    fval.df <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb1064-3"><a href="types-of-data.html#cb1064-3" aria-hidden="true" tabindex="-1"></a>        oo <span class="ot">&lt;-</span> <span class="fu">order</span>(x)</span>
+<span id="cb1064-4"><a href="types-of-data.html#cb1064-4" aria-hidden="true" tabindex="-1"></a>        n <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
+<span id="cb1064-5"><a href="types-of-data.html#cb1064-5" aria-hidden="true" tabindex="-1"></a>        f <span class="ot">&lt;-</span> ((<span class="dv">1</span><span class="sc">:</span>n)<span class="sc">-</span><span class="fl">0.5</span>)<span class="sc">/</span>n</span>
+<span id="cb1064-6"><a href="types-of-data.html#cb1064-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">return</span>(<span class="fu">data.frame</span>(<span class="at">value=</span>x[oo], <span class="at">q=</span>f))</span>
+<span id="cb1064-7"><a href="types-of-data.html#cb1064-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1064-8"><a href="types-of-data.html#cb1064-8" aria-hidden="true" tabindex="-1"></a>    Tenor1 <span class="ot">&lt;-</span> <span class="fu">fval.df</span>(singer<span class="sc">$</span>height[singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Tenor 1&quot;</span>])</span>
+<span id="cb1064-9"><a href="types-of-data.html#cb1064-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(Tenor1, <span class="fu">aes</span>(q, value)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_path</span>() <span class="sc">+</span></span>
+<span id="cb1064-10"><a href="types-of-data.html#cb1064-10" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;f-value&quot;</span>,</span>
+<span id="cb1064-11"><a href="types-of-data.html#cb1064-11" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> <span class="st">&quot;Tenor 1 Height (inches)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1064-12"><a href="types-of-data.html#cb1064-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1064-13"><a href="types-of-data.html#cb1064-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1064-14"><a href="types-of-data.html#cb1064-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1064-15"><a href="types-of-data.html#cb1064-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.2</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
+<div class="sourceCode" id="cb1065"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1065-1"><a href="types-of-data.html#cb1065-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.1</span> <span class="ot">&lt;-</span></span>
+<span id="cb1065-2"><a href="types-of-data.html#cb1065-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>()</span>
+<span id="cb1065-3"><a href="types-of-data.html#cb1065-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">qqmath</span>(<span class="sc">~</span> height <span class="sc">|</span> voice.part,</span>
+<span id="cb1065-4"><a href="types-of-data.html#cb1065-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">distribution=</span>qunif,</span>
+<span id="cb1065-5"><a href="types-of-data.html#cb1065-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">data=</span>singer,</span>
+<span id="cb1065-6"><a href="types-of-data.html#cb1065-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">panel =</span> <span class="cf">function</span>(x, ...) {</span>
+<span id="cb1065-7"><a href="types-of-data.html#cb1065-7" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">panel.grid</span>()     </span>
+<span id="cb1065-8"><a href="types-of-data.html#cb1065-8" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">panel.qqmath</span>(x, ...)</span>
+<span id="cb1065-9"><a href="types-of-data.html#cb1065-9" aria-hidden="true" tabindex="-1"></a>               },</span>
+<span id="cb1065-10"><a href="types-of-data.html#cb1065-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">layout=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>), </span>
+<span id="cb1065-11"><a href="types-of-data.html#cb1065-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">aspect=</span><span class="dv">1</span>,</span>
+<span id="cb1065-12"><a href="types-of-data.html#cb1065-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.1&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1065-13"><a href="types-of-data.html#cb1065-13" aria-hidden="true" tabindex="-1"></a>               <span class="at">xlab =</span> <span class="st">&quot;f-value&quot;</span>,</span>
+<span id="cb1065-14"><a href="types-of-data.html#cb1065-14" aria-hidden="true" tabindex="-1"></a>               <span class="at">ylab=</span><span class="st">&quot;Height (inches)&quot;</span>)</span>
+<span id="cb1065-15"><a href="types-of-data.html#cb1065-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1065-16"><a href="types-of-data.html#cb1065-16" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.1</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-5-3.png" width="672" /></p>
+<div class="sourceCode" id="cb1066"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1066-1"><a href="types-of-data.html#cb1066-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1066-2"><a href="types-of-data.html#cb1066-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(singer, <span class="fu">aes</span>(<span class="at">sample=</span>height))<span class="sc">+</span></span>
+<span id="cb1066-3"><a href="types-of-data.html#cb1066-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_qq</span>(<span class="at">distribution=</span>qunif)<span class="sc">+</span></span>
+<span id="cb1066-4"><a href="types-of-data.html#cb1066-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>voice.part, <span class="at">ncol=</span><span class="dv">2</span>)<span class="sc">+</span></span>
+<span id="cb1066-5"><a href="types-of-data.html#cb1066-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;f-value&quot;</span>,</span>
+<span id="cb1066-6"><a href="types-of-data.html#cb1066-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="st">&quot;Height (inches)&quot;</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1066-7"><a href="types-of-data.html#cb1066-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1066-8"><a href="types-of-data.html#cb1066-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1066-9"><a href="types-of-data.html#cb1066-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.1</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-5-4.png" width="672" /></p>
+<div class="sourceCode" id="cb1067"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1067-1"><a href="types-of-data.html#cb1067-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.1</span>alt <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1067-2"><a href="types-of-data.html#cb1067-2" aria-hidden="true" tabindex="-1"></a>fval.df <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb1067-3"><a href="types-of-data.html#cb1067-3" aria-hidden="true" tabindex="-1"></a>        oo <span class="ot">&lt;-</span> <span class="fu">order</span>(x)</span>
+<span id="cb1067-4"><a href="types-of-data.html#cb1067-4" aria-hidden="true" tabindex="-1"></a>        n <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
+<span id="cb1067-5"><a href="types-of-data.html#cb1067-5" aria-hidden="true" tabindex="-1"></a>        f <span class="ot">&lt;-</span> ((<span class="dv">1</span><span class="sc">:</span>n)<span class="sc">-</span><span class="fl">0.5</span>)<span class="sc">/</span>n</span>
+<span id="cb1067-6"><a href="types-of-data.html#cb1067-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">return</span>(<span class="fu">data.frame</span>(<span class="at">value=</span>x[oo], <span class="at">q=</span>f))</span>
+<span id="cb1067-7"><a href="types-of-data.html#cb1067-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1067-8"><a href="types-of-data.html#cb1067-8" aria-hidden="true" tabindex="-1"></a>    singer.q <span class="ot">&lt;-</span> plyr<span class="sc">::</span><span class="fu">ddply</span>(singer, <span class="st">&quot;voice.part&quot;</span>,</span>
+<span id="cb1067-9"><a href="types-of-data.html#cb1067-9" aria-hidden="true" tabindex="-1"></a>                      <span class="cf">function</span>(df) <span class="fu">fval.df</span>(df<span class="sc">$</span>height))</span>
+<span id="cb1067-10"><a href="types-of-data.html#cb1067-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(singer.q, <span class="fu">aes</span>(q, value))<span class="sc">+</span><span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb1067-11"><a href="types-of-data.html#cb1067-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">facet_wrap</span>(.<span class="sc">~</span>voice.part, <span class="at">ncol=</span><span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb1067-12"><a href="types-of-data.html#cb1067-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(  <span class="at">x =</span> <span class="st">&quot;f-value&quot;</span>,</span>
+<span id="cb1067-13"><a href="types-of-data.html#cb1067-13" aria-hidden="true" tabindex="-1"></a>               <span class="at">y=</span><span class="st">&quot;Height (inches)&quot;</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1067-14"><a href="types-of-data.html#cb1067-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1067-15"><a href="types-of-data.html#cb1067-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1067-16"><a href="types-of-data.html#cb1067-16" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.1alt</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-5-5.png" width="672" /></p>
+<ul>
+<li>Quantile-quantile plot</li>
+</ul>
+<div class="sourceCode" id="cb1068"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1068-1"><a href="types-of-data.html#cb1068-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.3</span> <span class="ot">&lt;-</span></span>
+<span id="cb1068-2"><a href="types-of-data.html#cb1068-2" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span>()</span>
+<span id="cb1068-3"><a href="types-of-data.html#cb1068-3" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1068-4"><a href="types-of-data.html#cb1068-4" aria-hidden="true" tabindex="-1"></a>    voice.part <span class="ot">&lt;-</span> <span class="fu">ordered</span>(singer<span class="sc">$</span>voice.part, </span>
+<span id="cb1068-5"><a href="types-of-data.html#cb1068-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">c</span>(<span class="st">&quot;Soprano 1&quot;</span>, <span class="st">&quot;Soprano 2&quot;</span>, <span class="st">&quot;Alto 1&quot;</span>, <span class="st">&quot;Alto 2&quot;</span>,</span>
+<span id="cb1068-6"><a href="types-of-data.html#cb1068-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;Tenor 1&quot;</span>, <span class="st">&quot;Tenor 2&quot;</span>, <span class="st">&quot;Bass 1&quot;</span>, <span class="st">&quot;Bass 2&quot;</span>))</span>
+<span id="cb1068-7"><a href="types-of-data.html#cb1068-7" aria-hidden="true" tabindex="-1"></a>    obj<span class="ot">&lt;-</span> <span class="fu">qq</span>(voice.part <span class="sc">~</span> singer<span class="sc">$</span>height,</span>
+<span id="cb1068-8"><a href="types-of-data.html#cb1068-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">subset=</span>voice.part<span class="sc">==</span><span class="st">&quot;Bass 2&quot;</span> <span class="sc">|</span> voice.part<span class="sc">==</span><span class="st">&quot;Tenor 1&quot;</span>,</span>
+<span id="cb1068-9"><a href="types-of-data.html#cb1068-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">aspect=</span><span class="dv">1</span>, </span>
+<span id="cb1068-10"><a href="types-of-data.html#cb1068-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.3&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1068-11"><a href="types-of-data.html#cb1068-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&quot;Tenor 1 Height (inches)&quot;</span>,</span>
+<span id="cb1068-12"><a href="types-of-data.html#cb1068-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;Base 2 Height (inches)&quot;</span>)</span>
+<span id="cb1068-13"><a href="types-of-data.html#cb1068-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(obj)</span>
+<span id="cb1068-14"><a href="types-of-data.html#cb1068-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1068-15"><a href="types-of-data.html#cb1068-15" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.3</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1069"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1069-1"><a href="types-of-data.html#cb1069-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.3</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1069-2"><a href="types-of-data.html#cb1069-2" aria-hidden="true" tabindex="-1"></a>    q <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">probs =</span> <span class="fu">ppoints</span>(<span class="dv">100</span>)) {</span>
+<span id="cb1069-3"><a href="types-of-data.html#cb1069-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">data.frame</span>(<span class="at">q =</span> probs, <span class="at">value =</span> <span class="fu">quantile</span>(x, probs))</span>
+<span id="cb1069-4"><a href="types-of-data.html#cb1069-4" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1069-5"><a href="types-of-data.html#cb1069-5" aria-hidden="true" tabindex="-1"></a>    temp <span class="ot">&lt;-</span> singer[singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Bass 2&quot;</span> <span class="sc">|</span></span>
+<span id="cb1069-6"><a href="types-of-data.html#cb1069-6" aria-hidden="true" tabindex="-1"></a>                   singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Tenor 1&quot;</span>, ]</span>
+<span id="cb1069-7"><a href="types-of-data.html#cb1069-7" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> <span class="fu">min</span>(<span class="fu">c</span>(<span class="fu">sum</span>(singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Bass 2&quot;</span>),</span>
+<span id="cb1069-8"><a href="types-of-data.html#cb1069-8" aria-hidden="true" tabindex="-1"></a>               <span class="fu">sum</span>(singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Tenor 1&quot;</span>)))</span>
+<span id="cb1069-9"><a href="types-of-data.html#cb1069-9" aria-hidden="true" tabindex="-1"></a>    temp.q <span class="ot">&lt;-</span> plyr<span class="sc">::</span><span class="fu">ddply</span>(temp, <span class="st">&quot;voice.part&quot;</span>,</span>
+<span id="cb1069-10"><a href="types-of-data.html#cb1069-10" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">function</span>(df) <span class="fu">q</span>(df<span class="sc">$</span>height, <span class="fu">ppoints</span>(n)))</span>
+<span id="cb1069-11"><a href="types-of-data.html#cb1069-11" aria-hidden="true" tabindex="-1"></a>    temp.df <span class="ot">&lt;-</span> reshape2<span class="sc">::</span><span class="fu">recast</span>(temp.q, q <span class="sc">~</span> voice.part, <span class="at">id.var =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb1069-12"><a href="types-of-data.html#cb1069-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">names</span>(temp.df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;q&quot;</span>, <span class="st">&quot;Bass2&quot;</span>, <span class="st">&quot;Tenor1&quot;</span>)</span>
+<span id="cb1069-13"><a href="types-of-data.html#cb1069-13" aria-hidden="true" tabindex="-1"></a>    pg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(temp.df, <span class="fu">aes</span>(Tenor1, Bass2)) <span class="sc">+</span></span>
+<span id="cb1069-14"><a href="types-of-data.html#cb1069-14" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_abline</span>() <span class="sc">+</span></span>
+<span id="cb1069-15"><a href="types-of-data.html#cb1069-15" aria-hidden="true" tabindex="-1"></a>        <span class="fu">coord_equal</span>(<span class="at">xlim=</span><span class="fu">range</span>(temp.q<span class="sc">$</span>value),</span>
+<span id="cb1069-16"><a href="types-of-data.html#cb1069-16" aria-hidden="true" tabindex="-1"></a>                    <span class="at">ylim=</span><span class="fu">range</span>(temp.q<span class="sc">$</span>value))</span>
+<span id="cb1069-17"><a href="types-of-data.html#cb1069-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(pg<span class="sc">+</span><span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>))</span>
+<span id="cb1069-18"><a href="types-of-data.html#cb1069-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1069-19"><a href="types-of-data.html#cb1069-19" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.3</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-6-2.png" width="672" /></p>
+<div class="sourceCode" id="cb1070"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1070-1"><a href="types-of-data.html#cb1070-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.4</span> <span class="ot">&lt;-</span></span>
+<span id="cb1070-2"><a href="types-of-data.html#cb1070-2" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span>()</span>
+<span id="cb1070-3"><a href="types-of-data.html#cb1070-3" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1070-4"><a href="types-of-data.html#cb1070-4" aria-hidden="true" tabindex="-1"></a>    voice.part <span class="ot">&lt;-</span> <span class="fu">ordered</span>(singer<span class="sc">$</span>voice.part,</span>
+<span id="cb1070-5"><a href="types-of-data.html#cb1070-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">c</span>(<span class="st">&quot;Soprano 1&quot;</span>, <span class="st">&quot;Soprano 2&quot;</span>, <span class="st">&quot;Alto 1&quot;</span>, <span class="st">&quot;Alto 2&quot;</span>,</span>
+<span id="cb1070-6"><a href="types-of-data.html#cb1070-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;Tenor 1&quot;</span>, <span class="st">&quot;Tenor 2&quot;</span>, <span class="st">&quot;Bass 1&quot;</span>, <span class="st">&quot;Bass 2&quot;</span>))</span>
+<span id="cb1070-7"><a href="types-of-data.html#cb1070-7" aria-hidden="true" tabindex="-1"></a>    bass.tenor.qq <span class="ot">&lt;-</span> <span class="fu">qq</span>(voice.part <span class="sc">~</span> singer<span class="sc">$</span>height,</span>
+<span id="cb1070-8"><a href="types-of-data.html#cb1070-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">subset=</span>voice.part<span class="sc">==</span><span class="st">&quot;Bass 2&quot;</span> <span class="sc">|</span> voice.part<span class="sc">==</span><span class="st">&quot;Tenor 1&quot;</span>)</span>
+<span id="cb1070-9"><a href="types-of-data.html#cb1070-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tmd</span>(bass.tenor.qq,</span>
+<span id="cb1070-10"><a href="types-of-data.html#cb1070-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">aspect=</span><span class="dv">1</span>,</span>
+<span id="cb1070-11"><a href="types-of-data.html#cb1070-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;Difference (inches)&quot;</span>,</span>
+<span id="cb1070-12"><a href="types-of-data.html#cb1070-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.4&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1070-13"><a href="types-of-data.html#cb1070-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&quot;Mean (inches)&quot;</span>)</span>
+<span id="cb1070-14"><a href="types-of-data.html#cb1070-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1070-15"><a href="types-of-data.html#cb1070-15" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.4</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-6-3.png" width="672" /></p>
+<div class="sourceCode" id="cb1071"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1071-1"><a href="types-of-data.html#cb1071-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.4</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1071-2"><a href="types-of-data.html#cb1071-2" aria-hidden="true" tabindex="-1"></a>    q <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">probs =</span> <span class="fu">ppoints</span>(<span class="dv">100</span>)) {</span>
+<span id="cb1071-3"><a href="types-of-data.html#cb1071-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">data.frame</span>(<span class="at">q =</span> probs, <span class="at">value =</span> <span class="fu">quantile</span>(x, probs))</span>
+<span id="cb1071-4"><a href="types-of-data.html#cb1071-4" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1071-5"><a href="types-of-data.html#cb1071-5" aria-hidden="true" tabindex="-1"></a>    temp <span class="ot">&lt;-</span> singer[singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Bass 2&quot;</span> <span class="sc">|</span></span>
+<span id="cb1071-6"><a href="types-of-data.html#cb1071-6" aria-hidden="true" tabindex="-1"></a>                   singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Tenor 1&quot;</span>, ]</span>
+<span id="cb1071-7"><a href="types-of-data.html#cb1071-7" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> <span class="fu">min</span>(<span class="fu">c</span>(<span class="fu">sum</span>(singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Bass 2&quot;</span>),</span>
+<span id="cb1071-8"><a href="types-of-data.html#cb1071-8" aria-hidden="true" tabindex="-1"></a>               <span class="fu">sum</span>(singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Tenor 1&quot;</span>)))</span>
+<span id="cb1071-9"><a href="types-of-data.html#cb1071-9" aria-hidden="true" tabindex="-1"></a>    temp.q <span class="ot">&lt;-</span> plyr<span class="sc">::</span><span class="fu">ddply</span>(temp, <span class="st">&quot;voice.part&quot;</span>,</span>
+<span id="cb1071-10"><a href="types-of-data.html#cb1071-10" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">function</span>(df) <span class="fu">q</span>(df<span class="sc">$</span>height, <span class="fu">ppoints</span>(n)))</span>
+<span id="cb1071-11"><a href="types-of-data.html#cb1071-11" aria-hidden="true" tabindex="-1"></a>    temp.df <span class="ot">&lt;-</span> reshape2<span class="sc">::</span><span class="fu">recast</span>(temp.q, q <span class="sc">~</span> voice.part, <span class="at">id.var =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb1071-12"><a href="types-of-data.html#cb1071-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">names</span>(temp.df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;q&quot;</span>, <span class="st">&quot;Bass2&quot;</span>, <span class="st">&quot;Tenor1&quot;</span>)</span>
+<span id="cb1071-13"><a href="types-of-data.html#cb1071-13" aria-hidden="true" tabindex="-1"></a>    temp.df<span class="sc">$</span>mn <span class="ot">&lt;-</span> (temp.df<span class="sc">$</span>Bass2<span class="sc">+</span>temp.df<span class="sc">$</span>Tenor1)<span class="sc">/</span><span class="dv">2</span></span>
+<span id="cb1071-14"><a href="types-of-data.html#cb1071-14" aria-hidden="true" tabindex="-1"></a>    temp.df<span class="sc">$</span>dff <span class="ot">&lt;-</span> temp.df<span class="sc">$</span>Bass2<span class="sc">-</span>temp.df<span class="sc">$</span>Tenor1</span>
+<span id="cb1071-15"><a href="types-of-data.html#cb1071-15" aria-hidden="true" tabindex="-1"></a>    pg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(temp.df, <span class="fu">aes</span>(mn,dff)) <span class="sc">+</span></span>
+<span id="cb1071-16"><a href="types-of-data.html#cb1071-16" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="dv">0</span>)</span>
+<span id="cb1071-17"><a href="types-of-data.html#cb1071-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(pg<span class="sc">+</span><span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>))</span>
+<span id="cb1071-18"><a href="types-of-data.html#cb1071-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1071-19"><a href="types-of-data.html#cb1071-19" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.4</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-6-4.png" width="672" />
+- Box plot</p>
+<div class="sourceCode" id="cb1072"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1072-1"><a href="types-of-data.html#cb1072-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.6</span> <span class="ot">&lt;-</span></span>
+<span id="cb1072-2"><a href="types-of-data.html#cb1072-2" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span>(){</span>
+<span id="cb1072-3"><a href="types-of-data.html#cb1072-3" aria-hidden="true" tabindex="-1"></a>    oldpty <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="st">&quot;pty&quot;</span>)</span>
+<span id="cb1072-4"><a href="types-of-data.html#cb1072-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">par</span>(<span class="at">pty =</span> <span class="st">&quot;s&quot;</span>)</span>
+<span id="cb1072-5"><a href="types-of-data.html#cb1072-5" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">&lt;-</span></span>
+<span id="cb1072-6"><a href="types-of-data.html#cb1072-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">1.6</span>, <span class="fl">2.26305</span>, <span class="fl">2.55052</span>, <span class="fl">2.61059</span>, <span class="fl">2.69284</span>, <span class="fl">2.78511</span>, <span class="fl">2.80955</span>, </span>
+<span id="cb1072-7"><a href="types-of-data.html#cb1072-7" aria-hidden="true" tabindex="-1"></a>        <span class="fl">2.94647</span>, <span class="fl">2.96043</span>, <span class="fl">3.05728</span>, <span class="fl">3.15748</span>, <span class="fl">3.18033</span>, <span class="fl">3.20021</span>, </span>
+<span id="cb1072-8"><a href="types-of-data.html#cb1072-8" aria-hidden="true" tabindex="-1"></a>        <span class="fl">3.20156</span>, <span class="fl">3.24435</span>, <span class="fl">3.33231</span>, <span class="fl">3.34176</span>, <span class="fl">3.3762</span>, <span class="fl">3.39578</span>, <span class="fl">3.4925</span>,</span>
+<span id="cb1072-9"><a href="types-of-data.html#cb1072-9" aria-hidden="true" tabindex="-1"></a>        <span class="fl">3.55195</span>, <span class="fl">3.56207</span>, <span class="fl">3.65149</span>, <span class="fl">3.72746</span>, <span class="fl">3.73338</span>, <span class="fl">3.73869</span>, </span>
+<span id="cb1072-10"><a href="types-of-data.html#cb1072-10" aria-hidden="true" tabindex="-1"></a>        <span class="fl">3.80469</span>, <span class="fl">3.85224</span>, <span class="fl">3.91386</span>, <span class="fl">3.93034</span>, <span class="fl">4.02351</span>, <span class="fl">4.03947</span>, </span>
+<span id="cb1072-11"><a href="types-of-data.html#cb1072-11" aria-hidden="true" tabindex="-1"></a>            <span class="fl">4.05481</span>, <span class="fl">4.10111</span>, <span class="fl">4.26249</span>, <span class="fl">4.28782</span>, <span class="fl">4.37586</span>, <span class="fl">4.48811</span>, </span>
+<span id="cb1072-12"><a href="types-of-data.html#cb1072-12" aria-hidden="true" tabindex="-1"></a>        <span class="fl">4.6001</span>, <span class="fl">4.65677</span>, <span class="fl">4.66167</span>, <span class="fl">4.73211</span>, <span class="fl">4.80803</span>, <span class="fl">4.9812</span>, <span class="fl">5.17246</span>,</span>
+<span id="cb1072-13"><a href="types-of-data.html#cb1072-13" aria-hidden="true" tabindex="-1"></a>        <span class="fl">5.3156</span>, <span class="fl">5.35086</span>, <span class="fl">5.36848</span>, <span class="fl">5.48167</span>, <span class="fl">5.68</span>, <span class="fl">5.98848</span>, <span class="fl">6.2</span>, <span class="fl">7.1</span>, </span>
+<span id="cb1072-14"><a href="types-of-data.html#cb1072-14" aria-hidden="true" tabindex="-1"></a>        <span class="fl">7.4</span>)</span>
+<span id="cb1072-15"><a href="types-of-data.html#cb1072-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">boxplot</span>(data, <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="fu">length</span>(data)), <span class="at">ylab =</span> <span class="st">&quot;Data&quot;</span>)</span>
+<span id="cb1072-16"><a href="types-of-data.html#cb1072-16" aria-hidden="true" tabindex="-1"></a>    usr <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="st">&quot;usr&quot;</span>)</span>
+<span id="cb1072-17"><a href="types-of-data.html#cb1072-17" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> usr[<span class="dv">1</span>] <span class="sc">+</span> (usr[<span class="dv">2</span>] <span class="sc">-</span> usr[<span class="dv">1</span>]) <span class="sc">*</span> <span class="fl">0.5</span></span>
+<span id="cb1072-18"><a href="types-of-data.html#cb1072-18" aria-hidden="true" tabindex="-1"></a>    at <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">1.6</span>, <span class="fl">3.2</span>, <span class="fl">3.8</span>, <span class="fl">4.65</span>, <span class="fl">6.2</span>, <span class="fl">7.2</span>)</span>
+<span id="cb1072-19"><a href="types-of-data.html#cb1072-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrows</span>(<span class="fu">rep</span>(x <span class="sc">*</span> <span class="fl">1.15</span>, <span class="dv">7</span>), at, <span class="fu">rep</span>(x, <span class="dv">7</span>), at)</span>
+<span id="cb1072-20"><a href="types-of-data.html#cb1072-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mtext</span>(<span class="st">&quot;Figure 2.6&quot;</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="at">cex=</span>.<span class="dv">8</span>)</span>
+<span id="cb1072-21"><a href="types-of-data.html#cb1072-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">text</span>(<span class="fu">rep</span>(x <span class="sc">*</span> <span class="fl">1.2</span>, <span class="dv">7</span>), at, <span class="at">adj =</span> <span class="dv">0</span>,</span>
+<span id="cb1072-22"><a href="types-of-data.html#cb1072-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;outside value&quot;</span>, <span class="st">&quot;lower adjacent value&quot;</span>, </span>
+<span id="cb1072-23"><a href="types-of-data.html#cb1072-23" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;lower quartile&quot;</span>, <span class="st">&quot;median&quot;</span>, <span class="st">&quot;upper quartile&quot;</span>, </span>
+<span id="cb1072-24"><a href="types-of-data.html#cb1072-24" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;upper adjacent value&quot;</span>, <span class="st">&quot;outside values&quot;</span>))  </span>
+<span id="cb1072-25"><a href="types-of-data.html#cb1072-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">par</span>(<span class="at">pty =</span> oldpty)</span>
+<span id="cb1072-26"><a href="types-of-data.html#cb1072-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">invisible</span>()</span>
+<span id="cb1072-27"><a href="types-of-data.html#cb1072-27" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1072-28"><a href="types-of-data.html#cb1072-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1072-29"><a href="types-of-data.html#cb1072-29" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.6</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1073"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1073-1"><a href="types-of-data.html#cb1073-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.6</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1073-2"><a href="types-of-data.html#cb1073-2" aria-hidden="true" tabindex="-1"></a>    ydata <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">1.6</span>, <span class="fl">2.26305</span>, <span class="fl">2.55052</span>,</span>
+<span id="cb1073-3"><a href="types-of-data.html#cb1073-3" aria-hidden="true" tabindex="-1"></a>               <span class="fl">2.61059</span>, <span class="fl">2.69284</span>, <span class="fl">2.78511</span>, <span class="fl">2.80955</span>, <span class="fl">2.94647</span>, <span class="fl">2.96043</span>,</span>
+<span id="cb1073-4"><a href="types-of-data.html#cb1073-4" aria-hidden="true" tabindex="-1"></a>               <span class="fl">3.05728</span>, <span class="fl">3.15748</span>, <span class="fl">3.18033</span>, <span class="fl">3.20021</span>, <span class="fl">3.20156</span>, <span class="fl">3.24435</span>,</span>
+<span id="cb1073-5"><a href="types-of-data.html#cb1073-5" aria-hidden="true" tabindex="-1"></a>               <span class="fl">3.33231</span>, <span class="fl">3.34176</span>, <span class="fl">3.37620</span>, <span class="fl">3.39578</span>, <span class="fl">3.49250</span>, <span class="fl">3.55195</span>,</span>
+<span id="cb1073-6"><a href="types-of-data.html#cb1073-6" aria-hidden="true" tabindex="-1"></a>               <span class="fl">3.56207</span>, <span class="fl">3.65149</span>, <span class="fl">3.72746</span>, <span class="fl">3.73338</span>, <span class="fl">3.73869</span>, <span class="fl">3.80469</span>,</span>
+<span id="cb1073-7"><a href="types-of-data.html#cb1073-7" aria-hidden="true" tabindex="-1"></a>               <span class="fl">3.85224</span>, <span class="fl">3.91386</span>, <span class="fl">3.93034</span>, <span class="fl">4.02351</span>, <span class="fl">4.03947</span>, <span class="fl">4.05481</span>,</span>
+<span id="cb1073-8"><a href="types-of-data.html#cb1073-8" aria-hidden="true" tabindex="-1"></a>               <span class="fl">4.10111</span>, <span class="fl">4.26249</span>, <span class="fl">4.28782</span>, <span class="fl">4.37586</span>, <span class="fl">4.48811</span>, <span class="fl">4.6001</span>,</span>
+<span id="cb1073-9"><a href="types-of-data.html#cb1073-9" aria-hidden="true" tabindex="-1"></a>               <span class="fl">4.65677</span>, <span class="fl">4.66167</span>, <span class="fl">4.73211</span>, <span class="fl">4.80803</span>, <span class="fl">4.9812</span>, <span class="fl">5.17246</span>,</span>
+<span id="cb1073-10"><a href="types-of-data.html#cb1073-10" aria-hidden="true" tabindex="-1"></a>               <span class="fl">5.3156</span>, <span class="fl">5.35086</span>, <span class="fl">5.36848</span>, <span class="fl">5.48167</span>, <span class="fl">5.68</span>, <span class="fl">5.98848</span>, <span class="fl">6.2</span>,</span>
+<span id="cb1073-11"><a href="types-of-data.html#cb1073-11" aria-hidden="true" tabindex="-1"></a>               <span class="fl">7.1</span>, <span class="fl">7.4</span>)</span>
+<span id="cb1073-12"><a href="types-of-data.html#cb1073-12" aria-hidden="true" tabindex="-1"></a>    text <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;outside value&quot;</span>, <span class="st">&quot;lower adjacent value&quot;</span>,</span>
+<span id="cb1073-13"><a href="types-of-data.html#cb1073-13" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;lower quartile&quot;</span>, <span class="st">&quot;median&quot;</span>, <span class="st">&quot;upper quartile&quot;</span>,</span>
+<span id="cb1073-14"><a href="types-of-data.html#cb1073-14" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;upper adjacent value&quot;</span>, <span class="st">&quot;outside values&quot;</span>)</span>
+<span id="cb1073-15"><a href="types-of-data.html#cb1073-15" aria-hidden="true" tabindex="-1"></a>    at <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">1.6</span>, <span class="fl">3.2</span>,<span class="fl">3.8</span>, <span class="fl">4.65</span>, <span class="fl">6.2</span>, <span class="fl">7.2</span>)</span>
+<span id="cb1073-16"><a href="types-of-data.html#cb1073-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1073-17"><a href="types-of-data.html#cb1073-17" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">y =</span> ydata, <span class="at">x =</span> <span class="dv">1</span>)</span>
+<span id="cb1073-18"><a href="types-of-data.html#cb1073-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1073-19"><a href="types-of-data.html#cb1073-19" aria-hidden="true" tabindex="-1"></a>    p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span><span class="st">&quot;&quot;</span>, y)) <span class="sc">+</span> <span class="fu">stat_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb1073-20"><a href="types-of-data.html#cb1073-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="fl">1.5</span>, <span class="at">y =</span> at, <span class="at">label =</span> <span class="fu">paste</span>(<span class="st">&quot;&lt;--&quot;</span>, text, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>))</span>
+<span id="cb1073-21"><a href="types-of-data.html#cb1073-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(p)</span>
+<span id="cb1073-22"><a href="types-of-data.html#cb1073-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1073-23"><a href="types-of-data.html#cb1073-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1073-24"><a href="types-of-data.html#cb1073-24" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.6</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
+<div class="sourceCode" id="cb1074"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1074-1"><a href="types-of-data.html#cb1074-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.7</span> <span class="ot">&lt;-</span></span>
+<span id="cb1074-2"><a href="types-of-data.html#cb1074-2" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span>()</span>
+<span id="cb1074-3"><a href="types-of-data.html#cb1074-3" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1074-4"><a href="types-of-data.html#cb1074-4" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">1.6</span>, <span class="fl">2.263047</span>,</span>
+<span id="cb1074-5"><a href="types-of-data.html#cb1074-5" aria-hidden="true" tabindex="-1"></a>        <span class="fl">2.550518</span>, <span class="fl">2.610592</span>, <span class="fl">2.69284</span>, <span class="fl">2.785113</span>, </span>
+<span id="cb1074-6"><a href="types-of-data.html#cb1074-6" aria-hidden="true" tabindex="-1"></a>        <span class="fl">2.809547</span>, <span class="fl">2.946467</span>, <span class="fl">2.96044</span>, <span class="fl">3.057283</span>, </span>
+<span id="cb1074-7"><a href="types-of-data.html#cb1074-7" aria-hidden="true" tabindex="-1"></a>        <span class="fl">3.15748</span>, <span class="fl">3.180327</span>, <span class="fl">3.200206</span>, </span>
+<span id="cb1074-8"><a href="types-of-data.html#cb1074-8" aria-hidden="true" tabindex="-1"></a>        <span class="fl">3.20156</span>, <span class="fl">3.244347</span>, <span class="fl">3.332312</span>, </span>
+<span id="cb1074-9"><a href="types-of-data.html#cb1074-9" aria-hidden="true" tabindex="-1"></a>        <span class="fl">3.341763</span>, <span class="fl">3.3762</span>, <span class="fl">3.395778</span>, <span class="fl">3.492497</span>, </span>
+<span id="cb1074-10"><a href="types-of-data.html#cb1074-10" aria-hidden="true" tabindex="-1"></a>        <span class="fl">3.551945</span>, <span class="fl">3.562066</span>, <span class="fl">3.65149</span>, </span>
+<span id="cb1074-11"><a href="types-of-data.html#cb1074-11" aria-hidden="true" tabindex="-1"></a>        <span class="fl">3.7274632</span>, <span class="fl">3.73338</span>, <span class="fl">3.738686</span>, <span class="fl">3.80469</span>, </span>
+<span id="cb1074-12"><a href="types-of-data.html#cb1074-12" aria-hidden="true" tabindex="-1"></a>        <span class="fl">3.85224</span>, <span class="fl">3.91386</span>, <span class="fl">3.93034</span>, </span>
+<span id="cb1074-13"><a href="types-of-data.html#cb1074-13" aria-hidden="true" tabindex="-1"></a>        <span class="fl">4.02351</span>, <span class="fl">4.039466</span>, <span class="fl">4.05481</span>, <span class="fl">4.101108</span>, <span class="fl">4.262486</span>, </span>
+<span id="cb1074-14"><a href="types-of-data.html#cb1074-14" aria-hidden="true" tabindex="-1"></a>        <span class="fl">4.28782</span>, <span class="fl">4.375864</span>, <span class="fl">4.48811</span>, <span class="fl">4.6001</span>, </span>
+<span id="cb1074-15"><a href="types-of-data.html#cb1074-15" aria-hidden="true" tabindex="-1"></a>        <span class="fl">4.656775</span>, <span class="fl">4.661673</span>, <span class="fl">4.73211</span>, </span>
+<span id="cb1074-16"><a href="types-of-data.html#cb1074-16" aria-hidden="true" tabindex="-1"></a>        <span class="fl">4.80803</span>, <span class="fl">4.9812</span>, <span class="fl">5.172464</span>, </span>
+<span id="cb1074-17"><a href="types-of-data.html#cb1074-17" aria-hidden="true" tabindex="-1"></a>        <span class="fl">5.3156</span>, <span class="fl">5.35086</span>, <span class="fl">5.36848</span>, </span>
+<span id="cb1074-18"><a href="types-of-data.html#cb1074-18" aria-hidden="true" tabindex="-1"></a>        <span class="fl">5.48167</span>, <span class="fl">5.68</span>, <span class="fl">5.98848</span>, <span class="fl">6.2</span>, </span>
+<span id="cb1074-19"><a href="types-of-data.html#cb1074-19" aria-hidden="true" tabindex="-1"></a>        <span class="fl">7.1</span>, <span class="fl">7.4</span>),<span class="dv">5</span>)</span>
+<span id="cb1074-20"><a href="types-of-data.html#cb1074-20" aria-hidden="true" tabindex="-1"></a>    uq <span class="ot">&lt;-</span> <span class="fu">quantile</span>(data,.<span class="dv">75</span>)</span>
+<span id="cb1074-21"><a href="types-of-data.html#cb1074-21" aria-hidden="true" tabindex="-1"></a>    lq <span class="ot">&lt;-</span> <span class="fu">quantile</span>(data,.<span class="dv">25</span>)</span>
+<span id="cb1074-22"><a href="types-of-data.html#cb1074-22" aria-hidden="true" tabindex="-1"></a>    r <span class="ot">&lt;-</span> <span class="fl">1.5</span><span class="sc">*</span>(uq<span class="sc">-</span>lq)</span>
+<span id="cb1074-23"><a href="types-of-data.html#cb1074-23" aria-hidden="true" tabindex="-1"></a>    h <span class="ot">&lt;-</span> <span class="fu">c</span>(lq<span class="sc">-</span>r,<span class="fl">1.6</span>,lq,uq,<span class="fl">6.2</span>,uq<span class="sc">+</span>r)</span>
+<span id="cb1074-24"><a href="types-of-data.html#cb1074-24" aria-hidden="true" tabindex="-1"></a>    writing <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;lower quartile - 1.5 r&quot;</span>,</span>
+<span id="cb1074-25"><a href="types-of-data.html#cb1074-25" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;lower adjacent value&quot;</span>,</span>
+<span id="cb1074-26"><a href="types-of-data.html#cb1074-26" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;lower quartile&quot;</span>,</span>
+<span id="cb1074-27"><a href="types-of-data.html#cb1074-27" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;upper quartile&quot;</span>,</span>
+<span id="cb1074-28"><a href="types-of-data.html#cb1074-28" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;upper adjacent value&quot;</span>,</span>
+<span id="cb1074-29"><a href="types-of-data.html#cb1074-29" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;upper quartile + 1.5 r&quot;</span>)</span>
+<span id="cb1074-30"><a href="types-of-data.html#cb1074-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">qqmath</span>(<span class="sc">~</span> data,</span>
+<span id="cb1074-31"><a href="types-of-data.html#cb1074-31" aria-hidden="true" tabindex="-1"></a>        <span class="at">distribution =</span> qunif,</span>
+<span id="cb1074-32"><a href="types-of-data.html#cb1074-32" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel =</span> <span class="fu">substitute</span>(<span class="cf">function</span>(x,...) {</span>
+<span id="cb1074-33"><a href="types-of-data.html#cb1074-33" aria-hidden="true" tabindex="-1"></a>            reference.line <span class="ot">&lt;-</span> <span class="fu">trellis.par.get</span>(<span class="st">&quot;reference.line&quot;</span>)</span>
+<span id="cb1074-34"><a href="types-of-data.html#cb1074-34" aria-hidden="true" tabindex="-1"></a>            <span class="fu">panel.abline</span>(<span class="at">h =</span> h, <span class="at">lwd =</span> reference.line<span class="sc">$</span>lwd, <span class="at">lty =</span> reference.line<span class="sc">$</span>lty, <span class="at">col =</span> reference.line<span class="sc">$</span>col)</span>
+<span id="cb1074-35"><a href="types-of-data.html#cb1074-35" aria-hidden="true" tabindex="-1"></a>            <span class="fu">panel.qqmath</span>(x, <span class="at">type=</span><span class="st">&quot;b&quot;</span>, ...)</span>
+<span id="cb1074-36"><a href="types-of-data.html#cb1074-36" aria-hidden="true" tabindex="-1"></a>            <span class="fu">panel.text</span>(<span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">3</span>), h[<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>], writing[<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>], <span class="at">adj=</span><span class="dv">0</span>)</span>
+<span id="cb1074-37"><a href="types-of-data.html#cb1074-37" aria-hidden="true" tabindex="-1"></a>            <span class="fu">panel.text</span>(<span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">3</span>), h[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], writing[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="at">adj=</span><span class="dv">1</span>)</span>
+<span id="cb1074-38"><a href="types-of-data.html#cb1074-38" aria-hidden="true" tabindex="-1"></a>        }),</span>
+<span id="cb1074-39"><a href="types-of-data.html#cb1074-39" aria-hidden="true" tabindex="-1"></a>        <span class="at">aspect =</span> <span class="dv">1</span>, </span>
+<span id="cb1074-40"><a href="types-of-data.html#cb1074-40" aria-hidden="true" tabindex="-1"></a>        <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.7&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1074-41"><a href="types-of-data.html#cb1074-41" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&quot;f-value&quot;</span>, </span>
+<span id="cb1074-42"><a href="types-of-data.html#cb1074-42" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;Data&quot;</span>)</span>
+<span id="cb1074-43"><a href="types-of-data.html#cb1074-43" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1074-44"><a href="types-of-data.html#cb1074-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1074-45"><a href="types-of-data.html#cb1074-45" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.7</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-7-3.png" width="672" /></p>
+<div class="sourceCode" id="cb1075"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1075-1"><a href="types-of-data.html#cb1075-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.7</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1075-2"><a href="types-of-data.html#cb1075-2" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">1.6</span>, <span class="fl">2.263047</span>,</span>
+<span id="cb1075-3"><a href="types-of-data.html#cb1075-3" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">2.550518</span>, <span class="fl">2.610592</span>, <span class="fl">2.69284</span>, <span class="fl">2.785113</span>, </span>
+<span id="cb1075-4"><a href="types-of-data.html#cb1075-4" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">2.809547</span>, <span class="fl">2.946467</span>, <span class="fl">2.96044</span>, <span class="fl">3.057283</span>, </span>
+<span id="cb1075-5"><a href="types-of-data.html#cb1075-5" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">3.15748</span>, <span class="fl">3.180327</span>, <span class="fl">3.200206</span>, </span>
+<span id="cb1075-6"><a href="types-of-data.html#cb1075-6" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">3.20156</span>, <span class="fl">3.244347</span>, <span class="fl">3.332312</span>, </span>
+<span id="cb1075-7"><a href="types-of-data.html#cb1075-7" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">3.341763</span>, <span class="fl">3.3762</span>, <span class="fl">3.395778</span>, <span class="fl">3.492497</span>, </span>
+<span id="cb1075-8"><a href="types-of-data.html#cb1075-8" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">3.551945</span>, <span class="fl">3.562066</span>, <span class="fl">3.65149</span>, </span>
+<span id="cb1075-9"><a href="types-of-data.html#cb1075-9" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">3.7274632</span>, <span class="fl">3.73338</span>, <span class="fl">3.738686</span>, <span class="fl">3.80469</span>, </span>
+<span id="cb1075-10"><a href="types-of-data.html#cb1075-10" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">3.85224</span>, <span class="fl">3.91386</span>, <span class="fl">3.93034</span>, </span>
+<span id="cb1075-11"><a href="types-of-data.html#cb1075-11" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">4.02351</span>, <span class="fl">4.039466</span>, <span class="fl">4.05481</span>, <span class="fl">4.101108</span>, <span class="fl">4.262486</span>, </span>
+<span id="cb1075-12"><a href="types-of-data.html#cb1075-12" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">4.28782</span>, <span class="fl">4.375864</span>, <span class="fl">4.48811</span>, <span class="fl">4.6001</span>, </span>
+<span id="cb1075-13"><a href="types-of-data.html#cb1075-13" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">4.656775</span>, <span class="fl">4.661673</span>, <span class="fl">4.73211</span>, </span>
+<span id="cb1075-14"><a href="types-of-data.html#cb1075-14" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">4.80803</span>, <span class="fl">4.9812</span>, <span class="fl">5.172464</span>, </span>
+<span id="cb1075-15"><a href="types-of-data.html#cb1075-15" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">5.3156</span>, <span class="fl">5.35086</span>, <span class="fl">5.36848</span>, </span>
+<span id="cb1075-16"><a href="types-of-data.html#cb1075-16" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">5.48167</span>, <span class="fl">5.68</span>, <span class="fl">5.98848</span>, <span class="fl">6.2</span>, </span>
+<span id="cb1075-17"><a href="types-of-data.html#cb1075-17" aria-hidden="true" tabindex="-1"></a>                    <span class="fl">7.1</span>, <span class="fl">7.4</span>),<span class="dv">5</span>)</span>
+<span id="cb1075-18"><a href="types-of-data.html#cb1075-18" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> <span class="fu">length</span>(data)</span>
+<span id="cb1075-19"><a href="types-of-data.html#cb1075-19" aria-hidden="true" tabindex="-1"></a>    uq <span class="ot">&lt;-</span> <span class="fu">quantile</span>(data,.<span class="dv">75</span>)</span>
+<span id="cb1075-20"><a href="types-of-data.html#cb1075-20" aria-hidden="true" tabindex="-1"></a>    lq <span class="ot">&lt;-</span> <span class="fu">quantile</span>(data,.<span class="dv">25</span>)</span>
+<span id="cb1075-21"><a href="types-of-data.html#cb1075-21" aria-hidden="true" tabindex="-1"></a>    r <span class="ot">&lt;-</span> <span class="fl">1.5</span><span class="sc">*</span>(uq<span class="sc">-</span>lq)</span>
+<span id="cb1075-22"><a href="types-of-data.html#cb1075-22" aria-hidden="true" tabindex="-1"></a>    h <span class="ot">&lt;-</span> <span class="fu">c</span>(lq<span class="sc">-</span>r,<span class="fl">1.6</span>,lq,uq,<span class="fl">6.2</span>,uq<span class="sc">+</span>r)</span>
+<span id="cb1075-23"><a href="types-of-data.html#cb1075-23" aria-hidden="true" tabindex="-1"></a>    writing <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;lower quartile - 1.5 r&quot;</span>,</span>
+<span id="cb1075-24"><a href="types-of-data.html#cb1075-24" aria-hidden="true" tabindex="-1"></a>                 <span class="st">&quot;lower adjacent value&quot;</span>,</span>
+<span id="cb1075-25"><a href="types-of-data.html#cb1075-25" aria-hidden="true" tabindex="-1"></a>                 <span class="st">&quot;lower quartile&quot;</span>,</span>
+<span id="cb1075-26"><a href="types-of-data.html#cb1075-26" aria-hidden="true" tabindex="-1"></a>                 <span class="st">&quot;upper quartile&quot;</span>,</span>
+<span id="cb1075-27"><a href="types-of-data.html#cb1075-27" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;upper adjacent value&quot;</span>,</span>
+<span id="cb1075-28"><a href="types-of-data.html#cb1075-28" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;upper quartile + 1.5 r&quot;</span>)</span>
+<span id="cb1075-29"><a href="types-of-data.html#cb1075-29" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">y =</span> data, <span class="at">fval=</span>((<span class="dv">1</span><span class="sc">:</span>n)<span class="sc">-</span><span class="fl">0.5</span>)<span class="sc">/</span>n)</span>
+<span id="cb1075-30"><a href="types-of-data.html#cb1075-30" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1075-31"><a href="types-of-data.html#cb1075-31" aria-hidden="true" tabindex="-1"></a>    p<span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(fval, y)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1075-32"><a href="types-of-data.html#cb1075-32" aria-hidden="true" tabindex="-1"></a>        <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="fl">0.125</span>, <span class="at">y =</span> h[<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>], <span class="at">label =</span> writing[<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>]) <span class="sc">+</span> </span>
+<span id="cb1075-33"><a href="types-of-data.html#cb1075-33" aria-hidden="true" tabindex="-1"></a>        <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="fl">0.875</span>, <span class="at">y =</span> h[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="at">label =</span> writing[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span>
+<span id="cb1075-34"><a href="types-of-data.html#cb1075-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(p <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>))</span>
+<span id="cb1075-35"><a href="types-of-data.html#cb1075-35" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1075-36"><a href="types-of-data.html#cb1075-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1075-37"><a href="types-of-data.html#cb1075-37" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.7</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-7-4.png" width="672" /></p>
+<div class="sourceCode" id="cb1076"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1076-1"><a href="types-of-data.html#cb1076-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.8</span> <span class="ot">&lt;-</span></span>
+<span id="cb1076-2"><a href="types-of-data.html#cb1076-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>()</span>
+<span id="cb1076-3"><a href="types-of-data.html#cb1076-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bwplot</span>(voice.part <span class="sc">~</span> height,</span>
+<span id="cb1076-4"><a href="types-of-data.html#cb1076-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">data=</span>singer,</span>
+<span id="cb1076-5"><a href="types-of-data.html#cb1076-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">aspect=</span><span class="dv">1</span>,</span>
+<span id="cb1076-6"><a href="types-of-data.html#cb1076-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.8&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1076-7"><a href="types-of-data.html#cb1076-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">xlab=</span><span class="st">&quot;Height (inches)&quot;</span>)</span>
+<span id="cb1076-8"><a href="types-of-data.html#cb1076-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1076-9"><a href="types-of-data.html#cb1076-9" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.8</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-7-5.png" width="672" /></p>
+<div class="sourceCode" id="cb1077"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1077-1"><a href="types-of-data.html#cb1077-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.8</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1077-2"><a href="types-of-data.html#cb1077-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(singer, <span class="fu">aes</span>(voice.part, height)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb1077-3"><a href="types-of-data.html#cb1077-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">coord_flip</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">xlab =</span> <span class="st">&quot; Height (inches)&quot;</span>)<span class="sc">+</span><span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1077-4"><a href="types-of-data.html#cb1077-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1077-5"><a href="types-of-data.html#cb1077-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1077-6"><a href="types-of-data.html#cb1077-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.8</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-7-6.png" width="672" /></p>
+<ul>
+<li>Normal Q-Q plot
+First, let’s take a look at the basic Q-Q plot</li>
+</ul>
+<div class="sourceCode" id="cb1078"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1078-1"><a href="types-of-data.html#cb1078-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.9</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1078-2"><a href="types-of-data.html#cb1078-2" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">&lt;-</span> <span class="fu">sort</span>(singer<span class="sc">$</span>height[singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Alto 1&quot;</span>])</span>
+<span id="cb1078-3"><a href="types-of-data.html#cb1078-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">qqmath</span>(<span class="sc">~</span> data, <span class="co">#qqmath computes the fvalue</span></span>
+<span id="cb1078-4"><a href="types-of-data.html#cb1078-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">distribution =</span> qunif,</span>
+<span id="cb1078-5"><a href="types-of-data.html#cb1078-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">panel =</span> <span class="cf">function</span>(x, ...) {</span>
+<span id="cb1078-6"><a href="types-of-data.html#cb1078-6" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.grid</span>()</span>
+<span id="cb1078-7"><a href="types-of-data.html#cb1078-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.qqmath</span>(x, <span class="at">type=</span><span class="st">&quot;b&quot;</span>, ...)</span>
+<span id="cb1078-8"><a href="types-of-data.html#cb1078-8" aria-hidden="true" tabindex="-1"></a>           },</span>
+<span id="cb1078-9"><a href="types-of-data.html#cb1078-9" aria-hidden="true" tabindex="-1"></a>           <span class="at">aspect =</span> <span class="dv">1</span>, </span>
+<span id="cb1078-10"><a href="types-of-data.html#cb1078-10" aria-hidden="true" tabindex="-1"></a>           <span class="at">ylim =</span> <span class="fu">range</span>(data, <span class="fu">qnorm</span>(<span class="fu">ppoints</span>(data), <span class="fu">mean</span>(data),</span>
+<span id="cb1078-11"><a href="types-of-data.html#cb1078-11" aria-hidden="true" tabindex="-1"></a>                                    <span class="fu">sqrt</span>(<span class="fu">var</span>(data)))),</span>
+<span id="cb1078-12"><a href="types-of-data.html#cb1078-12" aria-hidden="true" tabindex="-1"></a>           <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.9&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1078-13"><a href="types-of-data.html#cb1078-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab =</span> <span class="st">&quot;f-value&quot;</span>,</span>
+<span id="cb1078-14"><a href="types-of-data.html#cb1078-14" aria-hidden="true" tabindex="-1"></a>           <span class="at">ylab =</span> <span class="st">&quot;Alto 1 Height (inches)&quot;</span>)</span>
+<span id="cb1078-15"><a href="types-of-data.html#cb1078-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1078-16"><a href="types-of-data.html#cb1078-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1078-17"><a href="types-of-data.html#cb1078-17" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.9</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1079"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1079-1"><a href="types-of-data.html#cb1079-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.9</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1079-2"><a href="types-of-data.html#cb1079-2" aria-hidden="true" tabindex="-1"></a>    fval <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb1079-3"><a href="types-of-data.html#cb1079-3" aria-hidden="true" tabindex="-1"></a>        oo <span class="ot">&lt;-</span> <span class="fu">order</span>(x)</span>
+<span id="cb1079-4"><a href="types-of-data.html#cb1079-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">return</span>((((<span class="dv">1</span><span class="sc">:</span><span class="fu">max</span>(oo))<span class="sc">-</span><span class="fl">0.5</span>)<span class="sc">/</span><span class="fu">max</span>(oo))[oo])</span>
+<span id="cb1079-5"><a href="types-of-data.html#cb1079-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1079-6"><a href="types-of-data.html#cb1079-6" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">&lt;-</span> (<span class="fu">sort</span>(singer<span class="sc">$</span>height[singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Alto 1&quot;</span>]))</span>
+<span id="cb1079-7"><a href="types-of-data.html#cb1079-7" aria-hidden="true" tabindex="-1"></a>    alto1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height=</span> data)</span>
+<span id="cb1079-8"><a href="types-of-data.html#cb1079-8" aria-hidden="true" tabindex="-1"></a>    alto1<span class="sc">$</span>f <span class="ot">&lt;-</span> <span class="fu">fval</span>(data)</span>
+<span id="cb1079-9"><a href="types-of-data.html#cb1079-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1079-10"><a href="types-of-data.html#cb1079-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(alto1, <span class="fu">aes</span>(f, height)) <span class="sc">+</span><span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1079-11"><a href="types-of-data.html#cb1079-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Alto 1 Height (inches)&quot;</span>, <span class="at">x =</span> <span class="st">&quot;f-value&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1079-12"><a href="types-of-data.html#cb1079-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_path</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1079-13"><a href="types-of-data.html#cb1079-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1079-14"><a href="types-of-data.html#cb1079-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.9</span>()    </span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
+<div class="sourceCode" id="cb1080"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1080-1"><a href="types-of-data.html#cb1080-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.10</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1080-2"><a href="types-of-data.html#cb1080-2" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">&lt;-</span> <span class="fu">sort</span>(singer<span class="sc">$</span>height[singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Alto 1&quot;</span>])</span>
+<span id="cb1080-3"><a href="types-of-data.html#cb1080-3" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> <span class="fu">ppoints</span>(data)</span>
+<span id="cb1080-4"><a href="types-of-data.html#cb1080-4" aria-hidden="true" tabindex="-1"></a>    y <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(x, <span class="fu">mean</span>(data), <span class="fu">sqrt</span>(<span class="fu">var</span>(data)))</span>
+<span id="cb1080-5"><a href="types-of-data.html#cb1080-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xyplot</span>(y <span class="sc">~</span> x, </span>
+<span id="cb1080-6"><a href="types-of-data.html#cb1080-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">panel =</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb1080-7"><a href="types-of-data.html#cb1080-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.grid</span>()</span>
+<span id="cb1080-8"><a href="types-of-data.html#cb1080-8" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.xyplot</span>(x, y, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>)</span>
+<span id="cb1080-9"><a href="types-of-data.html#cb1080-9" aria-hidden="true" tabindex="-1"></a>           },</span>
+<span id="cb1080-10"><a href="types-of-data.html#cb1080-10" aria-hidden="true" tabindex="-1"></a>           <span class="at">ylim =</span> <span class="fu">range</span>(data, y),</span>
+<span id="cb1080-11"><a href="types-of-data.html#cb1080-11" aria-hidden="true" tabindex="-1"></a>           <span class="at">aspect =</span> <span class="dv">1</span>, </span>
+<span id="cb1080-12"><a href="types-of-data.html#cb1080-12" aria-hidden="true" tabindex="-1"></a>           <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.10&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1080-13"><a href="types-of-data.html#cb1080-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab =</span> <span class="st">&quot;f-value&quot;</span>, </span>
+<span id="cb1080-14"><a href="types-of-data.html#cb1080-14" aria-hidden="true" tabindex="-1"></a>           <span class="at">ylab =</span> <span class="st">&quot;Normal Quantile Function&quot;</span>)</span>
+<span id="cb1080-15"><a href="types-of-data.html#cb1080-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1080-16"><a href="types-of-data.html#cb1080-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1080-17"><a href="types-of-data.html#cb1080-17" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.10</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-8-3.png" width="672" /></p>
+<div class="sourceCode" id="cb1081"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1081-1"><a href="types-of-data.html#cb1081-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.10</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1081-2"><a href="types-of-data.html#cb1081-2" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">&lt;-</span> <span class="fu">sort</span>(singer<span class="sc">$</span>height[singer<span class="sc">$</span>voice.part<span class="sc">==</span><span class="st">&quot;Alto 1&quot;</span>])</span>
+<span id="cb1081-3"><a href="types-of-data.html#cb1081-3" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> <span class="fu">ppoints</span>(data)</span>
+<span id="cb1081-4"><a href="types-of-data.html#cb1081-4" aria-hidden="true" tabindex="-1"></a>    y <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(x, <span class="fu">mean</span>(data), <span class="fu">sqrt</span>(<span class="fu">var</span>(data)))</span>
+<span id="cb1081-5"><a href="types-of-data.html#cb1081-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1081-6"><a href="types-of-data.html#cb1081-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">data.frame</span>(x, y), (<span class="fu">aes</span>(x, y))) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb1081-7"><a href="types-of-data.html#cb1081-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Normal Quantile Function&quot;</span>, <span class="at">x =</span> <span class="st">&quot;f-value&quot;</span>)<span class="sc">+</span></span>
+<span id="cb1081-8"><a href="types-of-data.html#cb1081-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1081-9"><a href="types-of-data.html#cb1081-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1081-10"><a href="types-of-data.html#cb1081-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.10</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-8-4.png" width="672" /></p>
+<p>Now, the relationship between the f-values of the two plots.</p>
+<p><span class="math display">\[
+q_{\mu, \sigma}(f) = \mu + \sigma q_{0,1}(f)
+\]</span></p>
+<div class="sourceCode" id="cb1082"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1082-1"><a href="types-of-data.html#cb1082-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.11</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1082-2"><a href="types-of-data.html#cb1082-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">qqmath</span>(<span class="sc">~</span> height <span class="sc">|</span> voice.part,</span>
+<span id="cb1082-3"><a href="types-of-data.html#cb1082-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">data=</span>singer,</span>
+<span id="cb1082-4"><a href="types-of-data.html#cb1082-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">prepanel =</span> prepanel.qqmathline,</span>
+<span id="cb1082-5"><a href="types-of-data.html#cb1082-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">panel =</span> <span class="cf">function</span>(x, ...) {</span>
+<span id="cb1082-6"><a href="types-of-data.html#cb1082-6" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.grid</span>()</span>
+<span id="cb1082-7"><a href="types-of-data.html#cb1082-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.qqmathline</span>(x, <span class="at">distribution =</span> qnorm)</span>
+<span id="cb1082-8"><a href="types-of-data.html#cb1082-8" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.qqmath</span>(x, ...)</span>
+<span id="cb1082-9"><a href="types-of-data.html#cb1082-9" aria-hidden="true" tabindex="-1"></a>           },</span>
+<span id="cb1082-10"><a href="types-of-data.html#cb1082-10" aria-hidden="true" tabindex="-1"></a>           <span class="at">layout=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>),</span>
+<span id="cb1082-11"><a href="types-of-data.html#cb1082-11" aria-hidden="true" tabindex="-1"></a>           <span class="at">aspect=</span><span class="dv">1</span>, </span>
+<span id="cb1082-12"><a href="types-of-data.html#cb1082-12" aria-hidden="true" tabindex="-1"></a>           <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.11&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1082-13"><a href="types-of-data.html#cb1082-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab =</span> <span class="st">&quot;Unit Normal Quantile&quot;</span>,</span>
+<span id="cb1082-14"><a href="types-of-data.html#cb1082-14" aria-hidden="true" tabindex="-1"></a>           <span class="at">ylab=</span><span class="st">&quot;Height (inches)&quot;</span>)</span>
+<span id="cb1082-15"><a href="types-of-data.html#cb1082-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1082-16"><a href="types-of-data.html#cb1082-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1082-17"><a href="types-of-data.html#cb1082-17" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.11</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1083"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1083-1"><a href="types-of-data.html#cb1083-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.11</span> <span class="ot">&lt;-</span> <span class="cf">function</span>()</span>
+<span id="cb1083-2"><a href="types-of-data.html#cb1083-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(singer, <span class="fu">aes</span>(<span class="at">sample =</span> height)) <span class="sc">+</span> <span class="fu">stat_qq</span>(<span class="at">distribution =</span> qnorm)<span class="sc">+</span></span>
+<span id="cb1083-3"><a href="types-of-data.html#cb1083-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_qq_line</span>()<span class="sc">+</span> <span class="fu">facet_wrap</span>(. <span class="sc">~</span> voice.part, <span class="at">ncol =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb1083-4"><a href="types-of-data.html#cb1083-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Unit Normal Quantile&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Height (inches)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1083-5"><a href="types-of-data.html#cb1083-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1083-6"><a href="types-of-data.html#cb1083-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.11</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
+</div>
+<div id="fits-and-residuals" class="section level2" number="41.2">
+<h2><span class="header-section-number">41.2</span> Fits and Residuals</h2>
+<div class="sourceCode" id="cb1084"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1084-1"><a href="types-of-data.html#cb1084-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.12</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1084-2"><a href="types-of-data.html#cb1084-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">dotplot</span>(<span class="fu">tapply</span>(singer<span class="sc">$</span>height,singer<span class="sc">$</span>voice.part,mean), </span>
+<span id="cb1084-3"><a href="types-of-data.html#cb1084-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">aspect=</span><span class="dv">1</span>,</span>
+<span id="cb1084-4"><a href="types-of-data.html#cb1084-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.12&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1084-5"><a href="types-of-data.html#cb1084-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">xlab=</span><span class="st">&quot;Mean Height (inches)&quot;</span>)</span>
+<span id="cb1084-6"><a href="types-of-data.html#cb1084-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1084-7"><a href="types-of-data.html#cb1084-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1084-8"><a href="types-of-data.html#cb1084-8" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.12</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1085"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1085-1"><a href="types-of-data.html#cb1085-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.12</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1085-2"><a href="types-of-data.html#cb1085-2" aria-hidden="true" tabindex="-1"></a>    meandot <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">tapply</span>(singer<span class="sc">$</span>height, singer<span class="sc">$</span>voice.part, mean))</span>
+<span id="cb1085-3"><a href="types-of-data.html#cb1085-3" aria-hidden="true" tabindex="-1"></a>    singer.means <span class="ot">=</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1085-4"><a href="types-of-data.html#cb1085-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">voice.part=</span><span class="fu">ordered</span>(<span class="fu">rownames</span>(meandot),</span>
+<span id="cb1085-5"><a href="types-of-data.html#cb1085-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">levels=</span><span class="fu">rev</span>(<span class="fu">c</span>(<span class="st">&quot;Soprano 1&quot;</span>, <span class="st">&quot;Soprano 2&quot;</span>,</span>
+<span id="cb1085-6"><a href="types-of-data.html#cb1085-6" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">&quot;Alto 1&quot;</span>, <span class="st">&quot;Alto 2&quot;</span> ,</span>
+<span id="cb1085-7"><a href="types-of-data.html#cb1085-7" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">&quot;Tenor 1&quot;</span>, <span class="st">&quot;Tenor 2&quot;</span>,</span>
+<span id="cb1085-8"><a href="types-of-data.html#cb1085-8" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">&quot;Bass 1&quot;</span>, <span class="st">&quot;Bass 2&quot;</span>))),</span>
+<span id="cb1085-9"><a href="types-of-data.html#cb1085-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">height=</span>meandot[,<span class="dv">1</span>])</span>
+<span id="cb1085-10"><a href="types-of-data.html#cb1085-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1085-11"><a href="types-of-data.html#cb1085-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(singer.means, <span class="fu">aes</span>(height,voice.part)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1085-12"><a href="types-of-data.html#cb1085-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Mean Height (inches)&quot;</span>)  <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1085-13"><a href="types-of-data.html#cb1085-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1085-14"><a href="types-of-data.html#cb1085-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1085-15"><a href="types-of-data.html#cb1085-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.12</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
+<p>Fitted values versus residuals</p>
+<p><span class="math display">\[
+h_{pi} = \hat{h}_{pi} + \hat{\varepsilon}_{pi}
+\]</span></p>
+<div class="sourceCode" id="cb1086"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1086-1"><a href="types-of-data.html#cb1086-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.13</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1086-2"><a href="types-of-data.html#cb1086-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bwplot</span>(voice.part <span class="sc">~</span> <span class="fu">oneway</span>(height<span class="sc">~</span>voice.part, <span class="at">spread =</span> <span class="dv">1</span>)<span class="sc">$</span>residuals,</span>
+<span id="cb1086-3"><a href="types-of-data.html#cb1086-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">data =</span> singer,</span>
+<span id="cb1086-4"><a href="types-of-data.html#cb1086-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">aspect=</span><span class="fl">0.75</span>,</span>
+<span id="cb1086-5"><a href="types-of-data.html#cb1086-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">panel =</span> <span class="cf">function</span>(x,y){</span>
+<span id="cb1086-6"><a href="types-of-data.html#cb1086-6" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.bwplot</span>(x,y)</span>
+<span id="cb1086-7"><a href="types-of-data.html#cb1086-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.abline</span>(<span class="at">v=</span><span class="dv">0</span>)</span>
+<span id="cb1086-8"><a href="types-of-data.html#cb1086-8" aria-hidden="true" tabindex="-1"></a>           },</span>
+<span id="cb1086-9"><a href="types-of-data.html#cb1086-9" aria-hidden="true" tabindex="-1"></a>           <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.13&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1086-10"><a href="types-of-data.html#cb1086-10" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab =</span> <span class="st">&quot;Residual Height (inches)&quot;</span>)</span>
+<span id="cb1086-11"><a href="types-of-data.html#cb1086-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1086-12"><a href="types-of-data.html#cb1086-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1086-13"><a href="types-of-data.html#cb1086-13" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.13</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1087"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1087-1"><a href="types-of-data.html#cb1087-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.13</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1087-2"><a href="types-of-data.html#cb1087-2" aria-hidden="true" tabindex="-1"></a>    res.height <span class="ot">&lt;-</span> <span class="fu">oneway</span>(height <span class="sc">~</span> voice.part, <span class="at">data =</span> singer,</span>
+<span id="cb1087-3"><a href="types-of-data.html#cb1087-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">spread =</span> <span class="dv">1</span>)<span class="sc">$</span>residuals </span>
+<span id="cb1087-4"><a href="types-of-data.html#cb1087-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1087-5"><a href="types-of-data.html#cb1087-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(singer, <span class="fu">aes</span>(voice.part, res.height)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb1087-6"><a href="types-of-data.html#cb1087-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">coord_flip</span>( )<span class="sc">+</span> <span class="fu">labs</span>(<span class="at">xlab =</span> <span class="st">&quot;Residual Height (inches)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1087-7"><a href="types-of-data.html#cb1087-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="fl">0.75</span>) </span>
+<span id="cb1087-8"><a href="types-of-data.html#cb1087-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1087-9"><a href="types-of-data.html#cb1087-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.13</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
+<div id="homogeneity-and-pooling" class="section level3" number="41.2.1">
+<h3><span class="header-section-number">41.2.1</span> Homogeneity and Pooling</h3>
+<div class="sourceCode" id="cb1088"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1088-1"><a href="types-of-data.html#cb1088-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.14</span> <span class="ot">&lt;-</span> <span class="cf">function</span>()</span>
+<span id="cb1088-2"><a href="types-of-data.html#cb1088-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1088-3"><a href="types-of-data.html#cb1088-3" aria-hidden="true" tabindex="-1"></a>    res.height <span class="ot">&lt;-</span> <span class="fu">oneway</span>(height <span class="sc">~</span> voice.part, <span class="at">data =</span> singer,</span>
+<span id="cb1088-4"><a href="types-of-data.html#cb1088-4" aria-hidden="true" tabindex="-1"></a>                         <span class="at">spread =</span> <span class="dv">1</span>)<span class="sc">$</span>residuals</span>
+<span id="cb1088-5"><a href="types-of-data.html#cb1088-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">qqmath</span>(<span class="sc">~</span> res.height <span class="sc">|</span> singer<span class="sc">$</span>voice.part, </span>
+<span id="cb1088-6"><a href="types-of-data.html#cb1088-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">distribution =</span> <span class="fu">substitute</span>(<span class="cf">function</span>(p) <span class="fu">quantile</span>(res.height, p)),</span>
+<span id="cb1088-7"><a href="types-of-data.html#cb1088-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">panel=</span><span class="cf">function</span>(x){</span>
+<span id="cb1088-8"><a href="types-of-data.html#cb1088-8" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.grid</span>()</span>
+<span id="cb1088-9"><a href="types-of-data.html#cb1088-9" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.qqmathline</span>(x)</span>
+<span id="cb1088-10"><a href="types-of-data.html#cb1088-10" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.qqmath</span>(x)</span>
+<span id="cb1088-11"><a href="types-of-data.html#cb1088-11" aria-hidden="true" tabindex="-1"></a>           },</span>
+<span id="cb1088-12"><a href="types-of-data.html#cb1088-12" aria-hidden="true" tabindex="-1"></a>           <span class="at">aspect=</span><span class="dv">1</span>,</span>
+<span id="cb1088-13"><a href="types-of-data.html#cb1088-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">layout=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>),</span>
+<span id="cb1088-14"><a href="types-of-data.html#cb1088-14" aria-hidden="true" tabindex="-1"></a>           <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.14&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1088-15"><a href="types-of-data.html#cb1088-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab =</span> <span class="st">&quot;Pooled Residual Height (inches)&quot;</span>,</span>
+<span id="cb1088-16"><a href="types-of-data.html#cb1088-16" aria-hidden="true" tabindex="-1"></a>           <span class="at">ylab =</span> <span class="st">&quot;Residual Height (inches)&quot;</span>)</span>
+<span id="cb1088-17"><a href="types-of-data.html#cb1088-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1088-18"><a href="types-of-data.html#cb1088-18" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.14</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1089"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1089-1"><a href="types-of-data.html#cb1089-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.14</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1089-2"><a href="types-of-data.html#cb1089-2" aria-hidden="true" tabindex="-1"></a>    res.height <span class="ot">&lt;-</span> <span class="fu">oneway</span>(height <span class="sc">~</span> voice.part, <span class="at">data =</span> singer,</span>
+<span id="cb1089-3"><a href="types-of-data.html#cb1089-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">spread =</span> <span class="dv">1</span>)<span class="sc">$</span>residuals</span>
+<span id="cb1089-4"><a href="types-of-data.html#cb1089-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1089-5"><a href="types-of-data.html#cb1089-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(singer, <span class="fu">aes</span>(<span class="at">sample =</span>res.height )) <span class="sc">+</span></span>
+<span id="cb1089-6"><a href="types-of-data.html#cb1089-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">stat_qq</span>(<span class="at">distribution =</span> qnorm) <span class="sc">+</span></span>
+<span id="cb1089-7"><a href="types-of-data.html#cb1089-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_qq_line</span>() <span class="sc">+</span></span>
+<span id="cb1089-8"><a href="types-of-data.html#cb1089-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">facet_wrap</span>(<span class="sc">~</span>voice.part, <span class="at">ncol =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb1089-9"><a href="types-of-data.html#cb1089-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Pooled Residual Height (inches)&quot;</span>,</span>
+<span id="cb1089-10"><a href="types-of-data.html#cb1089-10" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> <span class="st">&quot;Residual Height (inches)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1089-11"><a href="types-of-data.html#cb1089-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1089-12"><a href="types-of-data.html#cb1089-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1089-13"><a href="types-of-data.html#cb1089-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.14</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
+</div>
+<div id="checking-for-normality-of-the-pooled-residuals" class="section level3" number="41.2.2">
+<h3><span class="header-section-number">41.2.2</span> Checking for normality of the pooled residuals</h3>
+<div class="sourceCode" id="cb1090"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1090-1"><a href="types-of-data.html#cb1090-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.15</span> <span class="ot">&lt;-</span> <span class="cf">function</span>()</span>
+<span id="cb1090-2"><a href="types-of-data.html#cb1090-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1090-3"><a href="types-of-data.html#cb1090-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">qqmath</span>(<span class="sc">~</span> <span class="fu">oneway</span>(height <span class="sc">~</span> voice.part, <span class="at">spread =</span> <span class="dv">1</span>)<span class="sc">$</span>residuals, </span>
+<span id="cb1090-4"><a href="types-of-data.html#cb1090-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">data =</span> singer,</span>
+<span id="cb1090-5"><a href="types-of-data.html#cb1090-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">distribution =</span> qunif,</span>
+<span id="cb1090-6"><a href="types-of-data.html#cb1090-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">aspect =</span> <span class="dv">1</span>,</span>
+<span id="cb1090-7"><a href="types-of-data.html#cb1090-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.15&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1090-8"><a href="types-of-data.html#cb1090-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab =</span> <span class="st">&quot;f-value&quot;</span>,</span>
+<span id="cb1090-9"><a href="types-of-data.html#cb1090-9" aria-hidden="true" tabindex="-1"></a>           <span class="at">ylab =</span> <span class="st">&quot;Residual Height (inches)&quot;</span>)</span>
+<span id="cb1090-10"><a href="types-of-data.html#cb1090-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1090-11"><a href="types-of-data.html#cb1090-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1090-12"><a href="types-of-data.html#cb1090-12" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.15</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1091"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1091-1"><a href="types-of-data.html#cb1091-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.15</span> <span class="ot">&lt;-</span> <span class="cf">function</span>()</span>
+<span id="cb1091-2"><a href="types-of-data.html#cb1091-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1091-3"><a href="types-of-data.html#cb1091-3" aria-hidden="true" tabindex="-1"></a>    res.height.f <span class="ot">&lt;-</span> ((<span class="dv">1</span><span class="sc">:</span><span class="fu">dim</span>(singer)[<span class="dv">1</span>]) <span class="sc">-</span>.<span class="dv">5</span>)<span class="sc">/</span>(<span class="fu">dim</span>(singer)[<span class="dv">1</span>])</span>
+<span id="cb1091-4"><a href="types-of-data.html#cb1091-4" aria-hidden="true" tabindex="-1"></a>    singer<span class="sc">$</span>res.height.f <span class="ot">&lt;-</span> res.height.f </span>
+<span id="cb1091-5"><a href="types-of-data.html#cb1091-5" aria-hidden="true" tabindex="-1"></a>    singer<span class="sc">$</span>res.height <span class="ot">&lt;-</span> <span class="fu">oneway</span>(height <span class="sc">~</span> voice.part,</span>
+<span id="cb1091-6"><a href="types-of-data.html#cb1091-6" aria-hidden="true" tabindex="-1"></a>                                <span class="at">data =</span> singer, <span class="at">spread =</span> <span class="dv">1</span>)<span class="sc">$</span>residuals</span>
+<span id="cb1091-7"><a href="types-of-data.html#cb1091-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1091-8"><a href="types-of-data.html#cb1091-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(singer, <span class="fu">aes</span>(<span class="at">sample =</span> res.height)) <span class="sc">+</span></span>
+<span id="cb1091-9"><a href="types-of-data.html#cb1091-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">stat_qq</span>(<span class="at">distribution =</span> qunif) <span class="sc">+</span></span>
+<span id="cb1091-10"><a href="types-of-data.html#cb1091-10" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;f-value&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Residual Height (inches)&quot;</span>)<span class="sc">+</span></span>
+<span id="cb1091-11"><a href="types-of-data.html#cb1091-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1091-12"><a href="types-of-data.html#cb1091-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1091-13"><a href="types-of-data.html#cb1091-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1091-14"><a href="types-of-data.html#cb1091-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.15</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
+<div class="sourceCode" id="cb1092"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1092-1"><a href="types-of-data.html#cb1092-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.16</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1092-2"><a href="types-of-data.html#cb1092-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">qqmath</span>(<span class="sc">~</span> <span class="fu">oneway</span>(height<span class="sc">~</span>voice.part, <span class="at">spread =</span> <span class="dv">1</span>)<span class="sc">$</span>residuals,</span>
+<span id="cb1092-3"><a href="types-of-data.html#cb1092-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">data =</span> singer,</span>
+<span id="cb1092-4"><a href="types-of-data.html#cb1092-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">prepanel =</span> prepanel.qqmathline, </span>
+<span id="cb1092-5"><a href="types-of-data.html#cb1092-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">panel =</span> <span class="cf">function</span>(x, ...) {</span>
+<span id="cb1092-6"><a href="types-of-data.html#cb1092-6" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.grid</span>()</span>
+<span id="cb1092-7"><a href="types-of-data.html#cb1092-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.qqmathline</span>(x, <span class="at">distribution =</span> qnorm)</span>
+<span id="cb1092-8"><a href="types-of-data.html#cb1092-8" aria-hidden="true" tabindex="-1"></a>               <span class="fu">panel.qqmath</span>(x,...)</span>
+<span id="cb1092-9"><a href="types-of-data.html#cb1092-9" aria-hidden="true" tabindex="-1"></a>           },</span>
+<span id="cb1092-10"><a href="types-of-data.html#cb1092-10" aria-hidden="true" tabindex="-1"></a>           <span class="at">aspect=</span><span class="dv">1</span>,</span>
+<span id="cb1092-11"><a href="types-of-data.html#cb1092-11" aria-hidden="true" tabindex="-1"></a>           <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.16&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1092-12"><a href="types-of-data.html#cb1092-12" aria-hidden="true" tabindex="-1"></a>           <span class="at">xlab =</span> <span class="st">&quot;Unit Normal Quantile&quot;</span>,</span>
+<span id="cb1092-13"><a href="types-of-data.html#cb1092-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">ylab=</span><span class="st">&quot;Residual Height (inches)&quot;</span>)</span>
+<span id="cb1092-14"><a href="types-of-data.html#cb1092-14" aria-hidden="true" tabindex="-1"></a>}    </span>
+<span id="cb1092-15"><a href="types-of-data.html#cb1092-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1092-16"><a href="types-of-data.html#cb1092-16" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.16</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-13-3.png" width="672" /></p>
+<div class="sourceCode" id="cb1093"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1093-1"><a href="types-of-data.html#cb1093-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.16</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1093-2"><a href="types-of-data.html#cb1093-2" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">&lt;-</span> singer</span>
+<span id="cb1093-3"><a href="types-of-data.html#cb1093-3" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>res.height <span class="ot">&lt;-</span> <span class="fu">oneway</span>(height<span class="sc">~</span>voice.part, </span>
+<span id="cb1093-4"><a href="types-of-data.html#cb1093-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">spread =</span> <span class="dv">1</span>, <span class="at">data=</span>singer)<span class="sc">$</span>residuals</span>
+<span id="cb1093-5"><a href="types-of-data.html#cb1093-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">sample =</span> res.height)) <span class="sc">+</span></span>
+<span id="cb1093-6"><a href="types-of-data.html#cb1093-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_qq</span>(<span class="at">distribution =</span> qnorm) <span class="sc">+</span></span>
+<span id="cb1093-7"><a href="types-of-data.html#cb1093-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_qq_line</span>()<span class="sc">+</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;f-value&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Residual&quot;</span>)<span class="sc">+</span></span>
+<span id="cb1093-8"><a href="types-of-data.html#cb1093-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1093-9"><a href="types-of-data.html#cb1093-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1093-10"><a href="types-of-data.html#cb1093-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1093-11"><a href="types-of-data.html#cb1093-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.16</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-13-4.png" width="672" /></p>
+</div>
+<div id="the-rfs-plot" class="section level3" number="41.2.3">
+<h3><span class="header-section-number">41.2.3</span> The <code>rfs</code> plot</h3>
+<div class="sourceCode" id="cb1094"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1094-1"><a href="types-of-data.html#cb1094-1" aria-hidden="true" tabindex="-1"></a>book.<span class="fl">2.17</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1094-2"><a href="types-of-data.html#cb1094-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rfs</span>(<span class="fu">oneway</span>(height<span class="sc">~</span>voice.part, <span class="at">data =</span> singer, <span class="at">spread =</span> <span class="dv">1</span>), </span>
+<span id="cb1094-3"><a href="types-of-data.html#cb1094-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">aspect=</span><span class="dv">1</span>, </span>
+<span id="cb1094-4"><a href="types-of-data.html#cb1094-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">sub =</span> <span class="fu">list</span>(<span class="st">&quot;Figure 2.17&quot;</span>,<span class="at">cex=</span>.<span class="dv">8</span>),</span>
+<span id="cb1094-5"><a href="types-of-data.html#cb1094-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;Height (inches)&quot;</span>)</span>
+<span id="cb1094-6"><a href="types-of-data.html#cb1094-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1094-7"><a href="types-of-data.html#cb1094-7" aria-hidden="true" tabindex="-1"></a><span class="fu">book.2.17</span>()</span></code></pre></div>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1095"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1095-1"><a href="types-of-data.html#cb1095-1" aria-hidden="true" tabindex="-1"></a>ggVD_2<span class="fl">.17</span> <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb1095-2"><a href="types-of-data.html#cb1095-2" aria-hidden="true" tabindex="-1"></a>    Fitoneway <span class="ot">&lt;-</span> <span class="fu">oneway</span>(height<span class="sc">~</span>voice.part, <span class="at">data =</span> singer, <span class="at">spread =</span> <span class="dv">1</span>)</span>
+<span id="cb1095-3"><a href="types-of-data.html#cb1095-3" aria-hidden="true" tabindex="-1"></a>    fitmean <span class="ot">&lt;-</span> Fitoneway<span class="sc">$</span>fitted<span class="sc">-</span><span class="fu">mean</span>(Fitoneway<span class="sc">$</span>fitted)</span>
+<span id="cb1095-4"><a href="types-of-data.html#cb1095-4" aria-hidden="true" tabindex="-1"></a>    singer.rfs <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Fitted_minus_mean=</span>fitmean,</span>
+<span id="cb1095-5"><a href="types-of-data.html#cb1095-5" aria-hidden="true" tabindex="-1"></a>                             <span class="at">Residual=</span>Fitoneway<span class="sc">$</span>residuals) </span>
+<span id="cb1095-6"><a href="types-of-data.html#cb1095-6" aria-hidden="true" tabindex="-1"></a>    singer.m <span class="ot">&lt;-</span>reshape2<span class="sc">::</span><span class="fu">melt</span>(singer.rfs) </span>
+<span id="cb1095-7"><a href="types-of-data.html#cb1095-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(singer.m)<span class="sc">+</span><span class="fu">stat_qq</span>(<span class="fu">aes</span>(<span class="at">sample =</span> value),</span>
+<span id="cb1095-8"><a href="types-of-data.html#cb1095-8" aria-hidden="true" tabindex="-1"></a>                             <span class="at">distribution =</span> qunif) <span class="sc">+</span></span>
+<span id="cb1095-9"><a href="types-of-data.html#cb1095-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">facet_wrap</span>(.<span class="sc">~</span>variable) <span class="sc">+</span></span>
+<span id="cb1095-10"><a href="types-of-data.html#cb1095-10" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Height (inches)&quot;</span>)<span class="sc">+</span></span>
+<span id="cb1095-11"><a href="types-of-data.html#cb1095-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">aspect.ratio=</span><span class="dv">1</span>)</span>
+<span id="cb1095-12"><a href="types-of-data.html#cb1095-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1095-13"><a href="types-of-data.html#cb1095-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1095-14"><a href="types-of-data.html#cb1095-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggVD_2.17</span>()</span></code></pre></div>
+<pre><code>## No id variables; using all as measure variables</code></pre>
+<p><img src="RGraphics_Basics_files/figure-html/unnamed-chunk-14-2.png" width="672" /></p>
+</div>
+</div>
+<div id="bivariate-data" class="section level2" number="41.3">
+<h2><span class="header-section-number">41.3</span> Bivariate data</h2>
+<ul>
+<li>Displaying functional relationship between two variables
+<ul>
+<li>Scatter plot
+Figure 1.3</li>
+<li>Smoothing</li>
+</ul></li>
+</ul>
+</div>
+<div id="trivariate-and-hypervariate-data" class="section level2" number="41.4">
+<h2><span class="header-section-number">41.4</span> Trivariate and hypervariate data</h2>
+<ul>
+<li>Exploring interactions and conditional relationships
+<ul>
+<li>Scatter-plot matrix
+Figures 1.4 &amp; 1.5</li>
+<li>Conditional plots</li>
+</ul></li>
+</ul>
+</div>
+<div id="multiway-data" class="section level2" number="41.5">
+<h2><span class="header-section-number">41.5</span> Multiway data</h2>
+<p>Figures 1.1 &amp; 1.6</p>
+<ul>
+<li>Multiway dotplot
+<ul>
+<li>The barley data</li>
+<li>The lizard data</li>
+</ul></li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="a-quick-recap.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="univariate-data-displaying-and-comparing-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
