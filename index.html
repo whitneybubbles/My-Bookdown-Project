@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Advanced Environmental Data Management</title>
+  <meta name="description" content="Advanced Environmental Data Management" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Advanced Environmental Data Management" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Advanced Environmental Data Management" />
+  
+  
+  
+
+<meta name="author" content="Whitney Adam" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="introduction.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html"><i class="fa fa-check"></i><b>2</b> Importing Data into R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#typing-vectors-and-matrices"><i class="fa fa-check"></i><b>2.1</b> Typing Vectors and Matrices</a></li>
+<li class="chapter" data-level="2.2" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#reading-data-frame"><i class="fa fa-check"></i><b>2.2</b> Reading Data Frame</a></li>
+<li class="chapter" data-level="2.3" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#fixed-with-input-files"><i class="fa fa-check"></i><b>2.3</b> Fixed-with Input Files</a></li>
+<li class="chapter" data-level="2.4" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#generating-data"><i class="fa fa-check"></i><b>2.4</b> Generating Data</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#sequences"><i class="fa fa-check"></i><b>2.4.1</b> Sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#random-number-generators"><i class="fa fa-check"></i><b>2.5</b> Random Number Generators</a></li>
+<li class="chapter" data-level="2.6" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#random-permutation"><i class="fa fa-check"></i><b>2.6</b> Random Permutation</a></li>
+<li class="chapter" data-level="2.7" data-path="importing-data-into-r.html"><a href="importing-data-into-r.html#spreadsheet"><i class="fa fa-check"></i><b>2.7</b> Spreadsheet</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="saving-r-data.html"><a href="saving-r-data.html"><i class="fa fa-check"></i><b>3</b> Saving R Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="saving-r-data.html"><a href="saving-r-data.html#writing-r-objects-to-files-in-ascii-format"><i class="fa fa-check"></i><b>3.1</b> Writing R Objects to Files in ASCII Format</a></li>
+<li class="chapter" data-level="3.2" data-path="saving-r-data.html"><a href="saving-r-data.html#reading-data-from-other-programs"><i class="fa fa-check"></i><b>3.2</b> Reading Data from Other Programs</a></li>
+<li class="chapter" data-level="3.3" data-path="saving-r-data.html"><a href="saving-r-data.html#functions-in-foreign-package"><i class="fa fa-check"></i><b>3.3</b> Functions in <code>foreign</code> package</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="date-objects.html"><a href="date-objects.html"><i class="fa fa-check"></i><b>4</b> Date Objects</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="date-objects.html"><a href="date-objects.html#date-formats-in-r-date-time-classes"><i class="fa fa-check"></i><b>4.1</b> Date formats in R date-time classes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="summary-statistics.html"><a href="summary-statistics.html"><i class="fa fa-check"></i><b>5</b> Summary Statistics</a></li>
+<li class="chapter" data-level="6" data-path="anatomy-of-a-plot.html"><a href="anatomy-of-a-plot.html"><i class="fa fa-check"></i><b>6</b> Anatomy of a Plot</a></li>
+<li class="chapter" data-level="7" data-path="customizing-a-plot.html"><a href="customizing-a-plot.html"><i class="fa fa-check"></i><b>7</b> Customizing a Plot</a></li>
+<li class="chapter" data-level="8" data-path="graphical-functions.html"><a href="graphical-functions.html"><i class="fa fa-check"></i><b>8</b> Graphical Functions</a></li>
+<li class="chapter" data-level="9" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html"><i class="fa fa-check"></i><b>9</b> Example: Lake Erie Harmful Algal Bloom Monitoring</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#data"><i class="fa fa-check"></i><b>9.1</b> Data</a></li>
+<li class="chapter" data-level="9.2" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#mc-distribution"><i class="fa fa-check"></i><b>9.2</b> MC Distribution</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#histogram-and-boxplot"><i class="fa fa-check"></i><b>9.2.1</b> Histogram and boxplot</a></li>
+<li class="chapter" data-level="9.2.2" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#comparing-to-the-normal-distribution"><i class="fa fa-check"></i><b>9.2.2</b> Comparing to the normal distribution</a></li>
+<li class="chapter" data-level="9.2.3" data-path="example-lake-erie-harmful-algal-bloom-monitoring.html"><a href="example-lake-erie-harmful-algal-bloom-monitoring.html#comparing-two-distributions"><i class="fa fa-check"></i><b>9.2.3</b> Comparing Two Distributions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="introduction-1.html"><a href="introduction-1.html"><i class="fa fa-check"></i><b>10</b> Introduction</a></li>
+<li class="chapter" data-level="11" data-path="data-1.html"><a href="data-1.html"><i class="fa fa-check"></i><b>11</b> Data</a></li>
+<li class="chapter" data-level="12" data-path="using-package-reshape.html"><a href="using-package-reshape.html"><i class="fa fa-check"></i><b>12</b> Using package <code>reshape</code></a></li>
+<li class="chapter" data-level="13" data-path="subscripting.html"><a href="subscripting.html"><i class="fa fa-check"></i><b>13</b> Subscripting</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="subscripting.html"><a href="subscripting.html#numerical-subscripts"><i class="fa fa-check"></i><b>13.1</b> Numerical Subscripts</a></li>
+<li class="chapter" data-level="13.2" data-path="subscripting.html"><a href="subscripting.html#character-subscripts"><i class="fa fa-check"></i><b>13.2</b> Character Subscripts</a></li>
+<li class="chapter" data-level="13.3" data-path="subscripting.html"><a href="subscripting.html#logical-subscripts"><i class="fa fa-check"></i><b>13.3</b> Logical Subscripts</a></li>
+<li class="chapter" data-level="13.4" data-path="subscripting.html"><a href="subscripting.html#subscripting-matrices"><i class="fa fa-check"></i><b>13.4</b> Subscripting Matrices</a></li>
+<li class="chapter" data-level="13.5" data-path="subscripting.html"><a href="subscripting.html#dropfalse"><i class="fa fa-check"></i><b>13.5</b> <code>drop=FALSE</code></a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="two-useful-functions-for-matrix.html"><a href="two-useful-functions-for-matrix.html"><i class="fa fa-check"></i><b>14</b> Two Useful Functions for Matrix</a></li>
+<li class="chapter" data-level="15" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>15</b> List</a></li>
+<li class="chapter" data-level="16" data-path="aggregation.html"><a href="aggregation.html"><i class="fa fa-check"></i><b>16</b> Aggregation</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="aggregation.html"><a href="aggregation.html#tabulation"><i class="fa fa-check"></i><b>16.1</b> Tabulation</a></li>
+<li class="chapter" data-level="16.2" data-path="aggregation.html"><a href="aggregation.html#general-considerations-of-aggregation"><i class="fa fa-check"></i><b>16.2</b> General Considerations of Aggregation</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="aggregation.html"><a href="aggregation.html#sapply"><i class="fa fa-check"></i><b>16.2.1</b> <code>sapply</code></a></li>
+<li class="chapter" data-level="16.2.2" data-path="aggregation.html"><a href="aggregation.html#apply"><i class="fa fa-check"></i><b>16.2.2</b> <code>apply</code></a></li>
+<li class="chapter" data-level="16.2.3" data-path="aggregation.html"><a href="aggregation.html#mapping-a-function-based-on-groups"><i class="fa fa-check"></i><b>16.2.3</b> Mapping a Function Based on Groups</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>17</b> Data transformation</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="transform.html"><a href="transform.html#introduction-2"><i class="fa fa-check"></i><b>17.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="transform.html"><a href="transform.html#prerequisites"><i class="fa fa-check"></i><b>17.1.1</b> Prerequisites</a></li>
+<li class="chapter" data-level="17.1.2" data-path="transform.html"><a href="transform.html#nycflights13"><i class="fa fa-check"></i><b>17.1.2</b> nycflights13</a></li>
+<li class="chapter" data-level="17.1.3" data-path="transform.html"><a href="transform.html#dplyr-basics"><i class="fa fa-check"></i><b>17.1.3</b> dplyr basics</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="transform.html"><a href="transform.html#filter-rows-with-filter"><i class="fa fa-check"></i><b>17.2</b> Filter rows with <code>filter()</code></a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="transform.html"><a href="transform.html#comparisons"><i class="fa fa-check"></i><b>17.2.1</b> Comparisons</a></li>
+<li class="chapter" data-level="17.2.2" data-path="transform.html"><a href="transform.html#logical-operators"><i class="fa fa-check"></i><b>17.2.2</b> Logical operators</a></li>
+<li class="chapter" data-level="17.2.3" data-path="transform.html"><a href="transform.html#missing-values"><i class="fa fa-check"></i><b>17.2.3</b> Missing values</a></li>
+<li class="chapter" data-level="17.2.4" data-path="transform.html"><a href="transform.html#exercises"><i class="fa fa-check"></i><b>17.2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="transform.html"><a href="transform.html#arrange-rows-with-arrange"><i class="fa fa-check"></i><b>17.3</b> Arrange rows with <code>arrange()</code></a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="transform.html"><a href="transform.html#exercises-1"><i class="fa fa-check"></i><b>17.3.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="transform.html"><a href="transform.html#select"><i class="fa fa-check"></i><b>17.4</b> Select columns with <code>select()</code></a>
+<ul>
+<li class="chapter" data-level="17.4.1" data-path="transform.html"><a href="transform.html#exercises-2"><i class="fa fa-check"></i><b>17.4.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.5" data-path="transform.html"><a href="transform.html#add-new-variables-with-mutate"><i class="fa fa-check"></i><b>17.5</b> Add new variables with <code>mutate()</code></a>
+<ul>
+<li class="chapter" data-level="17.5.1" data-path="transform.html"><a href="transform.html#mutate-funs"><i class="fa fa-check"></i><b>17.5.1</b> Useful creation functions</a></li>
+<li class="chapter" data-level="17.5.2" data-path="transform.html"><a href="transform.html#exercises-3"><i class="fa fa-check"></i><b>17.5.2</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.6" data-path="transform.html"><a href="transform.html#grouped-summaries-with-summarise"><i class="fa fa-check"></i><b>17.6</b> Grouped summaries with <code>summarise()</code></a>
+<ul>
+<li class="chapter" data-level="17.6.1" data-path="transform.html"><a href="transform.html#combining-multiple-operations-with-the-pipe"><i class="fa fa-check"></i><b>17.6.1</b> Combining multiple operations with the pipe</a></li>
+<li class="chapter" data-level="17.6.2" data-path="transform.html"><a href="transform.html#missing-values-1"><i class="fa fa-check"></i><b>17.6.2</b> Missing values</a></li>
+<li class="chapter" data-level="17.6.3" data-path="transform.html"><a href="transform.html#counts"><i class="fa fa-check"></i><b>17.6.3</b> Counts</a></li>
+<li class="chapter" data-level="17.6.4" data-path="transform.html"><a href="transform.html#summarise-funs"><i class="fa fa-check"></i><b>17.6.4</b> Useful summary functions</a></li>
+<li class="chapter" data-level="17.6.5" data-path="transform.html"><a href="transform.html#grouping-by-multiple-variables"><i class="fa fa-check"></i><b>17.6.5</b> Grouping by multiple variables</a></li>
+<li class="chapter" data-level="17.6.6" data-path="transform.html"><a href="transform.html#ungrouping"><i class="fa fa-check"></i><b>17.6.6</b> Ungrouping</a></li>
+<li class="chapter" data-level="17.6.7" data-path="transform.html"><a href="transform.html#exercises-4"><i class="fa fa-check"></i><b>17.6.7</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="17.7" data-path="transform.html"><a href="transform.html#grouped-mutates-and-filters"><i class="fa fa-check"></i><b>17.7</b> Grouped mutates (and filters)</a>
+<ul>
+<li class="chapter" data-level="17.7.1" data-path="transform.html"><a href="transform.html#exercises-5"><i class="fa fa-check"></i><b>17.7.1</b> Exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="package-reshape.html"><a href="package-reshape.html"><i class="fa fa-check"></i><b>18</b> Package <code>reshape</code></a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="package-reshape.html"><a href="package-reshape.html#melting-data"><i class="fa fa-check"></i><b>18.1</b> Melting data</a></li>
+<li class="chapter" data-level="18.2" data-path="package-reshape.html"><a href="package-reshape.html#casting-molten-data"><i class="fa fa-check"></i><b>18.2</b> Casting molten data</a></li>
+<li class="chapter" data-level="18.3" data-path="package-reshape.html"><a href="package-reshape.html#the-french-fries-example"><i class="fa fa-check"></i><b>18.3</b> The French Fries Example</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="package-reshape2.html"><a href="package-reshape2.html"><i class="fa fa-check"></i><b>19</b> Package <code>reshape2</code></a></li>
+<li class="chapter" data-level="20" data-path="reshaping-data.html"><a href="reshaping-data.html"><i class="fa fa-check"></i><b>20</b> Reshaping Data</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="reshaping-data.html"><a href="reshaping-data.html#modifying-data-frame-variables"><i class="fa fa-check"></i><b>20.1</b> Modifying data frame variables</a></li>
+<li class="chapter" data-level="20.2" data-path="reshaping-data.html"><a href="reshaping-data.html#reshaping-a-data-frame"><i class="fa fa-check"></i><b>20.2</b> Reshaping a data frame</a></li>
+<li class="chapter" data-level="20.3" data-path="reshaping-data.html"><a href="reshaping-data.html#function-reshape"><i class="fa fa-check"></i><b>20.3</b> Function <code>reshape</code></a></li>
+<li class="chapter" data-level="20.4" data-path="reshaping-data.html"><a href="reshaping-data.html#combining-data-frames"><i class="fa fa-check"></i><b>20.4</b> Combining Data Frames</a></li>
+<li class="chapter" data-level="20.5" data-path="reshaping-data.html"><a href="reshaping-data.html#merging-using-index"><i class="fa fa-check"></i><b>20.5</b> Merging using index</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="a-quick-review.html"><a href="a-quick-review.html"><i class="fa fa-check"></i><b>21</b> A quick review</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="a-quick-review.html"><a href="a-quick-review.html#data-in-r"><i class="fa fa-check"></i><b>21.1</b> Data in R</a></li>
+<li class="chapter" data-level="21.2" data-path="a-quick-review.html"><a href="a-quick-review.html#reading-and-writing-data"><i class="fa fa-check"></i><b>21.2</b> Reading and writing data</a></li>
+<li class="chapter" data-level="21.3" data-path="a-quick-review.html"><a href="a-quick-review.html#dates"><i class="fa fa-check"></i><b>21.3</b> Dates</a></li>
+<li class="chapter" data-level="21.4" data-path="a-quick-review.html"><a href="a-quick-review.html#subscripting-1"><i class="fa fa-check"></i><b>21.4</b> Subscripting</a></li>
+<li class="chapter" data-level="21.5" data-path="a-quick-review.html"><a href="a-quick-review.html#data-aggregation"><i class="fa fa-check"></i><b>21.5</b> Data aggregation</a></li>
+<li class="chapter" data-level="21.6" data-path="a-quick-review.html"><a href="a-quick-review.html#data-reshaping"><i class="fa fa-check"></i><b>21.6</b> Data reshaping</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="introduction-3.html"><a href="introduction-3.html"><i class="fa fa-check"></i><b>22</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="22.1" data-path="introduction-3.html"><a href="introduction-3.html#example-1"><i class="fa fa-check"></i><b>22.1</b> Example 1:</a></li>
+<li class="chapter" data-level="22.2" data-path="introduction-3.html"><a href="introduction-3.html#example-2"><i class="fa fa-check"></i><b>22.2</b> Example 2:</a></li>
+<li class="chapter" data-level="22.3" data-path="introduction-3.html"><a href="introduction-3.html#example-4"><i class="fa fa-check"></i><b>22.3</b> Example 4:</a></li>
+<li class="chapter" data-level="22.4" data-path="introduction-3.html"><a href="introduction-3.html#example-5"><i class="fa fa-check"></i><b>22.4</b> Example 5:</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="types-of-arguments.html"><a href="types-of-arguments.html"><i class="fa fa-check"></i><b>23</b> Types of arguments</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="types-of-arguments.html"><a href="types-of-arguments.html#example-6"><i class="fa fa-check"></i><b>23.1</b> Example 6:</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="default-arguments.html"><a href="default-arguments.html"><i class="fa fa-check"></i><b>24</b> Default arguments</a>
+<ul>
+<li class="chapter" data-level="24.1" data-path="default-arguments.html"><a href="default-arguments.html#example-7"><i class="fa fa-check"></i><b>24.1</b> Example 7:</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="recursive-function.html"><a href="recursive-function.html"><i class="fa fa-check"></i><b>25</b> Recursive Function</a></li>
+<li class="chapter" data-level="26" data-path="two-real-example.html"><a href="two-real-example.html"><i class="fa fa-check"></i><b>26</b> Two Real Example</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="two-real-example.html"><a href="two-real-example.html#importing-elisa-test-data"><i class="fa fa-check"></i><b>26.1</b> Importing ELISA Test Data</a></li>
+<li class="chapter" data-level="26.2" data-path="two-real-example.html"><a href="two-real-example.html#the-hockey-stick-model"><i class="fa fa-check"></i><b>26.2</b> The Hockey Stick Model</a></li>
+<li class="chapter" data-level="26.3" data-path="two-real-example.html"><a href="two-real-example.html#sparrow-model"><i class="fa fa-check"></i><b>26.3</b> SPARROW model</a></li>
+</ul></li>
+<li class="chapter" data-level="27" data-path="good-function-writing-practices.html"><a href="good-function-writing-practices.html"><i class="fa fa-check"></i><b>27</b> Good function writing practices</a></li>
+<li class="chapter" data-level="28" data-path="package-tidyr.html"><a href="package-tidyr.html"><i class="fa fa-check"></i><b>28</b> Package <code>tidyr</code></a></li>
+<li class="chapter" data-level="29" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html"><i class="fa fa-check"></i><b>29</b> Package <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="29.1" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#long-versus-wide"><i class="fa fa-check"></i><b>29.1</b> Long versus Wide</a></li>
+<li class="chapter" data-level="29.2" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#reshape2"><i class="fa fa-check"></i><b>29.2</b> <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="29.2.1" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#wide--to-long-format-data-the-melt-function"><i class="fa fa-check"></i><b>29.2.1</b> Wide- to long-format data: the <code>melt</code> function</a></li>
+<li class="chapter" data-level="29.2.2" data-path="package-reshape2-1.html"><a href="package-reshape2-1.html#long--to-wide-format-data-the-cast-functions"><i class="fa fa-check"></i><b>29.2.2</b> Long- to wide-format data: the cast functions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html"><i class="fa fa-check"></i><b>30</b> <code>tidyr</code> versus <code>reshape2</code></a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#data-tidying"><i class="fa fa-check"></i><b>30.1</b> Data tidying</a>
+<ul>
+<li class="chapter" data-level="30.1.1" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#from-the-wide-to-the-long-format-gather-vs-melt"><i class="fa fa-check"></i><b>30.1.1</b> From the wide to the long format: <code>gather()</code> vs <code>melt()</code></a></li>
+<li class="chapter" data-level="30.1.2" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#split-a-column-separate-vs-colsplit"><i class="fa fa-check"></i><b>30.1.2</b> Split a column: <code>separate()</code> vs <code>colsplit()</code></a></li>
+<li class="chapter" data-level="30.1.3" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#from-the-long-to-the-wide-format-spread-vs-dcast"><i class="fa fa-check"></i><b>30.1.3</b> From the long to the wide format: <code>spread()</code> vs <code>dcast()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="30.2" data-path="tidyr-versus-reshape2.html"><a href="tidyr-versus-reshape2.html#data-aggregation-1"><i class="fa fa-check"></i><b>30.2</b> Data aggregation</a></li>
+</ul></li>
+<li class="chapter" data-level="31" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>31</b> Factors</a>
+<ul>
+<li class="chapter" data-level="31.1" data-path="factors.html"><a href="factors.html#numeric-factors"><i class="fa fa-check"></i><b>31.1</b> Numeric Factors</a></li>
+<li class="chapter" data-level="31.2" data-path="factors.html"><a href="factors.html#manipulating-factors"><i class="fa fa-check"></i><b>31.2</b> Manipulating Factors</a></li>
+<li class="chapter" data-level="31.3" data-path="factors.html"><a href="factors.html#creating-factors-from-continuous-variables"><i class="fa fa-check"></i><b>31.3</b> Creating Factors from Continuous Variables</a></li>
+<li class="chapter" data-level="31.4" data-path="factors.html"><a href="factors.html#factors-based-on-dates-and-times"><i class="fa fa-check"></i><b>31.4</b> Factors Based on Dates and Times</a></li>
+<li class="chapter" data-level="31.5" data-path="factors.html"><a href="factors.html#interactions"><i class="fa fa-check"></i><b>31.5</b> Interactions</a></li>
+</ul></li>
+<li class="chapter" data-level="32" data-path="character-manipulation.html"><a href="character-manipulation.html"><i class="fa fa-check"></i><b>32</b> Character Manipulation</a>
+<ul>
+<li class="chapter" data-level="32.1" data-path="character-manipulation.html"><a href="character-manipulation.html#regular-expressions-in-r"><i class="fa fa-check"></i><b>32.1</b> Regular Expressions in R</a></li>
+<li class="chapter" data-level="32.2" data-path="character-manipulation.html"><a href="character-manipulation.html#breaking-apart-character-values"><i class="fa fa-check"></i><b>32.2</b> Breaking Apart Character Values</a></li>
+<li class="chapter" data-level="32.3" data-path="character-manipulation.html"><a href="character-manipulation.html#substitutions-and-tagging"><i class="fa fa-check"></i><b>32.3</b> Substitutions and Tagging</a></li>
+<li class="chapter" data-level="32.4" data-path="character-manipulation.html"><a href="character-manipulation.html#a-quick-summary"><i class="fa fa-check"></i><b>32.4</b> A Quick Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="33" data-path="introduction-4.html"><a href="introduction-4.html"><i class="fa fa-check"></i><b>33</b> Introduction</a></li>
+<li class="chapter" data-level="34" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i><b>34</b> Examples</a>
+<ul>
+<li class="chapter" data-level="34.1" data-path="examples.html"><a href="examples.html#example-1-1"><i class="fa fa-check"></i><b>34.1</b> Example 1</a></li>
+<li class="chapter" data-level="34.2" data-path="examples.html"><a href="examples.html#example-2-1"><i class="fa fa-check"></i><b>34.2</b> Example 2</a></li>
+<li class="chapter" data-level="34.3" data-path="examples.html"><a href="examples.html#using-lattice-package"><i class="fa fa-check"></i><b>34.3</b> Using Lattice Package</a></li>
+<li class="chapter" data-level="34.4" data-path="examples.html"><a href="examples.html#using-lattice-functions"><i class="fa fa-check"></i><b>34.4</b> Using Lattice Functions</a></li>
+<li class="chapter" data-level="34.5" data-path="examples.html"><a href="examples.html#custom-panel-functions"><i class="fa fa-check"></i><b>34.5</b> Custom Panel Functions</a></li>
+<li class="chapter" data-level="34.6" data-path="examples.html"><a href="examples.html#the-example-that-started-trellis"><i class="fa fa-check"></i><b>34.6</b> The Example That Started Trellis</a></li>
+<li class="chapter" data-level="34.7" data-path="examples.html"><a href="examples.html#an-example-of-graphical-exploratory-data-analysis"><i class="fa fa-check"></i><b>34.7</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="35" data-path="introduction-5.html"><a href="introduction-5.html"><i class="fa fa-check"></i><b>35</b> Introduction</a></li>
+<li class="chapter" data-level="36" data-path="examples-1.html"><a href="examples-1.html"><i class="fa fa-check"></i><b>36</b> Examples</a>
+<ul>
+<li class="chapter" data-level="36.1" data-path="examples-1.html"><a href="examples-1.html#example-1-2"><i class="fa fa-check"></i><b>36.1</b> Example 1</a></li>
+<li class="chapter" data-level="36.2" data-path="examples-1.html"><a href="examples-1.html#example-2-2"><i class="fa fa-check"></i><b>36.2</b> Example 2</a></li>
+<li class="chapter" data-level="36.3" data-path="examples-1.html"><a href="examples-1.html#using-lattice-package-1"><i class="fa fa-check"></i><b>36.3</b> Using Lattice Package</a></li>
+<li class="chapter" data-level="36.4" data-path="examples-1.html"><a href="examples-1.html#using-lattice-functions-1"><i class="fa fa-check"></i><b>36.4</b> Using Lattice Functions</a></li>
+<li class="chapter" data-level="36.5" data-path="examples-1.html"><a href="examples-1.html#costom-panel-functions"><i class="fa fa-check"></i><b>36.5</b> Costom Panel Functions</a></li>
+<li class="chapter" data-level="36.6" data-path="examples-1.html"><a href="examples-1.html#the-example-that-started-trellis-1"><i class="fa fa-check"></i><b>36.6</b> The Example That Started Trellis</a></li>
+<li class="chapter" data-level="36.7" data-path="examples-1.html"><a href="examples-1.html#an-example-of-graphical-exploratory-data-analysis-1"><i class="fa fa-check"></i><b>36.7</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="37" data-path="introduction-6.html"><a href="introduction-6.html"><i class="fa fa-check"></i><b>37</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="37.1" data-path="introduction-6.html"><a href="introduction-6.html#filter"><i class="fa fa-check"></i><b>37.1</b> Filter</a></li>
+<li class="chapter" data-level="37.2" data-path="introduction-6.html"><a href="introduction-6.html#mutate"><i class="fa fa-check"></i><b>37.2</b> Mutate</a></li>
+<li class="chapter" data-level="37.3" data-path="introduction-6.html"><a href="introduction-6.html#summarise"><i class="fa fa-check"></i><b>37.3</b> Summarise</a></li>
+<li class="chapter" data-level="37.4" data-path="introduction-6.html"><a href="introduction-6.html#group-by"><i class="fa fa-check"></i><b>37.4</b> Group By</a></li>
+<li class="chapter" data-level="37.5" data-path="introduction-6.html"><a href="introduction-6.html#sample"><i class="fa fa-check"></i><b>37.5</b> Sample</a></li>
+<li class="chapter" data-level="37.6" data-path="introduction-6.html"><a href="introduction-6.html#count"><i class="fa fa-check"></i><b>37.6</b> Count</a></li>
+<li class="chapter" data-level="37.7" data-path="introduction-6.html"><a href="introduction-6.html#arrange"><i class="fa fa-check"></i><b>37.7</b> Arrange</a></li>
+<li class="chapter" data-level="37.8" data-path="introduction-6.html"><a href="introduction-6.html#pipe"><i class="fa fa-check"></i><b>37.8</b> Pipe</a></li>
+</ul></li>
+<li class="chapter" data-level="38" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html"><i class="fa fa-check"></i><b>38</b> Explaining <code>dplyr</code> – A More Complicated Example</a>
+<ul>
+<li class="chapter" data-level="38.1" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#data-nycflights13"><i class="fa fa-check"></i><b>38.1</b> Data: <code>nycflights13</code></a></li>
+<li class="chapter" data-level="38.2" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#single-table-verbs"><i class="fa fa-check"></i><b>38.2</b> Single table verbs</a></li>
+<li class="chapter" data-level="38.3" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#filter-rows-with-filter-1"><i class="fa fa-check"></i><b>38.3</b> Filter rows with <code>filter()</code></a></li>
+<li class="chapter" data-level="38.4" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#arrange-rows-with-arrange-1"><i class="fa fa-check"></i><b>38.4</b> Arrange rows with <code>arrange()</code></a></li>
+<li class="chapter" data-level="38.5" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#select-columns-with-select"><i class="fa fa-check"></i><b>38.5</b> Select columns with <code>select()</code></a></li>
+<li class="chapter" data-level="38.6" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#extract-distinct-unique-rows"><i class="fa fa-check"></i><b>38.6</b> Extract distinct (unique) rows</a></li>
+<li class="chapter" data-level="38.7" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#add-new-columns-with-mutate"><i class="fa fa-check"></i><b>38.7</b> Add new columns with mutate()</a></li>
+<li class="chapter" data-level="38.8" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#summarise-values-with-summarise"><i class="fa fa-check"></i><b>38.8</b> Summarise values with <code>summarise()</code></a></li>
+<li class="chapter" data-level="38.9" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#randomly-sample-rows-with-sample_n-and-sample_frac"><i class="fa fa-check"></i><b>38.9</b> Randomly sample rows with sample_n() and sample_frac()</a></li>
+<li class="chapter" data-level="38.10" data-path="explaining-dplyr-a-more-complicated-example.html"><a href="explaining-dplyr-a-more-complicated-example.html#commonalities"><i class="fa fa-check"></i><b>38.10</b> Commonalities</a></li>
+</ul></li>
+<li class="chapter" data-level="39" data-path="grouped-operations.html"><a href="grouped-operations.html"><i class="fa fa-check"></i><b>39</b> Grouped operations</a>
+<ul>
+<li class="chapter" data-level="39.1" data-path="grouped-operations.html"><a href="grouped-operations.html#chaining"><i class="fa fa-check"></i><b>39.1</b> Chaining</a></li>
+<li class="chapter" data-level="39.2" data-path="grouped-operations.html"><a href="grouped-operations.html#a-quick-summary-1"><i class="fa fa-check"></i><b>39.2</b> A quick Summary</a>
+<ul>
+<li class="chapter" data-level="39.2.1" data-path="grouped-operations.html"><a href="grouped-operations.html#dplyr-verbs-in-action"><i class="fa fa-check"></i><b>39.2.1</b> dplyr verbs in action</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="40" data-path="a-quick-recap.html"><a href="a-quick-recap.html"><i class="fa fa-check"></i><b>40</b> A Quick Recap</a>
+<ul>
+<li class="chapter" data-level="40.1" data-path="a-quick-recap.html"><a href="a-quick-recap.html#costom-panel-functions-1"><i class="fa fa-check"></i><b>40.1</b> Costom Panel Functions</a></li>
+<li class="chapter" data-level="40.2" data-path="a-quick-recap.html"><a href="a-quick-recap.html#the-example-that-started-trellis-2"><i class="fa fa-check"></i><b>40.2</b> The Example That Started Trellis</a></li>
+</ul></li>
+<li class="chapter" data-level="41" data-path="types-of-data.html"><a href="types-of-data.html"><i class="fa fa-check"></i><b>41</b> Types of Data</a>
+<ul>
+<li class="chapter" data-level="41.1" data-path="types-of-data.html"><a href="types-of-data.html#univariate-data"><i class="fa fa-check"></i><b>41.1</b> Univariate data</a></li>
+<li class="chapter" data-level="41.2" data-path="types-of-data.html"><a href="types-of-data.html#fits-and-residuals"><i class="fa fa-check"></i><b>41.2</b> Fits and Residuals</a>
+<ul>
+<li class="chapter" data-level="41.2.1" data-path="types-of-data.html"><a href="types-of-data.html#homogeneity-and-pooling"><i class="fa fa-check"></i><b>41.2.1</b> Homogeneity and Pooling</a></li>
+<li class="chapter" data-level="41.2.2" data-path="types-of-data.html"><a href="types-of-data.html#checking-for-normality-of-the-pooled-residuals"><i class="fa fa-check"></i><b>41.2.2</b> Checking for normality of the pooled residuals</a></li>
+<li class="chapter" data-level="41.2.3" data-path="types-of-data.html"><a href="types-of-data.html#the-rfs-plot"><i class="fa fa-check"></i><b>41.2.3</b> The <code>rfs</code> plot</a></li>
+</ul></li>
+<li class="chapter" data-level="41.3" data-path="types-of-data.html"><a href="types-of-data.html#bivariate-data"><i class="fa fa-check"></i><b>41.3</b> Bivariate data</a></li>
+<li class="chapter" data-level="41.4" data-path="types-of-data.html"><a href="types-of-data.html#trivariate-and-hypervariate-data"><i class="fa fa-check"></i><b>41.4</b> Trivariate and hypervariate data</a></li>
+<li class="chapter" data-level="41.5" data-path="types-of-data.html"><a href="types-of-data.html#multiway-data"><i class="fa fa-check"></i><b>41.5</b> Multiway data</a></li>
+</ul></li>
+<li class="chapter" data-level="42" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html"><i class="fa fa-check"></i><b>42</b> Univariate Data – Displaying and Comparing Distributions</a>
+<ul>
+<li class="chapter" data-level="42.1" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#displaying-distribution"><i class="fa fa-check"></i><b>42.1</b> Displaying distribution</a></li>
+<li class="chapter" data-level="42.2" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#comparing-distributions"><i class="fa fa-check"></i><b>42.2</b> Comparing distributions</a></li>
+<li class="chapter" data-level="42.3" data-path="univariate-data-displaying-and-comparing-distributions.html"><a href="univariate-data-displaying-and-comparing-distributions.html#an-example-of-graphical-exploratory-data-analysis-2"><i class="fa fa-check"></i><b>42.3</b> An Example of Graphical Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="43" data-path="a-summary.html"><a href="a-summary.html"><i class="fa fa-check"></i><b>43</b> A Summary</a>
+<ul>
+<li class="chapter" data-level="43.1" data-path="a-summary.html"><a href="a-summary.html#types-of-data-1"><i class="fa fa-check"></i><b>43.1</b> Types of Data</a>
+<ul>
+<li class="chapter" data-level="43.1.1" data-path="a-summary.html"><a href="a-summary.html#checking-for-normality-of-the-pooled-residuals-1"><i class="fa fa-check"></i><b>43.1.1</b> Checking for normality of the pooled residuals</a></li>
+<li class="chapter" data-level="43.1.2" data-path="a-summary.html"><a href="a-summary.html#the-rfs-plot-1"><i class="fa fa-check"></i><b>43.1.2</b> The <code>rfs</code> plot</a></li>
+</ul></li>
+<li class="chapter" data-level="43.2" data-path="a-summary.html"><a href="a-summary.html#additive-versus-multiplicative-shifts"><i class="fa fa-check"></i><b>43.2</b> Additive versus multiplicative shifts</a></li>
+<li class="chapter" data-level="43.3" data-path="a-summary.html"><a href="a-summary.html#using-q-q-plot-to-check-for-additive-shift"><i class="fa fa-check"></i><b>43.3</b> Using Q-Q plot to Check for Additive Shift</a></li>
+<li class="chapter" data-level="43.4" data-path="a-summary.html"><a href="a-summary.html#transformation-to-normality"><i class="fa fa-check"></i><b>43.4</b> Transformation to Normality</a></li>
+<li class="chapter" data-level="43.5" data-path="a-summary.html"><a href="a-summary.html#an-example-of-graphical-exploratory-data-analysis-3"><i class="fa fa-check"></i><b>43.5</b> An Example of Graphical Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="43.6" data-path="a-summary.html"><a href="a-summary.html#nutrient-loading-and-flow-from-maumee"><i class="fa fa-check"></i><b>43.6</b> Nutrient Loading and Flow from Maumee</a>
+<ul>
+<li class="chapter" data-level="43.6.1" data-path="a-summary.html"><a href="a-summary.html#objectives"><i class="fa fa-check"></i><b>43.6.1</b> Objectives</a></li>
+<li class="chapter" data-level="43.6.2" data-path="a-summary.html"><a href="a-summary.html#methods"><i class="fa fa-check"></i><b>43.6.2</b> Methods</a></li>
+<li class="chapter" data-level="43.6.3" data-path="a-summary.html"><a href="a-summary.html#results"><i class="fa fa-check"></i><b>43.6.3</b> Results</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advanced Environmental Data Management</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Advanced Environmental Data Management</h1>
+<p class="author"><em>Whitney Adam</em></p>
+</div>
+<div id="preface" class="section level1 unnumbered">
+<h1>Preface</h1>
+<p>This book template is what I learned from <em>Advanced Data Management</em>.
+Sean Kross has a much better template on <a href="https://github.com/seankross/bookdown-start/">GitHub</a>.</p>
+<p>This is a book that contains notes from my time in Environmental Data Management. Here I will be able to refresh myself on how to upload data, sort it, display it graphically, etc. Any Rstudio questions that can not be answered here can be answered by The University of Google. :D</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
